@@ -1,0 +1,34 @@
+{
+  "commit": "f09a7452b8b663a903772ea56006884dde4049b0",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-03-reexecucao-deepseek-llm-7b-base-completo",
+      "codigo": "results/extensao/2026-11-03-reexecucao-deepseek-coder-7b-base-v1.5-completo",
+      "instruct": "results/extensao/2026-11-05-reexecucao-deepseek-coder-7b-instruct-v1.5-bergum-gopstein-template"
+    },
+    "reamostragens": 10000,
+    "conjunto": "bergum",
+    "aoi": "manual",
+    "anotacao": null,
+    "n_pares": {
+      "aoi_max": 72,
+      "snippet_media": 72
+    },
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "deepseek-ai/deepseek-llm-7b-base",
+    "codigo": "deepseek-ai/deepseek-coder-7b-base-v1.5",
+    "instruct": "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
+  },
+  "model_revision": {
+    "base": "7683fea62db869066ddaff6a41d032262c490d4f",
+    "codigo": "98f0904cee2237e235f10408ae12292037b21dac",
+    "instruct": "2a050a4c59d687a85324d32e147517992117ed30"
+  },
+  "date": "2026-11-05",
+  "approx_cost": "sem custo (Mac local)"
+}

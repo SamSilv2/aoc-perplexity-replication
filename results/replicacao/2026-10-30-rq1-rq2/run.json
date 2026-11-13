@@ -1,0 +1,13 @@
+{
+  "commit": "f9b8ab0c681e848dc0e14a138cc45c6b85b6deac",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "fonte": "data/external/llm-perplexity-AoC/model_results/Qwen2.5-Coder-32B/pairwise_analysis/pairwise_comparisons"
+  },
+  "seed": null,
+  "model": "Qwen2.5-Coder-32B (resultados publicados, sem reexecução)",
+  "model_revision": null,
+  "date": "2026-10-30",
+  "approx_cost": "sem custo"
+}

@@ -1,0 +1,29 @@
+{
+  "commit": "ca58f26331126ca1721ebf3a878c22ae5dc9ef64",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-02-reexecucao-Qwen2.5-3B-completo",
+      "codigo": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-completo",
+      "instruct": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-Instruct-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "bergum",
+    "aoi": "manual",
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "Qwen/Qwen2.5-3B",
+    "codigo": "Qwen/Qwen2.5-Coder-3B",
+    "instruct": "Qwen/Qwen2.5-Coder-3B-Instruct"
+  },
+  "model_revision": {
+    "base": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+    "codigo": "09d9bc5d376b0cfa0100a0694ea7de7232525803",
+    "instruct": "488639f1ff808d1d3d0ba301aef8c11461451ec5"
+  },
+  "date": "2026-11-02",
+  "approx_cost": "sem custo (Mac local)"
+}

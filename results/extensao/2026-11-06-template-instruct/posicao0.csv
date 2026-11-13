@@ -1,0 +1,25 @@
+trio,linguagem,modo,condicao,n_snippets,logprob_posicao0_medio
+Qwen2.5 3B,Java,sem_template,todos,144,-10.006754385100471
+Qwen2.5 3B,Java,sem_template,limpo,72,-10.061918695767721
+Qwen2.5 3B,Java,sem_template,confuso,72,-9.95159007443322
+Qwen2.5 3B,Java,com_template,todos,144,-8.70736771159702
+Qwen2.5 3B,Java,com_template,limpo,72,-8.76339786582523
+Qwen2.5 3B,Java,com_template,confuso,72,-8.651337557368809
+Qwen2.5 3B,C,sem_template,todos,126,-10.726482141585578
+Qwen2.5 3B,C,sem_template,limpo,63,-10.708656083969842
+Qwen2.5 3B,C,sem_template,confuso,63,-10.744308199201312
+Qwen2.5 3B,C,com_template,todos,126,-9.939667565482003
+Qwen2.5 3B,C,com_template,limpo,63,-9.89869839804513
+Qwen2.5 3B,C,com_template,confuso,63,-9.980636732918876
+DeepSeek 7B,Java,sem_template,todos,144,-7.584003471665913
+DeepSeek 7B,Java,sem_template,limpo,72,-7.62683990266588
+DeepSeek 7B,Java,sem_template,confuso,72,-7.541167040665944
+DeepSeek 7B,Java,com_template,todos,144,-17.008097555902268
+DeepSeek 7B,Java,com_template,limpo,72,-16.97819683286879
+DeepSeek 7B,Java,com_template,confuso,72,-17.03799827893575
+DeepSeek 7B,C,sem_template,todos,126,-5.739353781654721
+DeepSeek 7B,C,sem_template,limpo,63,-5.768470143514966
+DeepSeek 7B,C,sem_template,confuso,63,-5.710237419794476
+DeepSeek 7B,C,com_template,todos,126,-17.508323555900937
+DeepSeek 7B,C,com_template,limpo,63,-17.568371833316863
+DeepSeek 7B,C,com_template,confuso,63,-17.44827527848501

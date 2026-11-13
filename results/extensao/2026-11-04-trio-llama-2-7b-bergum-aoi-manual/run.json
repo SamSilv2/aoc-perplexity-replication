@@ -1,0 +1,29 @@
+{
+  "commit": "f66eb0c82fb1a1bbbc732464c28cf35bcdcf60e2",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-04-reexecucao-Llama-2-7b-hf-completo",
+      "codigo": "results/extensao/2026-11-04-reexecucao-CodeLlama-7b-hf-completo",
+      "instruct": "results/extensao/2026-11-04-reexecucao-CodeLlama-7b-Instruct-hf-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "bergum",
+    "aoi": "manual",
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "meta-llama/Llama-2-7b-hf",
+    "codigo": "meta-llama/CodeLlama-7b-hf",
+    "instruct": "meta-llama/CodeLlama-7b-Instruct-hf"
+  },
+  "model_revision": {
+    "base": "01c7f73d771dfac7d292323805ebc428287df4f9",
+    "codigo": "b462c3c99b077d341db691ec780a33156f3c1472",
+    "instruct": "4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc"
+  },
+  "date": "2026-11-04",
+  "approx_cost": "sem custo (Mac local)"
+}

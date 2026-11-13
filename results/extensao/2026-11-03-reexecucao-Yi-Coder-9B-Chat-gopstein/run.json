@@ -1,0 +1,32 @@
+{
+  "commit": "f66eb0c82fb1a1bbbc732464c28cf35bcdcf60e2",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "tokenizador": "01-ai/Yi-Coder-9B",
+    "tokenizador_revisao": "bc6e63fd26a654ee42dba737a553310bfa01dc5d",
+    "uma_passagem": true,
+    "dispositivo_entrada": "mps",
+    "dispositivo_inferencia": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "gopstein"
+    ],
+    "arquivos": {
+      "gopstein": 126
+    },
+    "segundos": {
+      "gopstein": 57.4
+    },
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "01-ai/Yi-Coder-9B-Chat",
+  "model_revision": "356a1f8d4e4a606d0b879e54191ca809918576b8",
+  "date": "2026-11-03",
+  "approx_cost": "sem custo (Mac local)"
+}

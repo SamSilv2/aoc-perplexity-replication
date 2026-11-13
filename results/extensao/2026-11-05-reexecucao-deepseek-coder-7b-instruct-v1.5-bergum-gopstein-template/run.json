@@ -1,0 +1,44 @@
+{
+  "commit": "2247cdda3d5003795fc7da5dd118c6f22b0da3b3",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "tokenizador": "deepseek-ai/deepseek-coder-7b-instruct-v1.5",
+    "tokenizador_revisao": "2a050a4c59d687a85324d32e147517992117ed30",
+    "uma_passagem": true,
+    "dispositivo_entrada": "mps",
+    "dispositivo_inferencia": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "bergum",
+      "gopstein"
+    ],
+    "arquivos": {
+      "bergum": 144,
+      "gopstein": 126
+    },
+    "segundos": {
+      "bergum": 70.0,
+      "gopstein": 73.8
+    },
+    "comparacao": null,
+    "chat_template": {
+      "papel_da_mensagem": "user",
+      "add_generation_prompt": false,
+      "chat_template": "{% if not add_generation_prompt is defined %}\n{% set add_generation_prompt = false %}\n{% endif %}\n{%- set ns = namespace(found=false) -%}\n{%- for message in messages -%}\n    {%- if message['role'] == 'system' -%}\n        {%- set ns.found = true -%}\n    {%- endif -%}\n{%- endfor -%}\n{{bos_token}}{%- if not ns.found -%}\n{{'You are an AI programming assistant, utilizing the Deepseek Coder model, developed by Deepseek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer\\n'}}\n{%- endif %}\n{%- for message in messages %}\n    {%- if message['role'] == 'system' %}\n{{ message['content'] }}\n    {%- else %}\n        {%- if message['role'] == 'user' %}\n{{'### Instruction:\\n' + message['content'] + '\\n'}}\n        {%- else %}\n{{'### Response:\\n' + message['content'] + '\\n<|EOT|>\\n'}}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{% if add_generation_prompt %}\n{{'### Response:'}}\n{% endif %}",
+      "prefixo": "<｜begin▁of▁sentence｜>You are an AI programming assistant, utilizing the Deepseek Coder model, developed by Deepseek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer\n### Instruction:\n",
+      "sufixo": "\n",
+      "tokens_do_prefixo": 60,
+      "nota": "só os tokens do snippet entram na perplexidade e na AOI; o sufixo vem depois do snippet e não é alimentado ao modelo"
+    }
+  },
+  "seed": null,
+  "model": "deepseek-ai/deepseek-coder-7b-instruct-v1.5",
+  "model_revision": "2a050a4c59d687a85324d32e147517992117ed30",
+  "date": "2026-11-05",
+  "approx_cost": "sem custo (Mac local)"
+}

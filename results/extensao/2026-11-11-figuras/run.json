@@ -1,0 +1,52 @@
+{
+  "commit": "d89a20313215f7c840e4a6e337bda7d050e019fe",
+  "codigo_alterado": false,
+  "config": {
+    "figuras": {
+      "delta-aoi_max.pdf": "Figura 1: Δ do aoi_max com IC 95% por família e papel (B, C, I), Java e C, mesma escala; dados-delta.csv",
+      "delta-aoi_max-coluna.pdf": "Figura 1 em largura de coluna ACM (3,33 × 4,6 pol., Java sobre C): mesmos dados, escala, cores e ordem de delta-aoi_max.pdf; versão anterior do main.tex",
+      "delta-aoi_max-grade.pdf": "Figura 1 em grade 2 × 2 na largura de coluna ACM (3,33 × 2,9 pol.): Java sobre C, trios em duas metades lado a lado, mesma escala; mesmos dados, cores e ordem de delta-aoi_max.pdf; sem o '(4 bits)' no rótulo do 32B; para o main.tex",
+      "eeg-java-pares.pdf": "Figura 2: ℓ = ln(PPL confuso) − ln(PPL limpo) da Max AOI Perplexity × FRP confuso − FRP limpo, um ponto por par de Qwen/Qwen2.5-7B; descritiva, sem estatística; dados-eeg-pares.csv",
+      "png": "delta-aoi_max.png, delta-aoi_max-coluna.png, delta-aoi_max-grade.png e eeg-java-pares.png (150 dpi), só para pré-visualização"
+    },
+    "fontes": {
+      "results/extensao/2026-11-05-consolidado-3/consolidado.csv": "38700580b3a681429e31e570c15e097222b03c952478b8f4a6300f32ab33cc16",
+      "results/extensao/2026-11-04-trio-qwen2.5-7b-bergum-aoi-manual/trio.csv": "cfa06b4b32503e3c6ad01bc81564013a6fb69530994ed45a5344358e703b921d",
+      "results/extensao/2026-11-04-reexecucao-Qwen2.5-7B-bergum-gopstein/perplexidade.json": "e85a921239604d605dbeb863703100853c5f1b236404e2754e719461bfe5f038"
+    },
+    "exemplo": {
+      "trio": "Qwen2.5 7B",
+      "papel": "base",
+      "model": "Qwen/Qwen2.5-7B",
+      "model_revision": "d149729398750b98c0af14eb82c78cfe92750796"
+    },
+    "pares": {
+      "total": 72,
+      "usados": 72,
+      "sem_aoi_valida": 0,
+      "por_quadrante": {
+        "sup_dir": 34,
+        "sup_esq": 15,
+        "inf_esq": 12,
+        "inf_dir": 11,
+        "eixo": 0
+      },
+      "delta_media_ell": 2.8397894965277777
+    },
+    "fonte_tipografica": {
+      "usada": "STIX Two Text",
+      "candidatas": [
+        "Linux Libertine O",
+        "Libertinus Serif",
+        "STIX Two Text",
+        "DejaVu Serif"
+      ],
+      "mathtext": "stix"
+    },
+    "matplotlib": "3.11.2",
+    "metadados": "PDF: CreationDate omitido, SOURCE_DATE_EPOCH fixo, fontes embutidas (Type 42); PNG: sem Software"
+  },
+  "seed": null,
+  "date": "2026-11-11",
+  "approx_cost": "sem custo (Mac local)"
+}

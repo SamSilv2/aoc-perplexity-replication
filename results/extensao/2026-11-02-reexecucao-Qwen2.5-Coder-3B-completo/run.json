@@ -1,0 +1,32 @@
+{
+  "commit": "b4fa1c41a925587ce78a3283e8c669f14239c242",
+  "codigo_alterado": true,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "uma_passagem": true,
+    "dispositivo": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "bergum",
+      "gopstein"
+    ],
+    "arquivos": {
+      "bergum": 144,
+      "gopstein": 126
+    },
+    "segundos": {
+      "bergum": 20.8,
+      "gopstein": 23.0
+    },
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "Qwen/Qwen2.5-Coder-3B",
+  "model_revision": "09d9bc5d376b0cfa0100a0694ea7de7232525803",
+  "date": "2026-11-02",
+  "approx_cost": "sem custo (Mac local)"
+}

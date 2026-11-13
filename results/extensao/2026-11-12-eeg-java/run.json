@@ -1,0 +1,38 @@
+{
+  "commit": "efa5c26dfbbe0eaec85ea381c10043e3e9e31552",
+  "codigo_alterado": false,
+  "config": {
+    "decisao": "0020",
+    "reamostragens": 10000,
+    "ic": "percentis 2,5 e 97,5; bootstrap agrupado por snippet-base (24 grupos)",
+    "metrica_perplexidade": "Max AOI Perplexity",
+    "frp": "clean_mean_eeg / obf_mean_eeg do pacote publicado (idêntico nos modelos publicados)",
+    "subconjuntos": {
+      "todos": "144 snippets",
+      "confusos": "72",
+      "limpos": "72"
+    },
+    "trios": {
+      "Qwen2.5 3B": "2026-11-02-trio-qwen2.5-3b-bergum-aoi-manual",
+      "Qwen2.5 7B": "2026-11-04-trio-qwen2.5-7b-bergum-aoi-manual",
+      "Qwen2.5 32B (4 bits)": "2026-11-03-trio-qwen2.5-32b-4bit-bergum-aoi-manual",
+      "DeepSeek 7B": "2026-11-03-trio-deepseek-7b-bergum-aoi-manual",
+      "Yi 9B": "2026-11-03-trio-yi-9b-bergum-aoi-manual",
+      "Llama-2 7B": "2026-11-04-trio-llama-2-7b-bergum-aoi-manual",
+      "Llama-2 13B": "2026-11-05-trio-llama-2-13b-bergum-aoi-manual",
+      "Gemma 7B": "2026-11-03-trio-gemma-7b-bergum-aoi-manual"
+    },
+    "publicados": [
+      "Artigenz-Coder-DS-6.7B",
+      "Llama-3.2-3B",
+      "Qwen2.5-Coder-32B",
+      "Yi-Coder-9B",
+      "deepseek-coder-1.3b-base",
+      "deepseek-coder-6.7b-base"
+    ],
+    "alfa_wilcoxon": 0.05
+  },
+  "seed": 42,
+  "date": "2026-11-12",
+  "approx_cost": "sem custo (Mac local)"
+}

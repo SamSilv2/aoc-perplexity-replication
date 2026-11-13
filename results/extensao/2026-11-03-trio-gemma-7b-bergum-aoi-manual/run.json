@@ -1,0 +1,29 @@
+{
+  "commit": "bd224b8125a95bb435337cbda770e41f2fd17229",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-03-reexecucao-gemma-7b-completo",
+      "codigo": "results/extensao/2026-11-03-reexecucao-codegemma-7b-completo",
+      "instruct": "results/extensao/2026-11-03-reexecucao-codegemma-7b-it-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "bergum",
+    "aoi": "manual",
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "google/gemma-7b",
+    "codigo": "google/codegemma-7b",
+    "instruct": "google/codegemma-7b-it"
+  },
+  "model_revision": {
+    "base": "ff6768d9368919a1f025a54f9f5aa0ee591730bb",
+    "codigo": "2ec970089fe8f083d10d1ce6bac30538ac4badaa",
+    "instruct": "078cdc51070553d1636d645c9a238f3b0914459a"
+  },
+  "date": "2026-11-03",
+  "approx_cost": "sem custo (Mac local)"
+}

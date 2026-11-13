@@ -1,0 +1,62 @@
+{
+  "descricao": "Pastas publicadas que cada etapa lê. Caminhos relativos à raiz do projeto. Gerado para a versão pública; aoc_perplexity.reproduzir grava um arquivo igual para os resultados que regenera.",
+  "trios": {
+    "principais": {
+      "Qwen2.5 3B|bergum": "results/extensao/2026-11-02-trio-qwen2.5-3b-bergum-aoi-manual",
+      "Qwen2.5 7B|bergum": "results/extensao/2026-11-04-trio-qwen2.5-7b-bergum-aoi-manual",
+      "Qwen2.5 32B (4 bits)|bergum": "results/extensao/2026-11-03-trio-qwen2.5-32b-4bit-bergum-aoi-manual",
+      "DeepSeek 7B|bergum": "results/extensao/2026-11-03-trio-deepseek-7b-bergum-aoi-manual",
+      "Yi 9B|bergum": "results/extensao/2026-11-03-trio-yi-9b-bergum-aoi-manual",
+      "Llama-2 7B|bergum": "results/extensao/2026-11-04-trio-llama-2-7b-bergum-aoi-manual",
+      "Llama-2 13B|bergum": "results/extensao/2026-11-05-trio-llama-2-13b-bergum-aoi-manual",
+      "Gemma 7B|bergum": "results/extensao/2026-11-03-trio-gemma-7b-bergum-aoi-manual",
+      "Qwen2.5 3B|gopstein": "results/extensao/2026-11-04-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1",
+      "Qwen2.5 7B|gopstein": "results/extensao/2026-11-04-trio-qwen2.5-7b-gopstein-aoi-manual-v2.1",
+      "Qwen2.5 32B (4 bits)|gopstein": "results/extensao/2026-11-04-trio-qwen2.5-32b-4bit-gopstein-aoi-manual-v2.1",
+      "DeepSeek 7B|gopstein": "results/extensao/2026-11-04-trio-deepseek-7b-gopstein-aoi-manual-v2.1",
+      "Yi 9B|gopstein": "results/extensao/2026-11-04-trio-yi-9b-gopstein-aoi-manual-v2.1",
+      "Llama-2 7B|gopstein": "results/extensao/2026-11-04-trio-llama-2-7b-gopstein-aoi-manual-v2.1",
+      "Llama-2 13B|gopstein": "results/extensao/2026-11-05-trio-llama-2-13b-gopstein-aoi-manual-v2.1",
+      "Gemma 7B|gopstein": "results/extensao/2026-11-04-trio-gemma-7b-gopstein-aoi-manual-v2.1"
+    },
+    "template": {
+      "Qwen2.5 3B|bergum": "results/extensao/2026-11-05-trio-qwen2.5-3b-bergum-aoi-manual-template",
+      "Qwen2.5 3B|gopstein": "results/extensao/2026-11-05-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1-template",
+      "DeepSeek 7B|bergum": "results/extensao/2026-11-05-trio-deepseek-7b-bergum-aoi-manual-template",
+      "DeepSeek 7B|gopstein": "results/extensao/2026-11-05-trio-deepseek-7b-gopstein-aoi-manual-v2.1-template"
+    },
+    "atomos": {
+      "DeepSeek 7B|confirmados": "results/extensao/2026-11-05-trio-deepseek-7b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "DeepSeek 7B|confirmados-indentacao": "results/extensao/2026-11-05-trio-deepseek-7b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Gemma 7B|confirmados": "results/extensao/2026-11-05-trio-gemma-7b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Gemma 7B|confirmados-indentacao": "results/extensao/2026-11-05-trio-gemma-7b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Llama-2 13B|confirmados": "results/extensao/2026-11-05-trio-llama-2-13b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Llama-2 13B|confirmados-indentacao": "results/extensao/2026-11-05-trio-llama-2-13b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Llama-2 7B|confirmados": "results/extensao/2026-11-05-trio-llama-2-7b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Llama-2 7B|confirmados-indentacao": "results/extensao/2026-11-05-trio-llama-2-7b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Qwen2.5 32B (4 bits)|confirmados": "results/extensao/2026-11-05-trio-qwen2.5-32b-4bit-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Qwen2.5 32B (4 bits)|confirmados-indentacao": "results/extensao/2026-11-05-trio-qwen2.5-32b-4bit-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Qwen2.5 3B|confirmados": "results/extensao/2026-11-05-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Qwen2.5 3B|confirmados-indentacao": "results/extensao/2026-11-05-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Qwen2.5 7B|confirmados": "results/extensao/2026-11-05-trio-qwen2.5-7b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Qwen2.5 7B|confirmados-indentacao": "results/extensao/2026-11-05-trio-qwen2.5-7b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao",
+      "Yi 9B|confirmados": "results/extensao/2026-11-05-trio-yi-9b-gopstein-aoi-manual-v2.1-atomos-confirmados",
+      "Yi 9B|confirmados-indentacao": "results/extensao/2026-11-05-trio-yi-9b-gopstein-aoi-manual-v2.1-atomos-confirmados-indentacao"
+    }
+  },
+  "etapas": {
+    "rq12": "results/replicacao/2026-10-30-rq1-rq2",
+    "rq3": "results/replicacao/2026-11-02-rq3",
+    "tabela_modelos": "results/replicacao/2026-11-02-tabela-por-modelo",
+    "consolidado": "results/extensao/2026-11-12-consolidado",
+    "eeg": "results/extensao/2026-11-12-eeg-java",
+    "sensibilidade": "results/extensao/2026-11-05-sensibilidade-aoi-gopstein",
+    "template": "results/extensao/2026-11-06-template-instruct",
+    "figuras": "results/extensao/2026-11-11-figuras",
+    "figuras_grade": "results/extensao/2026-11-12-figuras"
+  },
+  "execucoes_replicacao": {
+    "deepseek-coder-1.3b-base": "results/replicacao/2026-11-02-reexecucao-deepseek-coder-1.3b-base-completo",
+    "Qwen2.5-Coder-32B-4bit": "results/replicacao/2026-11-02-reexecucao-Qwen2.5-Coder-32B-4bit-completo"
+  }
+}

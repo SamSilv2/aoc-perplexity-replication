@@ -1,0 +1,21 @@
+{
+  "commit": "9d040850cebe687ec4c6481d5531c90865874031",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "quantização do repositório",
+    "backend": "mlx",
+    "dispositivo": "cpu",
+    "limite": 20,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "arquivos": 20,
+    "segundos": 15.6,
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "mlx-community/Qwen2.5-Coder-1.5B-4bit",
+  "model_revision": "a18a8bf7bf0563001cb807abff12a98d4a1ae43c",
+  "date": "2026-11-02",
+  "approx_cost": "sem custo (Mac local)"
+}

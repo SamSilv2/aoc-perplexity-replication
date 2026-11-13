@@ -1,0 +1,228 @@
+% Anexos do artigo (main.tex), incluídos depois das referências.
+\appendix
+% Numeração por anexo: Figura A.1, Tabela B.2 etc.
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+% Sem esticar o espaço vertical (o \flushbottom do template abre vãos entre as tabelas).
+\raggedbottom
+
+\section{Experimental Design}
+\label{app:design}
+
+Figure~\ref{fig:app-design} summarizes the experiment, Table~\ref{tab:app-models} lists the 24 checkpoints and Table~\ref{tab:app-revisions} the revision of each one.
+The reproduction (top row) checks the original analyses before the extension (bottom row) reuses their metric on new models and on the C dataset.
+In C, the maximum AOI-level metric uses 60 pairs from 20 atoms (the dead-code atom has no clean AOI), and the snippet-level metric all 63 pairs from 21 atoms; bootstrap clusters follow the atoms of each metric.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[
+      font=\footnotesize,
+      box/.style={draw, rounded corners=2pt, align=flush left, inner sep=4pt, text width=#1, minimum height=2.2cm},
+      box/.default=3cm,
+      lane/.style={font=\footnotesize\bfseries, anchor=west},
+      arr/.style={-{Latex[length=2mm]}, thick},
+      node distance=4mm]
+    % Reproduction
+    \node[lane] (rlab) at (0, 0) {Reproduction};
+    \node[box=3.4cm, below=1mm of rlab.south west, anchor=north west] (r1)
+      {\textbf{Published outputs}\\
+       Replication package of Abdelsalam et al.\ (6 models, 72 Java pairs, published FRP)};
+    \node[box=3.6cm, right=of r1] (r2)
+      {\textbf{Recomputation}\\
+       RQ1--RQ3 statistics for Qwen2.5-Coder-32B, compared with the paper and the authors' result files};
+    \node[box=3.6cm, right=of r2] (r3)
+      {\textbf{Re-execution}\\
+       \texttt{deepseek-coder-1.3b-base} in fp16, token by token (tolerance not met);\\
+       Qwen2.5-Coder-32B in 4 bits vs.\ published fp16};
+    \node[box=3.8cm, right=of r3] (r4)
+      {\textbf{Robustness}\\
+       Bootstrap clustered by base pair (24 clusters) for RQ1 and RQ2 of the six published models};
+    \draw[arr] (r1) -- (r2);
+    \draw[arr] (r2) -- (r3);
+    \draw[arr] (r3) -- (r4);
+
+    % Extension
+    \node[lane, below=5mm of r1.south west, anchor=north west] (elab) {Extension};
+    \node[box=3.4cm, below=1mm of elab.south west, anchor=north west] (e1)
+      {\textbf{Data}\\
+       Java: 72 pairs = 24 base pairs $\times$ 3 versions; AOI designed with the EEG stimuli\\
+       C: 63 pairs = 21 atoms $\times$ 3; AOI annotated by us (60 pairs, 20 atoms)};
+    \node[box=3.6cm, right=of e1] (e2)
+      {\textbf{Models}\\
+       8 trios, 5 families (Table~\ref{tab:app-models})\\[2pt]
+       $B \xrightarrow{\text{code}} C \xrightarrow{\text{instr.}} I$\\[2pt]
+       Plain snippets, no chat template; fp16 (32B trio: 4 bits)};
+    \node[box=3.6cm, right=of e2] (e3)
+      {\textbf{Metrics}\\
+       Per-token log-probabilities\\
+       Max.\ AOI-level PPL (primary); snippet-level mean PPL (secondary)\\
+       $\ell = \ln \mathrm{PPL}_{\mathrm{conf}} - \ln \mathrm{PPL}_{\mathrm{clean}}$, $\Delta = \bar{\ell}$};
+    \node[box=3.8cm, right=of e3] (e4)
+      {\textbf{Analyses}\\
+       Contrasts $\Dcb$, $\Dic$, $\Dib$\\
+       Cluster bootstrap: 10\,000 resamples, seed 42, shared within a trio\\
+       RQ2: Spearman $\rho$ with FRP (Java only)};
+    \draw[arr] (e1) -- (e2);
+    \draw[arr] (e2) -- (e3);
+    \draw[arr] (e3) -- (e4);
+    \draw[arr, dashed] (r3.south) -- node[right, font=\scriptsize, align=left] {scoring code\\checked in\\re-execution} (e3.north);
+  \end{tikzpicture}
+  \caption{Structure of the experiment. Top: reproduction of Abdelsalam et al.; bottom: extension to trios of related checkpoints and to the C dataset. The extension reuses the scoring implementation checked in the re-execution; most trios use an equivalent single forward pass per snippet.}
+  \label{fig:app-design}
+\end{figure}
+
+\begin{table}[H]
+  \caption{Checkpoints of the eight trios (Hugging Face identifiers). All trios are evaluated on Java and C.}
+  \label{tab:app-models}
+  \footnotesize
+  \begin{tabular}{llll}
+    \toprule
+    Trio & Base ($B$) & Code ($C$) & Instruct ($I$) \\
+    \midrule
+    Qwen2.5 3B & \texttt{Qwen/Qwen2.5-3B} & \texttt{Qwen/Qwen2.5-Coder-3B} & \texttt{Qwen/Qwen2.5-Coder-3B-Instruct} \\
+    Qwen2.5 7B & \texttt{Qwen/Qwen2.5-7B} & \texttt{Qwen/Qwen2.5-Coder-7B} & \texttt{Qwen/Qwen2.5-Coder-7B-Instruct} \\
+    Qwen2.5 32B (4 bits) & \texttt{mlx-community/Qwen2.5-32B-4bit} & \texttt{mlx-community/Qwen2.5-Coder-32B-4bit} & \texttt{mlx-community/Qwen2.5-Coder-32B-Instruct-4bit} \\
+    DeepSeek 7B & \texttt{deepseek-ai/deepseek-llm-7b-base} & \texttt{deepseek-ai/deepseek-coder-7b-base-v1.5} & \texttt{deepseek-ai/deepseek-coder-7b-instruct-v1.5} \\
+    Yi 9B & \texttt{01-ai/Yi-9B} & \texttt{01-ai/Yi-Coder-9B} & \texttt{01-ai/Yi-Coder-9B-Chat} \\
+    Llama-2 7B & \texttt{meta-llama/Llama-2-7b-hf} & \texttt{meta-llama/CodeLlama-7b-hf} & \texttt{meta-llama/CodeLlama-7b-Instruct-hf} \\
+    Llama-2 13B & \texttt{meta-llama/Llama-2-13b-hf} & \texttt{meta-llama/CodeLlama-13b-hf} & \texttt{meta-llama/CodeLlama-13b-Instruct-hf} \\
+    Gemma 7B & \texttt{google/gemma-7b} & \texttt{google/codegemma-7b} & \texttt{google/codegemma-7b-it} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \caption{Hugging Face revisions (first seven characters of the commit hash) of the checkpoints in Table~\ref{tab:app-models}, as recorded in the run of each model; every run of a checkpoint used the same revision.}
+  \label{tab:app-revisions}
+  \centering
+  \footnotesize
+  \begin{tabular}{llll}
+    \toprule
+    Trio & Base ($B$) & Code ($C$) & Instruct ($I$) \\
+    \midrule
+    Qwen2.5 3B & \texttt{3aab1f1} & \texttt{09d9bc5} & \texttt{488639f} \\
+    Qwen2.5 7B & \texttt{d149729} & \texttt{0396a76} & \texttt{c03e6d3} \\
+    Qwen2.5 32B (4 bits) & \texttt{2bea1f0} & \texttt{95a94c7} & \texttt{d1e3b69} \\
+    DeepSeek 7B & \texttt{7683fea} & \texttt{98f0904} & \texttt{2a050a4} \\
+    Yi 9B & \texttt{7b7ca5c} & \texttt{bc6e63f} & \texttt{356a1f8} \\
+    Llama-2 7B & \texttt{01c7f73} & \texttt{b462c3c} & \texttt{4ce0c40} \\
+    Llama-2 13B & \texttt{5c31dfb} & \texttt{bed8c60} & \texttt{c24689b} \\
+    Gemma 7B & \texttt{ff6768d} & \texttt{2ec9700} & \texttt{078cdc5} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\clearpage
+\section{Reproduction Details}
+\label{app:reproduction}
+
+Table~\ref{tab:app-reproduction} compares the published and recomputed statistics of Qwen2.5-Coder-32B, Table~\ref{tab:app-reexecution} the local re-execution of \texttt{deepseek-coder-1.3b-base}, and Table~\ref{tab:app-quantized} the effect of running Qwen2.5-Coder-32B in 4 bits.
+RQ1 asks whether confusing snippets have higher perplexity than clean ones (Wilcoxon signed-rank test), RQ2 whether maximum AOI-level perplexity correlates with the FRP (Spearman), and RQ3 whether regions of high perplexity detected automatically overlap the atoms.
+For RQ3 we recompute the statistics from the released detected regions without rerunning the detection; as in the original code, \emph{overlap} groups the snippets in which a detected region overlaps the atom, and the bootstrap resamples snippets, not the 24 base pairs used in the extension.
+The acceptance criteria were fixed before the analyses: statistics equal to the published ones after rounding and, for the re-execution, identical tokens and an absolute log-probability difference of at most 0.01 for at least 99\% of the tokens.
+
+\begin{table}[H]
+  \centering
+  \caption{Published versus recomputed results for Qwen2.5-Coder-32B. A check mark indicates agreement after rounding to the published precision. $N$: nonzero paired differences used by the Wilcoxon test (72 pairs in total). RQ3: mean of the bootstrap correlations over snippets, as in the original analysis, with the number of regions and snippets of each group.}
+  \label{tab:app-reproduction}
+  \small
+  \begin{tabular}{llll}
+    \toprule
+    Analysis & Published & Recomputed & \\
+    \midrule
+    \multicolumn{4}{l}{\textit{RQ1: Wilcoxon signed-rank, confusing vs.\ clean ($W$, $p$, $r$)}} \\
+    Snippet, avg.\ ($N = 72$) & 941, .036, .247 & 941, .036, .247 & \checkmark \\
+    Snippet, max.\ ($N = 26$) & 97, .046, .391 & 97, .046, .391 & \checkmark \\
+    AOI, avg.\ ($N = 72$) & 686, $<$.001, .415 & 686, $<$.001, .415 & \checkmark \\
+    AOI, max.\ ($N = 72$) & 638, $<$.001, .447 & 638, $<$.001, .447 & \checkmark \\
+    \midrule
+    \multicolumn{4}{l}{\textit{RQ2: Spearman, max.\ AOI perplexity vs.\ FRP ($\rho$, $p$)}} \\
+    Confusing & .47, $<$.001 & .47, $<$.001 & \checkmark \\
+    Clean & .05, .664 & .06, .600 & \\
+    \midrule
+    \multicolumn{4}{l}{\textit{RQ3: snippet-clustered bootstrap, mean Spearman $\rho$ [95\% CI] (regions/snippets)}} \\
+    Confusing (101/66) & .37 [.19, .53] & .37 [.19, .53] & \checkmark \\
+    Clean (93/59) & .31 [.10, .50] & .31 [.10, .50] & \checkmark \\
+    Overlap, clean (49/25) & .38 [.10, .70] & .42 [.10, .70] & \\
+    No overlap, clean (44/34) & .24 [$-$.05, .49] & .24 [$-$.05, .49] & \checkmark \\
+    Overlap, confusing (68/46) & .33 [.12, .52] & .33 [.12, .52] & \checkmark \\
+    No overlap, confusing (33/20) & .36 [$-$.05, .71] & .36 [$-$.05, .71] & \checkmark \\
+    \bottomrule
+  \end{tabular}
+
+  \smallskip
+  \parbox{\textwidth}{\footnotesize Point estimates in the authors' result files: RQ2 clean $\rho = .063$, $p = .600$; RQ3 overlap, clean $\rho = .406$ (the paper reports the bootstrap mean, .418 in our recomputation).}
+\end{table}
+
+\begin{table}[H]
+  \begin{minipage}[t]{0.48\textwidth}
+    \caption{Snippet-level average perplexity of \texttt{deepseek-coder-1.3b-base} over the 72 pairs: published output versus our local re-execution. Perplexities are medians; $W$, $p$ and $r$ are the statistic, $p$ value and effect size ($r = |Z|/\sqrt{N}$) of the Wilcoxon signed-rank test, confusing vs.\ clean (RQ1), with $N = 72$ nonzero differences in both runs.}
+    \label{tab:app-reexecution}
+    \small
+    \begin{tabular}{lrrrrr}
+      \toprule
+      Run & Clean & Confusing & $W$ & $p$ & $r$ \\
+      \midrule
+      Published & 14.22 & 20.13 & 864 & .012 & .298 \\
+      Ours (Apple Silicon, fp16) & 14.21 & 20.14 & 863 & .011 & .298 \\
+      \bottomrule
+    \end{tabular}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \caption{RQ1 for \texttt{Qwen2.5-Coder-32B}: published fp16 output versus our 4-bit re-execution ($W$, $p$, $r$). Tokens are identical, but 4-bit log-probabilities are lower (median absolute difference 0.28, Spearman 0.96): median snippet-level perplexity rises from 15.31 to 21.41 (clean) and from 17.73 to 26.40 (confusing); the paired test compares confusing and clean snippets within the same run. $N = 72$ nonzero differences, except Snippet, max.: 26 (fp16) and 13 (4-bit).}
+    \label{tab:app-quantized}
+    \small
+    \begin{tabular}{lll}
+      \toprule
+      Metric & Published (fp16) & 4-bit \\
+      \midrule
+      Snippet, avg.\ & 941, .036, .247 & 989, .068, .215 \\
+      Snippet, max.\ & 97, .046, .391 & 36, .529, .184 \\
+      AOI, avg.\ & 686, $<$.001, .415 & 769, .002, .360 \\
+      AOI, max.\ & 638, $<$.001, .447 & 615, $<$.001, .462 \\
+      \bottomrule
+    \end{tabular}
+  \end{minipage}
+\end{table}
+
+\clearpage
+\section{Detailed Results}
+\label{app:results}
+
+Table~\ref{tab:app-aoi} gives the confusion effect of each model and the three contrasts for the primary metric, and Table~\ref{tab:app-snippet} the same for the secondary snippet-level metric.
+The Spearman correlation between perplexity and the FRP for every Java model is in Table~\ref{tab:app-eeg}, and Figures~\ref{fig:app-eeg-llama} and~\ref{fig:app-eeg-qwen} show, for the Llama-2 and Qwen2.5 trios, how perplexity and the FRP change from the clean to the confusing version of each base pair in Java.
+All intervals are nominal 95\% percentile bootstrap intervals, not adjusted for multiple comparisons.
+
+\begin{table}[H]
+  \caption{Confusion effect ($\Delta$) and contrasts for maximum AOI-level perplexity (primary metric), with nominal 95\% bootstrap confidence intervals; C uses 60 pairs from 20 atoms. Bold: interval excludes zero. Contrasts are computed from unrounded values, so displayed components may differ by 0.01.}
+  \label{tab:app-aoi}
+  \footnotesize\setlength{\tabcolsep}{3pt}
+  \input{../results/extensao/2026-11-12-consolidado/tabela-aoi_max.tex}
+\end{table}
+
+\begin{table}[H]
+  \caption{Confusion effect ($\Delta$) and contrasts for the snippet-level average perplexity (secondary metric), with nominal 95\% bootstrap confidence intervals. C uses all 63 pairs from 21 atoms. Bold: interval excludes zero. Gemma 7B is not reported for this metric: \texttt{codegemma-7b-it} assigns a log-probability of about $-395$ to the first token of every snippet, which dominates the snippet-level average; the value persisted in a 20-snippet diagnostic with fp32 arithmetic, suggesting that fp16 rounding alone does not explain it. The first token lies outside the AOIs, so the trio is reported in Table~\ref{tab:app-aoi}.}
+  \label{tab:app-snippet}
+  \footnotesize\setlength{\tabcolsep}{3pt}
+  \input{../results/extensao/2026-11-12-consolidado/tabela-snippet_media.tex}
+\end{table}
+
+\begin{table}[H]
+  \caption{Spearman correlation between maximum AOI-level perplexity and the FRP in Java, per snippet, with nominal 95\% bootstrap intervals clustered by base pair (24 clusters). The FRP is the per-snippet mean amplitude released by Abdelsalam et al.~\cite{abdelsalam2026} (\texttt{clean\_mean\_eeg} and \texttt{obf\_mean\_eeg}), the same for every model. Bold: interval excludes zero.}
+  \label{tab:app-eeg}
+  \centering
+  \footnotesize
+  \input{../results/extensao/2026-11-12-eeg-java/tabela-correlacoes.tex}
+\end{table}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{../results/extensao/2026-11-12-figuras/eeg-grade-llama2.pdf}
+  \caption{Maximum AOI-level perplexity (geometric mean over the three versions of each base pair, log scale) vs.\ mean FRP for the base, code and instruct models of the Llama-2 trios (7B and 13B). Each arrow goes from the clean to the confusing version of one base pair (24 per panel), colored by direction: both perplexity and FRP increase (expected), only one increases (partial), or both decrease (opposite); the green arrow is the mean over base pairs; triangles on the right edge mark values above $10^6$. $\rho_{\mathrm{conf}}$ is the per-snippet Spearman correlation on confusing snippets (Table~\ref{tab:app-eeg}). Percentages are rounded and may not sum to 100\%.}
+  \label{fig:app-eeg-llama}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{../results/extensao/2026-11-12-figuras/eeg-grade-qwen25.pdf}
+  \caption{Same as Figure~\ref{fig:app-eeg-llama} for the Qwen2.5 trios (3B, 7B and 32B, the latter in 4 bits).}
+  \label{fig:app-eeg-qwen}
+\end{figure}

@@ -1,0 +1,33 @@
+{
+  "commit": "bd224b8125a95bb435337cbda770e41f2fd17229",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "uma_passagem": true,
+    "dispositivo_entrada": "mps",
+    "dispositivo_inferencia": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "bergum",
+      "gopstein"
+    ],
+    "arquivos": {
+      "bergum": 144,
+      "gopstein": 126
+    },
+    "segundos": {
+      "bergum": 46.2,
+      "gopstein": 55.0
+    },
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "google/codegemma-7b",
+  "model_revision": "2ec970089fe8f083d10d1ce6bac30538ac4badaa",
+  "date": "2026-11-03",
+  "approx_cost": "sem custo (Mac local)"
+}

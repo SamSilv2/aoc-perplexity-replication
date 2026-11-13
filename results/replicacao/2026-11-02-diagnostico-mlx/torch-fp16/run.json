@@ -1,0 +1,21 @@
+{
+  "commit": "9d040850cebe687ec4c6481d5531c90865874031",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "dispositivo": "mps",
+    "limite": 20,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "arquivos": 20,
+    "segundos": 32.2,
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "date": "2026-11-02",
+  "approx_cost": "sem custo (Mac local)"
+}

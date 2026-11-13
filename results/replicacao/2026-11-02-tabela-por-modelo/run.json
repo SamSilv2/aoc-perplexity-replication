@@ -1,0 +1,13 @@
+{
+  "commit": "2b439cd4b8c3a34c83d850a5bbf96896bcf374e0",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "estatistica": "mediana por condição; r do Wilcoxon pareado"
+  },
+  "seed": null,
+  "model": "6 modelos publicados e reexecução do 1.3B",
+  "model_revision": null,
+  "date": "2026-11-02",
+  "approx_cost": "sem custo"
+}

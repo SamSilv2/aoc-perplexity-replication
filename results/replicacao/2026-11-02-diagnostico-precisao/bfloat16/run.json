@@ -1,0 +1,28 @@
+{
+  "commit": "dbb2a3e7f0cb976c837577b9ebd1ed5a653d5201",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "bfloat16",
+    "dispositivo": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "arquivos": 144,
+    "segundos": 175.3,
+    "comparacao": {
+      "arquivos": 144,
+      "arquivos_com_tokens_iguais": 144,
+      "tokens_comparados": 3588,
+      "fracao_ate_tolerancia": 0.3971571906354515,
+      "diferenca_mediana": 0.0185546875,
+      "diferenca_maxima": 1.2265625,
+      "tolerancia": 0.01
+    }
+  },
+  "seed": null,
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "model_revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "date": "2026-11-02",
+  "approx_cost": "sem custo (Mac local)"
+}

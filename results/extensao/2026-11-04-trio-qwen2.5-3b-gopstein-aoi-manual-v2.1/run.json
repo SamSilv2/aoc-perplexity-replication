@@ -1,0 +1,38 @@
+{
+  "commit": "c4c5df48f0d8a9dcd46c00dd56300c1ef67e628f",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-02-reexecucao-Qwen2.5-3B-completo",
+      "codigo": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-completo",
+      "instruct": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-Instruct-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "gopstein",
+    "aoi": "manual",
+    "anotacao": {
+      "versao": "v2.1",
+      "arquivo": "data/anotacoes/gopstein-aoi-v2.1.csv",
+      "sha256": "8ebc846fb9d403c4b9291b70585546bd5f1c3ca03308344bee06aabe6c335e24"
+    },
+    "n_pares": {
+      "aoi_max": 60,
+      "snippet_media": 63
+    },
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "Qwen/Qwen2.5-3B",
+    "codigo": "Qwen/Qwen2.5-Coder-3B",
+    "instruct": "Qwen/Qwen2.5-Coder-3B-Instruct"
+  },
+  "model_revision": {
+    "base": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+    "codigo": "09d9bc5d376b0cfa0100a0694ea7de7232525803",
+    "instruct": "488639f1ff808d1d3d0ba301aef8c11461451ec5"
+  },
+  "date": "2026-11-04",
+  "approx_cost": "sem custo (Mac local)"
+}

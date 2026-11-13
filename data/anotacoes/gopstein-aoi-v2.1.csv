@@ -1,0 +1,242 @@
+id,snippet,atomo,versao,lado,inicio,fim,trecho,ocorrencia,nivel_aprox,origem,na_metrica_aoi,justificativa,revisao,alternativa,observacao,sha256_snippet
+1,1-obf-v0,add_CONDITION_atom,v0,obf,44,55,! (V1 % V2),0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,3f429b33bf1ccddd
+2,1-clean-v0,add_CONDITION_atom,v0,clean,44,58,(V2 - V1) == 0,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,0cdb3b30a806dab6
+3,1-obf-v1,add_CONDITION_atom,v1,obf,38,44,V1 = 8,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,e3578212ecff4ae6
+4,1-clean-v1,add_CONDITION_atom,v1,clean,36,49,(V1 = 8) != 0,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,77592429e753c6f4
+5,1-obf-v2,add_CONDITION_atom,v2,obf,21,25,"""V1""",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,c94f8d500a9dd771
+6,1-clean-v2,add_CONDITION_atom,v2,clean,21,33,"""V1"" != '\0'",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,2d4be4c753d3c251
+7,2-obf-v0,add_PARENTHESIS_atom,v0,obf,34,43,2 - 4 / 2,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,fd096dd7af7eb11e
+8,2-clean-v0,add_PARENTHESIS_atom,v0,clean,34,45,3 + (9 / 3),0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,8de1bbb28d9b638f
+9,2-obf-v1,add_PARENTHESIS_atom,v1,obf,21,29,! 0 && 2,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,7101eb70c4fa6b81
+10,2-clean-v1,add_PARENTHESIS_atom,v1,clean,22,32,1 && (! 0),0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,06dea30387293c76
+11,2-obf-v2,add_PARENTHESIS_atom,v2,obf,21,32,0 && 1 || 2,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,58588b243bcfb99f
+12,2-clean-v2,add_PARENTHESIS_atom,v2,clean,21,34,(2 && 0) || 5,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,569e375e3c2ab501
+13,3-obf-v0,move_POST_INC_DEC_atom,v0,obf,42,50,3 + V1++,0,NEXP,independente,sim,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",,,,3fd0bffb12837172
+14,3-clean-v0,move_POST_INC_DEC_atom,v0,clean,43,49,V1 + 3,0,NEXP,regra_v2.1,sim,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",,Do uso ao incremento: V1 + 3; V1++ (v2 sem o alvo e o ';').,v2.1: reduzida (1c/1e).,85e2df7a1ca0b5ee
+15,3-obf-v1,move_POST_INC_DEC_atom,v1,obf,37,46,V1++ == 0,0,NEXP,independente,sim,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",,,,9c1aa75a404221c2
+16,3-clean-v1,move_POST_INC_DEC_atom,v1,clean,37,44,V1 == 0,0,NEXP,regra_v2.1,sim,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,"Do teste ao incremento, com os corpos do if (v2).",v2.1: reduzida (1c/1e/3).,8c265f1a2d01dcb6
+17,3-obf-v2,move_POST_INC_DEC_atom,v2,obf,37,46,V1-- == 1,0,NEXP,independente,sim,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",,,,8662da77eda66f54
+18,3-clean-v2,move_POST_INC_DEC_atom,v2,clean,37,44,V1 == 1,0,NEXP,regra_v2.1,sim,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,"Do teste ao decremento, com os corpos do if (v2).",v2.1: reduzida (1c/1e/3).,92069eb00d195655
+19,4-obf-v0,move_PRE_INC_DEC_atom,v0,obf,42,50,++V1 - 2,0,NEXP,independente,sim,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,,,,521060dea9ace49b
+20,4-clean-v0,move_PRE_INC_DEC_atom,v0,clean,51,57,5 - V1,0,NEXP,regra_v2.1,sim,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,,Do incremento ao uso: ++V1; V2 = 5 - V1 (v2 sem o ';').,v2.1: reduzida (1c/1e).,2f2e536f0bfb9f4d
+21,4-obf-v1,move_PRE_INC_DEC_atom,v1,obf,37,46,--V1 == 1,0,NEXP,independente,sim,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,,,,1aebf0f2ba20506a
+22,4-clean-v1,move_PRE_INC_DEC_atom,v1,clean,46,53,V1 == 1,0,NEXP,regra_v2.1,sim,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,,Do decremento ao teste: V1--; if (V1 == 1 (v2 sem ') {').,v2.1: reduzida (1c/1e).,5c093a210953e368
+23,4-obf-v2,move_PRE_INC_DEC_atom,v2,obf,42,50,--V1 + 3,0,NEXP,independente,sim,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,,,,caf51a11f1065e6f
+24,4-clean-v2,move_PRE_INC_DEC_atom,v2,clean,42,48,9 - V1,0,NEXP,regra_v2.1,sim,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,,Do uso ao decremento: 9 - V1; --V1 (v2 sem o alvo e o ';').,O limpo de Gopstein faz a conta antes do decremento: não é o mesmo cálculo do confuso. v2.1: reduzida (1c/1e).,c9c36c4bbc71e495
+25,5-obf-v0,replace_CONSTANTVARIABLE_atom,v0,obf,41,47,V1 + 2,0,NEXP,equipe,sim,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,Da declaração até a conta (v2).,v2.1: reduzida (1b/1c/3).,24d6d64e8c5ef044
+26,5-clean-v0,replace_CONSTANTVARIABLE_atom,v0,clean,27,32,2 + 3,0,NEXP,ambas,sim,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,,,,1b731c25fb8d1a1e
+27,5-obf-v1,replace_CONSTANTVARIABLE_atom,v1,obf,41,47,2 * V1,0,NEXP,equipe,sim,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,Da declaração até a conta (v2).,v2.1: reduzida (1b/1c/3).,dc1965b98549fcd8
+28,5-clean-v1,replace_CONSTANTVARIABLE_atom,v1,clean,26,31,3 * 2,0,NEXP,ambas,sim,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,,,,f4ff5587248b4a44
+29,5-obf-v2,replace_CONSTANTVARIABLE_atom,v2,obf,47,55,2.5 * V1,0,NEXP,equipe,sim,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,Da declaração até a conta (v2).,v2.1: reduzida (1b/1c/3).,2274a4e633827ad5
+30,5-clean-v2,replace_CONSTANTVARIABLE_atom,v2,clean,32,39,2 * 4.5,0,NEXP,ambas,sim,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,,,,951e7c4eab17ad81
+31,6-obf-v0,remove_INDENTATION_atom,v0,obf,63,133,"if (V1)
+      if (V2)
+         V3 = V3 + 2;
+   else
+      V3 = V3 + 4;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,496f71244c930eca
+32,6-clean-v0,remove_INDENTATION_atom,v0,clean,63,139,"if (V1)
+      if (V2)
+         V3 = V3 + 2;
+      else
+         V3 = V3 + 4;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,0e7f41d90143b7e0
+33,6-obf-v1,remove_INDENTATION_atom,v1,obf,40,78,"while (V2 > 0)
+      V2--;
+      V1++;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,8916257e49c2a0c9
+34,6-clean-v1,remove_INDENTATION_atom,v1,clean,40,75,"while (V2 > 0)
+      V2--;
+   V1++;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,ff0a34b7f4c349c7
+35,6-obf-v2,remove_INDENTATION_atom,v2,obf,40,74,"if (V1 > V2)
+   V2 = 1;
+   V1 = 2;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,2ff67b0390536a01
+36,6-clean-v2,remove_INDENTATION_atom,v2,clean,40,77,"if (V1 < V2)
+      V1 = 2;
+   V2 = 5;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,b2a47c15bcbeb900
+37,7-obf-v0,replace_MACRO_atom,v0,obf,51,57,M1 * 2,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta. O #define fica fora: a confusão aparece no uso.,,,,2f677d41d43778e3
+38,7-clean-v0,replace_MACRO_atom,v0,clean,32,43,128 - 1 * 2,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta. O #define fica fora: a confusão aparece no uso.,,,,3e11f78f9789d3ac
+39,7-obf-v1,replace_MACRO_atom,v1,obf,53,69,"M1(1 + 2, 3 + 4)",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta. O #define fica fora: a confusão aparece no uso.,,,,d1ad7c1472270ea8
+40,7-clean-v1,replace_MACRO_atom,v1,clean,25,38,2 + 1 * 4 + 3,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta. O #define fica fora: a confusão aparece no uso.,,,,afd4ac400137f559
+41,7-obf-v2,replace_MACRO_atom,v2,obf,57,73,"M1(1 + 2, 3 + 4)",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta. O #define fica fora: a confusão aparece no uso.,,,,ea3cbbf732c766f2
+42,7-clean-v2,replace_MACRO_atom,v2,clean,25,42,(2 + 1) * (3 + 4),0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta. O #define fica fora: a confusão aparece no uso.,,,,3e3144ab8441bb2b
+43,8-obf-v0,replace_Mixed_Pointer_Integer_Arithmetic,v0,obf,28,40,"""abcdef"" + 3",0,NEXP,ambas,sim,"A AOI é a conta de ponteiro inteira; se ela é feita em mais de um comando, vai do primeiro ao último passo. Limpo: o mesmo na forma &…[…].",,,,89a9caf6168e77d3
+44,8-clean-v0,replace_Mixed_Pointer_Integer_Arithmetic,v0,clean,28,42,"&(""abcdef""[2])",0,NEXP,ambas,sim,"A AOI é a conta de ponteiro inteira; se ela é feita em mais de um comando, vai do primeiro ao último passo. Limpo: o mesmo na forma &…[…].",,,,8753ce9d4049ef02
+45,8-obf-v1,replace_Mixed_Pointer_Integer_Arithmetic,v1,obf,55,61,V1 + 1,0,NEXP,ambas,sim,"A AOI é a conta de ponteiro inteira; se ela é feita em mais de um comando, vai do primeiro ao último passo. Limpo: o mesmo na forma &…[…].",,,,6ca39c298f193ec1
+46,8-clean-v1,replace_Mixed_Pointer_Integer_Arithmetic,v1,clean,55,61,&V1[1],0,NEXP,ambas,sim,"A AOI é a conta de ponteiro inteira; se ela é feita em mais de um comando, vai do primeiro ao último passo. Limpo: o mesmo na forma &…[…].",,,,fde5c254080ad949
+47,8-obf-v2,replace_Mixed_Pointer_Integer_Arithmetic,v2,obf,55,77,"V1 + 1;
+   V2 = V2 + 2",0,STAT,regra_v2.1,sim,"A AOI é a conta de ponteiro inteira; se ela é feita em mais de um comando, vai do primeiro ao último passo. Limpo: o mesmo na forma &…[…].",,,v2.1: reduzida (1c).,69472f2433539f9e
+48,8-clean-v2,replace_Mixed_Pointer_Integer_Arithmetic,v2,clean,55,77,"&V1[1];
+   V2 = &V2[2]",0,STAT,regra_v2.1,sim,"A AOI é a conta de ponteiro inteira; se ela é feita em mais de um comando, vai do primeiro ao último passo. Limpo: o mesmo na forma &…[…].",,,v2.1: reduzida (1c).,ddb040844eb5be89
+49,9-obf-v0,replace_Ternary_Operator,v0,obf,42,57,V1 == 3 ? 2 : 1,0,NEXP,ambas,sim,"Decisão fechada: confuso, a expressão ternária inteira; limpo, o if/else inteiro equivalente.",mantido (ternario_virgula),,,7fb3b24ba9f3c6c4
+50,9-clean-v0,replace_Ternary_Operator,v0,clean,61,120,"if (V1 == 3) {
+      V3 = 2;
+   } else {
+      V3 = 1;
+   }",0,BLOCK,independente,sim,"Decisão fechada: confuso, a expressão ternária inteira; limpo, o if/else inteiro equivalente.",mantido (ternario_virgula),,v2.1 mantida: Razão > 2: o if/else é o equivalente de ?: (R4); as atribuições ficam no meio e não podem sair sem quebrar a continuidade.,47be7c12236116fc
+51,9-obf-v1,replace_Ternary_Operator,v1,obf,72,121,(V1 == 2 ? (V3 == 2 ? 1 : 2) : (V2 == 2 ? 3 : 4)),0,NEXP,ambas,sim,"Decisão fechada: confuso, a expressão ternária inteira; limpo, o if/else inteiro equivalente.",mantido (ternario_virgula),,,7c5d16b37e64c038
+52,9-clean-v1,replace_Ternary_Operator,v1,clean,74,261,"if (V1 == 2) {
+      if (V3 == 2) {
+         V4 = 1;
+      } else {
+         V4 = 2;
+      }
+   } else {
+      if (V2 == 2) {
+         V4 = 3;
+      } else {
+         V4 = 4;
+      }
+   }",0,BLOCK,independente,sim,"Decisão fechada: confuso, a expressão ternária inteira; limpo, o if/else inteiro equivalente.",mantido (ternario_virgula),,v2.1 mantida: Razão > 2: o if/else aninhado é o equivalente dos ?: aninhados (R4); nada sai da borda.,2060a4e1dda2b9fe
+53,9-obf-v2,replace_Ternary_Operator,v2,obf,72,89,V1 == 3 ? V2 : V3,0,NEXP,ambas,sim,"Decisão fechada: confuso, a expressão ternária inteira; limpo, o if/else inteiro equivalente.",mantido (ternario_virgula),,,28eda38beeafa843
+54,9-clean-v2,replace_Ternary_Operator,v2,clean,74,136,"if (V1 == 3){
+      V4 = V2;
+   }
+   else{
+      V4 = V3;
+   }",0,BLOCK,independente,sim,"Decisão fechada: confuso, a expressão ternária inteira; limpo, o if/else inteiro equivalente.",mantido (ternario_virgula),,v2.1 mantida: Razão > 2: o if/else é o equivalente de ?: (R4); nada sai da borda.,465d94b0f2476257
+55,10-obf-v0,replace_Arithmetic_As_Logic,v0,obf,37,61,(V1 - 3) * (7 - V1) <= 0,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,db540519bca84d05
+56,10-clean-v0,replace_Arithmetic_As_Logic,v0,clean,37,55,3 <= V1 || V1 >= 7,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,5adb88b1ba89b0d8
+57,10-obf-v1,replace_Arithmetic_As_Logic,v1,obf,37,60,(V1 - 2) * (6 - V1) > 0,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,04e1e0182b2f3bd2
+58,10-clean-v1,replace_Arithmetic_As_Logic,v1,clean,37,53,V1 < 2 || 6 < V1,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,ad2b9ba7201fb8f2
+59,10-obf-v2,replace_Arithmetic_As_Logic,v2,obf,37,48,V1 + 5 != 0,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,6e6b673db82182ec
+60,10-clean-v2,replace_Arithmetic_As_Logic,v2,clean,37,45,V1 != -5,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,409bba9e787201b3
+61,11-obf-v0,replace_Comma_Operator,v0,obf,38,49,"(V2 = 1, 2)",0,NEXP,ambas,sim,"Decisão fechada: confuso, a expressão com vírgula inteira; limpo, os comandos separados que fazem o mesmo.",mantido (ternario_virgula),,,118549c8a9f4f37f
+62,11-clean-v0,replace_Comma_Operator,v0,clean,38,50,"2;
+   V2 = 1",0,STAT,regra_v2.1,sim,"Decisão fechada: confuso, a expressão com vírgula inteira; limpo, os comandos separados que fazem o mesmo.",alterado (ternario_virgula; item 1c/3),,v2.1: reduzida (1c/3).,bc9285a9e58e26ef
+63,11-obf-v1,replace_Comma_Operator,v1,obf,41,59,"(V1 *= 2, V1 += 1)",0,NEXP,ambas,sim,"Decisão fechada: confuso, a expressão com vírgula inteira; limpo, os comandos separados que fazem o mesmo.",mantido (ternario_virgula),,,b1c69eb8794b1a31
+64,11-clean-v1,replace_Comma_Operator,v1,clean,35,66,"V1 *= 2;
+
+   int V2 = (V1 += 1)",0,STAT,regra_v2.1,sim,"Decisão fechada: confuso, a expressão com vírgula inteira; limpo, os comandos separados que fazem o mesmo.",alterado (ternario_virgula; item 1c/3),,v2.1: reduzida (1c/3).,461e649a4978218f
+65,11-obf-v2,replace_Comma_Operator,v2,obf,41,59,"(V1 += 1, V1 *= 2)",0,NEXP,ambas,sim,"Decisão fechada: confuso, a expressão com vírgula inteira; limpo, os comandos separados que fazem o mesmo.",mantido (ternario_virgula),,,a957808608cb3c03
+66,11-clean-v2,replace_Comma_Operator,v2,clean,35,66,"V1 += 1;
+
+   int V2 = (V1 *= 2)",0,STAT,regra_v2.1,sim,"Decisão fechada: confuso, a expressão com vírgula inteira; limpo, os comandos separados que fazem o mesmo.",alterado (ternario_virgula; item 1c/3),,v2.1: reduzida (1c/3).,c1da13d56551cee1
+67,12-obf-v0,move_Preprocessor_Directives_Inside_Statements,v0,obf,28,62,"""abcdef""
+   #define M1
+   ""abcdef""",0,STAT,regra_v2.1,sim,"A diretiva altera o resultado do comando em que está. Confuso: a estrutura que contém a diretiva. Limpo: o cálculo equivalente (o comando sem a diretiva, ou as diretivas que valem).",,,v2.1: reduzida (1c).,cb27e3b47f0842e7
+68,12-clean-v0,move_Preprocessor_Directives_Inside_Statements,v0,clean,28,48,"""abcdef""
+   ""abcdef""",0,STAT,regra_v2.1,sim,"A diretiva altera o resultado do comando em que está. Confuso: a estrutura que contém a diretiva. Limpo: o cálculo equivalente (o comando sem a diretiva, ou as diretivas que valem).",,,v2.1: reduzida (1c).,78b81fafe37c5911
+69,12-obf-v1,move_Preprocessor_Directives_Inside_Statements,v1,obf,49,93,"1
+   #define M1 1
+   +
+   #define M2 2
+   V1",0,STAT,regra_v2.1,sim,"A diretiva altera o resultado do comando em que está. Confuso: a estrutura que contém a diretiva. Limpo: o cálculo equivalente (o comando sem a diretiva, ou as diretivas que valem).",,,"v2.1: reduzida (1c). v2.1 mantida: Razão < 0,5: as diretivas no meio da expressão são o próprio átomo; nada sai sem perdê-lo. No limpo, as diretivas estão fora do cálculo.",329fad8e66b4b2b3
+70,12-clean-v1,move_Preprocessor_Directives_Inside_Statements,v1,clean,82,88,1 + V1,0,NEXP,independente,sim,"A diretiva altera o resultado do comando em que está. Confuso: a estrutura que contém a diretiva. Limpo: o cálculo equivalente (o comando sem a diretiva, ou as diretivas que valem).",,,,cd64946af6ab08b9
+71,12-obf-v2,move_Preprocessor_Directives_Inside_Statements,v2,obf,41,148,"if (V1 < V2) {
+      #define M1 1
+      #define M2 2
+   } else {
+      #define M1 2
+      #define M2 1
+   }",0,BLOCK,independente,sim,"A diretiva altera o resultado do comando em que está. Confuso: a estrutura que contém a diretiva. Limpo: o cálculo equivalente (o comando sem a diretiva, ou as diretivas que valem).",,,"v2.1 mantida: Razão < 0,5: o if/else é o que faz as diretivas parecerem condicionais; sem ele a AOI perde o átomo.",a16cd38195cc704a
+72,12-clean-v2,move_Preprocessor_Directives_Inside_Statements,v2,clean,40,68,"#define M1 2
+   #define M2 1",0,STAT,independente,sim,"A diretiva altera o resultado do comando em que está. Confuso: a estrutura que contém a diretiva. Limpo: o cálculo equivalente (o comando sem a diretiva, ou as diretivas que valem).",,,,817944eb73da63d8
+73,13-obf-v0,Constant Assignment,v0,obf,37,43,V1 = 1,0,NEXP,ambas,sim,O cálculo tem duas partes: guardar o valor e testar o resultado. Confuso: a condição inteira com a atribuição. Limpo: da atribuição até o teste.,,,,e306557d94d969ed
+74,13-clean-v0,Constant Assignment,v0,clean,32,49,"V1 = 1;
+   if (1)",0,BLOCK,regra_v2.1,sim,O cálculo tem duas partes: guardar o valor e testar o resultado. Confuso: a condição inteira com a atribuição. Limpo: da atribuição até o teste.,,,v2.1: reduzida (1c). v2.1 mantida: Razão > 2: o cálculo do limpo tem duas partes (atribuição e teste) em comandos separados; nenhuma sai sem perder o cálculo.,aa7679ac130efdd5
+75,13-obf-v1,Constant Assignment,v1,obf,37,43,V1 = 0,1,NEXP,independente,sim,O cálculo tem duas partes: guardar o valor e testar o resultado. Confuso: a condição inteira com a atribuição. Limpo: da atribuição até o teste.,,,,ebd378039b17a12f
+76,13-clean-v1,Constant Assignment,v1,clean,33,52,"V1 = 0;
+
+   if (V1)",0,BLOCK,regra_v2.1,sim,O cálculo tem duas partes: guardar o valor e testar o resultado. Confuso: a condição inteira com a atribuição. Limpo: da atribuição até o teste.,,,v2.1: reduzida (1c). v2.1 mantida: Razão > 2: o cálculo do limpo tem duas partes (atribuição e teste) em comandos separados; nenhuma sai sem perder o cálculo.,406b87932bd53332
+77,13-obf-v2,Constant Assignment,v2,obf,55,64,!(V1 = 3),0,NEXP,independente,sim,O cálculo tem duas partes: guardar o valor e testar o resultado. Confuso: a condição inteira com a atribuição. Limpo: da atribuição até o teste.,,,,c9a6ae337c74849b
+78,13-clean-v2,Constant Assignment,v2,clean,48,70,"V1 = 4;
+
+   while (!4)",0,BLOCK,regra_v2.1,sim,O cálculo tem duas partes: guardar o valor e testar o resultado. Confuso: a condição inteira com a atribuição. Limpo: da atribuição até o teste.,,,v2.1: reduzida (1c).,328dbe7c3b79fff7
+79,14-obf-v0,Logic as Control Flow,v0,obf,52,64,++V1 || ++V2,0,NEXP,ambas,sim,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",,,,d85f380ca9b7ab37
+80,14-clean-v0,Logic as Control Flow,v0,clean,48,121,"if (++V1) {
+        V1 = V1 * 2;
+        V2 = V2 * 2;
+   } else if (++V2)",0,BLOCK,regra_v2.1,sim,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,"O if/else inteiro, com o segundo corpo.",AOI do limpo inclui o primeiro corpo por continuidade: é o menor trecho contíguo que vai do primeiro ao último teste. v2.1: reduzida (1c/3). v2.1 mantida: Razão > 2: o menor trecho contíguo do primeiro ao último teste passa pelo primeiro corpo (continuidade); a opção maior está em alternativa.,626bd6453373cba3
+81,14-obf-v1,Logic as Control Flow,v1,obf,48,72,V1 == V2 && ++V1 || ++V2,0,NEXP,equipe,sim,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",,,"Expressão sem ';', como em v0 e v2 (a independente inclui o ';').",b8ecf332e546ba82
+82,14-clean-v1,Logic as Control Flow,v1,clean,48,98,"if (V1 == V2) {
+      ++V1;
+   } else {
+      ++V2",0,BLOCK,regra_v2.1,sim,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",,,v2.1: reduzida (1c/1e).,86cb17a01f5aa0ff
+83,14-obf-v2,Logic as Control Flow,v2,obf,70,86,V1 != V2 && ++V1,0,NEXP,ambas,sim,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",,,,6e216ed0801e9be7
+84,14-clean-v2,Logic as Control Flow,v2,clean,64,116,"while (V1 != V2) {
+      ++V1;
+      if (!V1) break;",0,BLOCK,independente,sim,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",,,v2.1 mantida: Razão > 2: o while com o if/break é o equivalente de && no teste do laço (R4); do primeiro teste ao último pedaço.,684e7a2f8d010fed
+85,15-obf-v0,Re-purposed variables,v0,obf,31,115,"V1[4] = 3;
+
+   while (V1[4]) {
+      V1[3 - V1[4]] = V1[4];
+      V1[4] = V1[4] - 1;",0,BLOCK,independente,sim,"Para seguir a variável é preciso ver onde é definida, alterada e usada nos dois papéis. Confuso: da primeira à última aparição. Limpo: a mesma região, com as variáveis separadas.",,,,0dfd47a46d819e41
+86,15-clean-v0,Re-purposed variables,v0,clean,31,101,"int V2 = 5;
+
+   while (V2) {
+      V1[5 - V2] = V2;
+      V2 = V2 - 1;",0,BLOCK,independente,sim,"Para seguir a variável é preciso ver onde é definida, alterada e usada nos dois papéis. Confuso: da primeira à última aparição. Limpo: a mesma região, com as variáveis separadas.",,,,973ef8a40ea1c7fb
+87,15-obf-v1,Re-purposed variables,v1,obf,72,130,"for (int V2 = 0; V1 < 2; V1++) {
+        V3 = 4 * V1 + V2;",0,BLOCK,novo,sim,"Para seguir a variável é preciso ver onde é definida, alterada e usada nos dois papéis. Confuso: da primeira à última aparição. Limpo: a mesma região, com as variáveis separadas.",mantido (novo),,A independente marcou só o cabeçalho do for interno e deixou fora o uso do V1 alterado.,b01301d9cb8ed0d7
+88,15-clean-v1,Re-purposed variables,v1,clean,72,131,"for (int V2 = 0; V2 < 2; V2++) {
+         V3 = 4 * V1 + V2;",0,BLOCK,regra_v2.1,sim,"Para seguir a variável é preciso ver onde é definida, alterada e usada nos dois papéis. Confuso: da primeira à última aparição. Limpo: a mesma região, com as variáveis separadas.",,,v2.1: reduzida (1c).,6eb923eb081e9317
+89,15-obf-v2,Re-purposed variables,v2,obf,67,156,"V1 = (V2 < 1);
+      if (V1) {
+         V1 = V2 + 5;
+      } else {
+         V1 = V1 + 2;",0,BLOCK,independente,sim,"Para seguir a variável é preciso ver onde é definida, alterada e usada nos dois papéis. Confuso: da primeira à última aparição. Limpo: a mesma região, com as variáveis separadas.",,,,2386e094c7babf45
+90,15-clean-v2,Re-purposed variables,v2,clean,67,160,"int V3 = (V2 < 1);
+      if (V3) {
+         V1 = V2 + 4;
+      } else {
+         V1 = V3 + 4;",0,BLOCK,independente,sim,"Para seguir a variável é preciso ver onde é definida, alterada e usada nos dois papéis. Confuso: da primeira à última aparição. Limpo: a mesma região, com as variáveis separadas.",,,,271e62260d989d51
+91,16-obf-v0,Swapped subscripts,v0,obf,27,37,"2[""qwert""]",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,50088289eaa7c974
+92,16-clean-v0,Swapped subscripts,v0,clean,27,37,"""zxcvb""[4]",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,955cfcd92617844c
+93,16-obf-v1,Swapped subscripts,v1,obf,43,54,"V1[""zxcvb""]",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,4f2f07005531b9fd
+94,16-clean-v1,Swapped subscripts,v1,clean,43,54,"""asdfg""[V1]",0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,f3a5085c616cc40d
+95,16-obf-v2,Swapped subscripts,v2,obf,67,73,V1[V2],0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,a3eebe5ce83615c6
+96,16-clean-v2,Swapped subscripts,v2,clean,67,73,V2[V1],0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,5ab7b7e5fe5e0322
+97,17-obf-v0,"Dead, unreachable, repeated",v0,obf,33,40,V1 = 3;,0,STAT,ambas,nao,"Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",alterado (novo; item 2),V1 = 3; V1 = 2; (v2: inclui o que torna o trecho morto).,"Inclui a atribuição seguinte, que é o que torna V1 = 3 morto. v2.1: reduzida (2).",aae4194e6c52d374
+98,17-clean-v0,"Dead, unreachable, repeated",v0,clean,,,,,,excluido,nao,"Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",,,,9063d500c237fbdc
+99,17-obf-v1,"Dead, unreachable, repeated",v1,obf,33,60,"if (0) {
+      V1 = 3;
+   }",0,BLOCK,independente,nao,"Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",,,,973f78368f339309
+100,17-clean-v1,"Dead, unreachable, repeated",v1,clean,,,,,,excluido,nao,"Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",,,,7839ebad52229eb0
+101,17-obf-v2,"Dead, unreachable, repeated",v2,obf,33,41,V1 = V1;,0,STAT,ambas,nao,"Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",,,,d8967cbee6411232
+102,17-clean-v2,"Dead, unreachable, repeated",v2,clean,,,,,,excluido,nao,"Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",,,,02f95db783f6d1de
+103,18-obf-v0,Literal encoding,v0,obf,27,30,104,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,a7e78ea50d9aba0b
+104,18-clean-v0,Literal encoding,v0,clean,27,30,'g',0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,38d84cece981561d
+105,18-obf-v1,Literal encoding,v1,obf,26,29,013,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,830c4e2d78c2b376
+106,18-clean-v1,Literal encoding,v1,clean,27,29,23,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,3beed419a8021b76
+107,18-obf-v2,Literal encoding,v2,obf,26,34,208 & 13,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,5f7ce776ee63ee4a
+108,18-clean-v2,Literal encoding,v2,clean,27,38,0xD0 & 0x0D,0,NEXP,ambas,sim,O átomo muda só a forma de uma expressão; o comando ao redor é igual nos dois lados. Confuso: a expressão afetada. Limpo: a expressão que faz a mesma conta.,,,,b41762350c957bdb
+109,19-obf-v0,Curly braces,v0,obf,33,51,if (0) V1++; V1++;,0,STAT,ambas,sim,"Para saber o que o if/for controla é preciso o cabeçalho e os comandos. Confuso: o if/for completo e os comandos que parecem dentro dele. Limpo: o mesmo, com chaves.",,,,d85a1f2b95958458
+110,19-clean-v0,Curly braces,v0,clean,33,55,if (0) { V1++; } V1++;,0,BLOCK,ambas,sim,"Para saber o que o if/for controla é preciso o cabeçalho e os comandos. Confuso: o if/for completo e os comandos que parecem dentro dele. Limpo: o mesmo, com chaves.",,,,261aac79bda31130
+111,19-obf-v1,Curly braces,v1,obf,48,74,while (V2 < 3) V2++; V1++;,0,STAT,ambas,sim,"Para saber o que o if/for controla é preciso o cabeçalho e os comandos. Confuso: o if/for completo e os comandos que parecem dentro dele. Limpo: o mesmo, com chaves.",,,,af5d2d113ec7b740
+112,19-clean-v1,Curly braces,v1,clean,48,78,while (V2 < 3) { V2++; } V1++;,0,BLOCK,ambas,sim,"Para saber o que o if/for controla é preciso o cabeçalho e os comandos. Confuso: o if/for completo e os comandos que parecem dentro dele. Limpo: o mesmo, com chaves.",,,,820035e513f272c3
+113,19-obf-v2,Curly braces,v2,obf,33,75,for (int V2 = 0; V2 < 3; V2++) V1++; V1++;,0,STAT,independente,sim,"Para saber o que o if/for controla é preciso o cabeçalho e os comandos. Confuso: o if/for completo e os comandos que parecem dentro dele. Limpo: o mesmo, com chaves.",,,,05dff11abea156a6
+114,19-clean-v2,Curly braces,v2,clean,33,79,for (int V2 = 0; V2 < 3; V2++) { V1++; } V1++;,0,BLOCK,independente,sim,"Para saber o que o if/for controla é preciso o cabeçalho e os comandos. Confuso: o if/for completo e os comandos que parecem dentro dele. Limpo: o mesmo, com chaves.",,,,de6eaeedc2b29e45
+115,20-obf-v0,Type conversion,v0,obf,38,50,int V2 = V1;,0,STAT,ambas,sim,"Confuso: o comando em que a conversão implícita acontece (não há expressão própria). Limpo: a região que faz a conversão explícita, expressão ou estrutura.",,,,2f2481a7e60138a8
+116,20-clean-v0,Type conversion,v0,clean,65,74,trunc(V1),0,NEXP,ambas,sim,"Confuso: o comando em que a conversão implícita acontece (não há expressão própria). Limpo: a região que faz a conversão explícita, expressão ou estrutura.",,,,fe32210092dfa3b7
+117,20-obf-v1,Type conversion,v1,obf,34,55,unsigned int V2 = V1;,0,STAT,ambas,sim,"Confuso: o comando em que a conversão implícita acontece (não há expressão própria). Limpo: a região que faz a conversão explícita, expressão ou estrutura.",,,,a21e35c2f3869822
+118,20-clean-v1,Type conversion,v1,clean,75,153,"if (V1 >= 0) {
+      V2 = V1;
+   } else {
+      V2 = UINT_MAX + (V1 + 1);
+   }",0,BLOCK,independente,sim,"Confuso: o comando em que a conversão implícita acontece (não há expressão própria). Limpo: a região que faz a conversão explícita, expressão ou estrutura.",,,v2.1 mantida: Razão > 2: a conversão explícita do limpo é condicional; tirar o teste ou um ramo perde a equivalência.,3fabec0f400053cc
+119,20-obf-v2,Type conversion,v2,obf,35,48,char V2 = V1;,0,STAT,ambas,sim,"Confuso: o comando em que a conversão implícita acontece (não há expressão própria). Limpo: a região que faz a conversão explícita, expressão ou estrutura.",,,,78501c55e68e5e61
+120,20-clean-v2,Type conversion,v2,clean,45,53,V1 % 256,0,NEXP,ambas,sim,"Confuso: o comando em que a conversão implícita acontece (não há expressão própria). Limpo: a região que faz a conversão explícita, expressão ou estrutura.",,,,d3fd0f7935bb8631
+121,21-obf-v0,Indentation,v0,obf,48,72,"if (V1) {}
+      V2 = 4;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,f829061edc6fcf44
+122,21-clean-v0,Indentation,v0,clean,48,69,"if (V1) {}
+   V2 = 4;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,4fd57d76ded9e127
+123,21-obf-v1,Indentation,v1,obf,48,95,"if (V1) {
+      V2 = 2;
+   }
+      V2 = V2 * 3;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,da127fd4a59b7a13
+124,21-clean-v1,Indentation,v1,clean,48,92,"if (V1) {
+      V2 = 2;
+   }
+   V2 = V2 * 2;",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,20f0a89a674e063a
+125,21-obf-v2,Indentation,v2,obf,63,150,"if (V1) {
+      if (V2) {
+         V3 = V3 +2;
+   } else {
+      V3 = V3 + 4;
+   }
+   }",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,3122e9474b2619bd
+126,21-clean-v2,Indentation,v2,clean,59,150,"if (V1) {
+     if (V2) {
+        V3 = V3 + 2;
+     } else {
+        V3 = V3 + 4;
+     }
+  }",0,BLOCK,independente,sim,"A confusão é a qual estrutura cada comando pertence. Confuso: a estrutura inteira cujo recuo engana (BLOCK). Limpo: a mesma estrutura, recuo correto.",,,,726b036d7dc0fba3

@@ -1,0 +1,49 @@
+trio,quantidade,v1,v2,v2.1,classe
+qwen2.5-3b,Delta_base,"+, IC exclui 0","+, IC inclui 0","+, IC inclui 0",dependente da anotação
+qwen2.5-3b,Delta_codigo,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+qwen2.5-3b,Delta_instruct,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+qwen2.5-3b,D,"-, IC inclui 0","+, IC exclui 0","+, IC inclui 0",dependente da anotação
+qwen2.5-3b,D_codigo,"-, IC inclui 0","+, IC inclui 0","+, IC inclui 0",dependente da anotação
+qwen2.5-3b,D_instrucao,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+qwen2.5-7b,Delta_base,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+qwen2.5-7b,Delta_codigo,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+qwen2.5-7b,Delta_instruct,"+, IC exclui 0","+, IC exclui 0","+, IC exclui 0",robusto
+qwen2.5-7b,D,"+, IC exclui 0","+, IC exclui 0","+, IC exclui 0",robusto
+qwen2.5-7b,D_codigo,"+, IC inclui 0","-, IC inclui 0","+, IC inclui 0",dependente da anotação
+qwen2.5-7b,D_instrucao,"+, IC exclui 0","+, IC exclui 0","+, IC exclui 0",robusto
+qwen2.5-32b-4bit,Delta_base,"+, IC exclui 0","+, IC exclui 0","+, IC exclui 0",robusto
+qwen2.5-32b-4bit,Delta_codigo,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+qwen2.5-32b-4bit,Delta_instruct,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+qwen2.5-32b-4bit,D,"-, IC inclui 0","+, IC inclui 0","+, IC inclui 0",dependente da anotação
+qwen2.5-32b-4bit,D_codigo,"-, IC exclui 0","-, IC exclui 0","-, IC exclui 0",robusto
+qwen2.5-32b-4bit,D_instrucao,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+deepseek-7b,Delta_base,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+deepseek-7b,Delta_codigo,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+deepseek-7b,Delta_instruct,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+deepseek-7b,D,"-, IC inclui 0","-, IC inclui 0","-, IC inclui 0",robusto
+deepseek-7b,D_codigo,"-, IC inclui 0","-, IC inclui 0","-, IC inclui 0",robusto
+deepseek-7b,D_instrucao,"-, IC inclui 0","-, IC inclui 0","+, IC inclui 0",dependente da anotação
+gemma-7b,Delta_base,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+gemma-7b,Delta_codigo,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+gemma-7b,Delta_instruct,"+, IC exclui 0","+, IC exclui 0","+, IC exclui 0",robusto
+gemma-7b,D,"+, IC exclui 0","+, IC exclui 0","+, IC exclui 0",robusto
+gemma-7b,D_codigo,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+gemma-7b,D_instrucao,"+, IC exclui 0","+, IC inclui 0","+, IC exclui 0",dependente da anotação
+yi-9b,Delta_base,"+, IC inclui 0","+, IC exclui 0","+, IC inclui 0",dependente da anotação
+yi-9b,Delta_codigo,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+yi-9b,Delta_instruct,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+yi-9b,D,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+yi-9b,D_codigo,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+yi-9b,D_instrucao,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-7b,Delta_base,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-7b,Delta_codigo,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-7b,Delta_instruct,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-7b,D,"+, IC inclui 0","-, IC inclui 0","+, IC inclui 0",dependente da anotação
+llama-2-7b,D_codigo,"-, IC inclui 0","-, IC inclui 0","-, IC inclui 0",robusto
+llama-2-7b,D_instrucao,"+, IC inclui 0","+, IC inclui 0","+, IC inclui 0",robusto
+llama-2-13b,Delta_base,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-13b,Delta_codigo,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-13b,Delta_instruct,"+, IC inclui 0","+, IC exclui 0","+, IC exclui 0",dependente da anotação
+llama-2-13b,D,"-, IC inclui 0","-, IC inclui 0","-, IC exclui 0",dependente da anotação
+llama-2-13b,D_codigo,"-, IC inclui 0","-, IC inclui 0","-, IC exclui 0",dependente da anotação
+llama-2-13b,D_instrucao,"-, IC inclui 0","-, IC inclui 0","-, IC inclui 0",robusto

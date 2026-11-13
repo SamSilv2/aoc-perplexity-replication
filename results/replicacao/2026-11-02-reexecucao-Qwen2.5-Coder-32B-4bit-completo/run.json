@@ -1,0 +1,29 @@
+{
+  "commit": "9d040850cebe687ec4c6481d5531c90865874031",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "quantização do repositório",
+    "backend": "mlx",
+    "dispositivo": "cpu",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "arquivos": 144,
+    "segundos": 3575.1,
+    "comparacao": {
+      "arquivos": 144,
+      "arquivos_com_tokens_iguais": 144,
+      "tokens_comparados": 3529,
+      "fracao_ate_tolerancia": 0.07055823179370926,
+      "diferenca_mediana": 0.28245747089385986,
+      "diferenca_maxima": 11.5694580078125,
+      "tolerancia": 0.01
+    }
+  },
+  "seed": null,
+  "model": "mlx-community/Qwen2.5-Coder-32B-4bit",
+  "model_revision": "95a94c79c01609c0ebd6eebab4164a65d2a690b8",
+  "date": "2026-11-02",
+  "approx_cost": "sem custo (Mac local)"
+}

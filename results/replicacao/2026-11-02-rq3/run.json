@@ -1,0 +1,19 @@
+{
+  "commit": "b073b06df01eeec65079cc14a6c577aafbf01d26",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "fonte": "data/external/llm-perplexity-AoC/model_results/Qwen2.5-Coder-32B",
+    "reamostragens": 10000,
+    "listas_de_sobreposicao_iguais_as_publicadas": true,
+    "regioes_novas_por_regiao": {
+      "limpo": 85,
+      "confuso": 69
+    }
+  },
+  "seed": 42,
+  "model": "Qwen2.5-Coder-32B (resultados publicados, sem reexecução)",
+  "model_revision": null,
+  "date": "2026-11-02",
+  "approx_cost": "sem custo"
+}

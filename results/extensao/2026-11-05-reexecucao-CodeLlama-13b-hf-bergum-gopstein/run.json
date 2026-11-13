@@ -1,0 +1,35 @@
+{
+  "commit": "72a44e3b447298635e0d2c60916cae3497900e6e",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "tokenizador": "meta-llama/CodeLlama-13b-hf",
+    "tokenizador_revisao": "bed8c603d9ad262851259de64609337fea3b620d",
+    "uma_passagem": true,
+    "dispositivo_entrada": "mps",
+    "dispositivo_inferencia": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "bergum",
+      "gopstein"
+    ],
+    "arquivos": {
+      "bergum": 144,
+      "gopstein": 126
+    },
+    "segundos": {
+      "bergum": 1225.4,
+      "gopstein": 87.6
+    },
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "meta-llama/CodeLlama-13b-hf",
+  "model_revision": "bed8c603d9ad262851259de64609337fea3b620d",
+  "date": "2026-11-05",
+  "approx_cost": "sem custo (Mac local)"
+}

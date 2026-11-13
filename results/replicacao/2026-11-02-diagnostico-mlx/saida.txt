@@ -1,0 +1,2 @@
+mlx-sem-quantizacao: mediana |Δ| 0.0245, média com sinal -0.0030
+mlx-4bit: mediana |Δ| 0.4502, média com sinal -0.3054

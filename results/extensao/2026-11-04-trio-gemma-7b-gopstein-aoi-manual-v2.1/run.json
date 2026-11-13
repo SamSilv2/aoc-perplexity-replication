@@ -1,0 +1,38 @@
+{
+  "commit": "c4c5df48f0d8a9dcd46c00dd56300c1ef67e628f",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-03-reexecucao-gemma-7b-completo",
+      "codigo": "results/extensao/2026-11-03-reexecucao-codegemma-7b-completo",
+      "instruct": "results/extensao/2026-11-03-reexecucao-codegemma-7b-it-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "gopstein",
+    "aoi": "manual",
+    "anotacao": {
+      "versao": "v2.1",
+      "arquivo": "data/anotacoes/gopstein-aoi-v2.1.csv",
+      "sha256": "8ebc846fb9d403c4b9291b70585546bd5f1c3ca03308344bee06aabe6c335e24"
+    },
+    "n_pares": {
+      "aoi_max": 60,
+      "snippet_media": 63
+    },
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "google/gemma-7b",
+    "codigo": "google/codegemma-7b",
+    "instruct": "google/codegemma-7b-it"
+  },
+  "model_revision": {
+    "base": "ff6768d9368919a1f025a54f9f5aa0ee591730bb",
+    "codigo": "2ec970089fe8f083d10d1ce6bac30538ac4badaa",
+    "instruct": "078cdc51070553d1636d645c9a238f3b0914459a"
+  },
+  "date": "2026-11-04",
+  "approx_cost": "sem custo (Mac local)"
+}

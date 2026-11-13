@@ -1,0 +1,32 @@
+{
+  "commit": "53787a0bff925c7b616c5a0bca6016b7a22ffeab",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "uma_passagem": true,
+    "dispositivo": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "bergum",
+      "gopstein"
+    ],
+    "arquivos": {
+      "bergum": 144,
+      "gopstein": 126
+    },
+    "segundos": {
+      "bergum": 37.0,
+      "gopstein": 43.7
+    },
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "deepseek-ai/deepseek-coder-7b-instruct-v1.5",
+  "model_revision": "2a050a4c59d687a85324d32e147517992117ed30",
+  "date": "2026-11-03",
+  "approx_cost": "sem custo (Mac local)"
+}

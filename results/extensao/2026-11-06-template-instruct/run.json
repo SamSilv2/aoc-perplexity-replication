@@ -1,0 +1,81 @@
+{
+  "commit": "eac1b0720cf6c1d304a9ac9b125da7e63accea48",
+  "codigo_alterado": false,
+  "config": {
+    "decisao": "0021",
+    "reamostragens": 10000,
+    "ic": "percentis 2,5 e 97,5; bootstrap dos átomos (pares-base), o mesmo sorteio de trio.analisar (semente 42)",
+    "anotacao_de_C": "v2.1",
+    "valores_sem_template": "2026-11-05-consolidado-3 (conferidos linha a linha)",
+    "trios": {
+      "Qwen2.5 3B bergum": {
+        "sem": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-Instruct-completo",
+        "com": "results/extensao/2026-11-05-reexecucao-Qwen2.5-Coder-3B-Instruct-bergum-gopstein-template",
+        "trio_sem": "2026-11-02-trio-qwen2.5-3b-bergum-aoi-manual",
+        "trio_com": "2026-11-05-trio-qwen2.5-3b-bergum-aoi-manual-template"
+      },
+      "Qwen2.5 3B gopstein": {
+        "sem": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-Instruct-completo",
+        "com": "results/extensao/2026-11-05-reexecucao-Qwen2.5-Coder-3B-Instruct-bergum-gopstein-template",
+        "trio_sem": "2026-11-04-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1",
+        "trio_com": "2026-11-05-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1-template"
+      },
+      "DeepSeek 7B bergum": {
+        "sem": "results/extensao/2026-11-03-reexecucao-deepseek-coder-7b-instruct-v1.5-completo",
+        "com": "results/extensao/2026-11-05-reexecucao-deepseek-coder-7b-instruct-v1.5-bergum-gopstein-template",
+        "trio_sem": "2026-11-03-trio-deepseek-7b-bergum-aoi-manual",
+        "trio_com": "2026-11-05-trio-deepseek-7b-bergum-aoi-manual-template"
+      },
+      "DeepSeek 7B gopstein": {
+        "sem": "results/extensao/2026-11-03-reexecucao-deepseek-coder-7b-instruct-v1.5-completo",
+        "com": "results/extensao/2026-11-05-reexecucao-deepseek-coder-7b-instruct-v1.5-bergum-gopstein-template",
+        "trio_sem": "2026-11-04-trio-deepseek-7b-gopstein-aoi-manual-v2.1",
+        "trio_com": "2026-11-05-trio-deepseek-7b-gopstein-aoi-manual-v2.1-template"
+      }
+    },
+    "resumo": {
+      "casos": 8,
+      "delta_i_cai": 6,
+      "maior_queda": {
+        "trio": "Qwen2.5 3B",
+        "linguagem": "Java",
+        "metrica": "aoi_max",
+        "queda": 0.490186341520813
+      },
+      "muda_de_sinal": [],
+      "muda_status_do_ic": [
+        {
+          "trio": "Qwen2.5 3B",
+          "linguagem": "Java",
+          "metrica": "snippet_media",
+          "quantidade": "D_instrucao",
+          "sem": [
+            -0.1075153301011412,
+            0.07333140894128229
+          ],
+          "com": [
+            0.020928458136871313,
+            0.132750237240648
+          ]
+        },
+        {
+          "trio": "DeepSeek 7B",
+          "linguagem": "C",
+          "metrica": "aoi_max",
+          "quantidade": "Delta_instruct",
+          "sem": [
+            0.1058324384689331,
+            1.8788068354626495
+          ],
+          "com": [
+            -0.07124453042944272,
+            1.906022580514351
+          ]
+        }
+      ]
+    }
+  },
+  "seed": 42,
+  "date": "2026-11-06",
+  "approx_cost": "sem custo (Mac local)"
+}

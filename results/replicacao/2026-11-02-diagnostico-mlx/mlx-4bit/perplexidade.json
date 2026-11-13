@@ -1,0 +1,3572 @@
+{
+  "-clean-v0": {
+    "code": "int V1 = 10;\nint V2 = 3;\nboolean R = (V1 - V2 > 5);",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "1",
+      "0",
+      ";\n",
+      "int",
+      " V",
+      "2",
+      " =",
+      " ",
+      "3",
+      ";\n",
+      "boolean",
+      " R",
+      " =",
+      " (",
+      "V",
+      "1",
+      " -",
+      " V",
+      "2",
+      " >",
+      " ",
+      "5",
+      ");"
+    ],
+    "summary": {
+      "overall_perplexity": 8.794513153916029,
+      "mean_perplexity": 364.82051296042,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 28
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "1",
+        "position": 5,
+        "log_prob": -1.9754685163497925,
+        "perplexity": 7.209996864032342
+      },
+      {
+        "token": "0",
+        "position": 6,
+        "log_prob": -1.2758307456970215,
+        "perplexity": 3.5816756361406354
+      },
+      {
+        "token": ";\n",
+        "position": 7,
+        "log_prob": -2.767735719680786,
+        "perplexity": 15.922540067706501
+      },
+      {
+        "token": "int",
+        "position": 8,
+        "log_prob": -1.2072665691375732,
+        "perplexity": 3.344330650718251
+      },
+      {
+        "token": " V",
+        "position": 9,
+        "log_prob": -0.6670891642570496,
+        "perplexity": 1.94855712785758
+      },
+      {
+        "token": "2",
+        "position": 10,
+        "log_prob": -0.053155217319726944,
+        "perplexity": 1.0545933235652483
+      },
+      {
+        "token": " =",
+        "position": 11,
+        "log_prob": -0.023638339713215828,
+        "perplexity": 1.023919939740074
+      },
+      {
+        "token": " ",
+        "position": 12,
+        "log_prob": -0.15795743465423584,
+        "perplexity": 1.1711163446745938
+      },
+      {
+        "token": "3",
+        "position": 13,
+        "log_prob": -2.574902057647705,
+        "perplexity": 13.130031109379148
+      },
+      {
+        "token": ";\n",
+        "position": 14,
+        "log_prob": -1.2064210176467896,
+        "perplexity": 3.3415040421408193
+      },
+      {
+        "token": "boolean",
+        "position": 15,
+        "log_prob": -4.264164924621582,
+        "perplexity": 71.10551670747257
+      },
+      {
+        "token": " R",
+        "position": 16,
+        "log_prob": -4.721763610839844,
+        "perplexity": 112.36624835645264
+      },
+      {
+        "token": " =",
+        "position": 17,
+        "log_prob": -0.398226261138916,
+        "perplexity": 1.4891809355660446
+      },
+      {
+        "token": " (",
+        "position": 18,
+        "log_prob": -2.6546363830566406,
+        "perplexity": 14.219814553660816
+      },
+      {
+        "token": "V",
+        "position": 19,
+        "log_prob": -0.20229995250701904,
+        "perplexity": 1.224215159450831
+      },
+      {
+        "token": "1",
+        "position": 20,
+        "log_prob": -0.12450993806123734,
+        "perplexity": 1.1325932761856508
+      },
+      {
+        "token": " -",
+        "position": 21,
+        "log_prob": -3.8814520835876465,
+        "perplexity": 48.49458215637522
+      },
+      {
+        "token": " V",
+        "position": 22,
+        "log_prob": -0.04015912488102913,
+        "perplexity": 1.0409764062607476
+      },
+      {
+        "token": "2",
+        "position": 23,
+        "log_prob": -0.0033483414445072412,
+        "perplexity": 1.0033539534015565
+      },
+      {
+        "token": " >",
+        "position": 24,
+        "log_prob": -2.1175246238708496,
+        "perplexity": 8.310540292242386
+      },
+      {
+        "token": " ",
+        "position": 25,
+        "log_prob": -0.17749111354351044,
+        "perplexity": 1.1942174454939378
+      },
+      {
+        "token": "5",
+        "position": 26,
+        "log_prob": -2.6390295028686523,
+        "perplexity": 13.999610430967756
+      },
+      {
+        "token": ");",
+        "position": 27,
+        "log_prob": -2.274284839630127,
+        "perplexity": 9.720964477501111
+      }
+    ]
+  },
+  "-obf-v0": {
+    "code": "int V1 = 10;\nint V2 = 3;\nboolean R = ( !(V1 - V2 < 6) );",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "1",
+      "0",
+      ";\n",
+      "int",
+      " V",
+      "2",
+      " =",
+      " ",
+      "3",
+      ";\n",
+      "boolean",
+      " R",
+      " =",
+      " (",
+      " !(",
+      "V",
+      "1",
+      " -",
+      " V",
+      "2",
+      " <",
+      " ",
+      "6",
+      ")",
+      " );"
+    ],
+    "summary": {
+      "overall_perplexity": 11.651835722690329,
+      "mean_perplexity": 562.4965179023691,
+      "max_perplexity": 6556.666332285287,
+      "token_count": 30
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "1",
+        "position": 5,
+        "log_prob": -1.9754685163497925,
+        "perplexity": 7.209996864032342
+      },
+      {
+        "token": "0",
+        "position": 6,
+        "log_prob": -1.2758307456970215,
+        "perplexity": 3.5816756361406354
+      },
+      {
+        "token": ";\n",
+        "position": 7,
+        "log_prob": -2.767735719680786,
+        "perplexity": 15.922540067706501
+      },
+      {
+        "token": "int",
+        "position": 8,
+        "log_prob": -1.2072665691375732,
+        "perplexity": 3.344330650718251
+      },
+      {
+        "token": " V",
+        "position": 9,
+        "log_prob": -0.6670891642570496,
+        "perplexity": 1.94855712785758
+      },
+      {
+        "token": "2",
+        "position": 10,
+        "log_prob": -0.053155217319726944,
+        "perplexity": 1.0545933235652483
+      },
+      {
+        "token": " =",
+        "position": 11,
+        "log_prob": -0.023638339713215828,
+        "perplexity": 1.023919939740074
+      },
+      {
+        "token": " ",
+        "position": 12,
+        "log_prob": -0.15795743465423584,
+        "perplexity": 1.1711163446745938
+      },
+      {
+        "token": "3",
+        "position": 13,
+        "log_prob": -2.574902057647705,
+        "perplexity": 13.130031109379148
+      },
+      {
+        "token": ";\n",
+        "position": 14,
+        "log_prob": -1.2064210176467896,
+        "perplexity": 3.3415040421408193
+      },
+      {
+        "token": "boolean",
+        "position": 15,
+        "log_prob": -4.264164924621582,
+        "perplexity": 71.10551670747257
+      },
+      {
+        "token": " R",
+        "position": 16,
+        "log_prob": -4.721763610839844,
+        "perplexity": 112.36624835645264
+      },
+      {
+        "token": " =",
+        "position": 17,
+        "log_prob": -0.398226261138916,
+        "perplexity": 1.4891809355660446
+      },
+      {
+        "token": " (",
+        "position": 18,
+        "log_prob": -2.6546363830566406,
+        "perplexity": 14.219814553660816
+      },
+      {
+        "token": " !(",
+        "position": 19,
+        "log_prob": -8.788237571716309,
+        "perplexity": 6556.666332285287
+      },
+      {
+        "token": "V",
+        "position": 20,
+        "log_prob": -1.1265640258789062,
+        "perplexity": 3.0850381571249708
+      },
+      {
+        "token": "1",
+        "position": 21,
+        "log_prob": -0.24912554025650024,
+        "perplexity": 1.282903078942325
+      },
+      {
+        "token": " -",
+        "position": 22,
+        "log_prob": -3.941594123840332,
+        "perplexity": 51.50063428669402
+      },
+      {
+        "token": " V",
+        "position": 23,
+        "log_prob": -0.04527043551206589,
+        "perplexity": 1.0463107812429102
+      },
+      {
+        "token": "2",
+        "position": 24,
+        "log_prob": -0.0036174117121845484,
+        "perplexity": 1.0036239624424468
+      },
+      {
+        "token": " <",
+        "position": 25,
+        "log_prob": -2.9835948944091797,
+        "perplexity": 19.75871963477063
+      },
+      {
+        "token": " ",
+        "position": 26,
+        "log_prob": -0.4128568172454834,
+        "perplexity": 1.511128642881686
+      },
+      {
+        "token": "6",
+        "position": 27,
+        "log_prob": -4.632336616516113,
+        "perplexity": 102.75388023587578
+      },
+      {
+        "token": ")",
+        "position": 28,
+        "log_prob": -0.24853113293647766,
+        "perplexity": 1.2821407385541217
+      },
+      {
+        "token": " );",
+        "position": 29,
+        "log_prob": -1.8166985511779785,
+        "perplexity": 6.151515973374064
+      }
+    ]
+  },
+  "10-clean-v0": {
+    "code": "int V1 = 2;\n++V1;\nint R = V1 - 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "++",
+      "V",
+      "1",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " V",
+      "1",
+      " -",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 20.054896477774175,
+      "mean_perplexity": 991.4919760630361,
+      "max_perplexity": 9212.406515316767,
+      "token_count": 20
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "++",
+        "position": 7,
+        "log_prob": -9.12830638885498,
+        "perplexity": 9212.406515316767
+      },
+      {
+        "token": "V",
+        "position": 8,
+        "log_prob": -1.9941163063049316,
+        "perplexity": 7.345708802305908
+      },
+      {
+        "token": "1",
+        "position": 9,
+        "log_prob": -0.3633917570114136,
+        "perplexity": 1.4381991735028783
+      },
+      {
+        "token": ";\n",
+        "position": 10,
+        "log_prob": -1.0577338933944702,
+        "perplexity": 2.8798375704108716
+      },
+      {
+        "token": "int",
+        "position": 11,
+        "log_prob": -2.3338003158569336,
+        "perplexity": 10.31707527041069
+      },
+      {
+        "token": " R",
+        "position": 12,
+        "log_prob": -6.493064880371094,
+        "perplexity": 660.5447546241446
+      },
+      {
+        "token": " =",
+        "position": 13,
+        "log_prob": -1.0420191287994385,
+        "perplexity": 2.8349353389793244
+      },
+      {
+        "token": " V",
+        "position": 14,
+        "log_prob": -0.528122067451477,
+        "perplexity": 1.6957448222174463
+      },
+      {
+        "token": "1",
+        "position": 15,
+        "log_prob": -0.179113507270813,
+        "perplexity": 1.1961565089233874
+      },
+      {
+        "token": " -",
+        "position": 16,
+        "log_prob": -2.715378999710083,
+        "perplexity": 15.110335799689615
+      },
+      {
+        "token": " ",
+        "position": 17,
+        "log_prob": -1.6301928758621216,
+        "perplexity": 5.1048592277142
+      },
+      {
+        "token": "2",
+        "position": 18,
+        "log_prob": -0.6521076560020447,
+        "perplexity": 1.9195823877509715
+      },
+      {
+        "token": ";",
+        "position": 19,
+        "log_prob": -1.5470008850097656,
+        "perplexity": 4.697361109681681
+      }
+    ]
+  },
+  "10-obf-v0": {
+    "code": "int V1 = 2;\nint R = ++V1 - 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ++",
+      "V",
+      "1",
+      " -",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 29.557802142254133,
+      "mean_perplexity": 760.9412101303498,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 17
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.7923691272735596,
+        "perplexity": 6.003659063548459
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.443970680236816,
+        "perplexity": 1709.5247386226765
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.6265019178390503,
+        "perplexity": 5.086052136034995
+      },
+      {
+        "token": " ++",
+        "position": 10,
+        "log_prob": -7.133799076080322,
+        "perplexity": 1253.6305694569949
+      },
+      {
+        "token": "V",
+        "position": 11,
+        "log_prob": -0.579491138458252,
+        "perplexity": 1.7851298156798199
+      },
+      {
+        "token": "1",
+        "position": 12,
+        "log_prob": -0.3536662757396698,
+        "perplexity": 1.4242797904391369
+      },
+      {
+        "token": " -",
+        "position": 13,
+        "log_prob": -3.6579837799072266,
+        "perplexity": 38.78306878641079
+      },
+      {
+        "token": " ",
+        "position": 14,
+        "log_prob": -2.374248504638672,
+        "perplexity": 10.742936884569088
+      },
+      {
+        "token": "2",
+        "position": 15,
+        "log_prob": -0.8177108764648438,
+        "perplexity": 2.2653083271889938
+      },
+      {
+        "token": ";",
+        "position": 16,
+        "log_prob": -1.483052134513855,
+        "perplexity": 4.406374024179606
+      }
+    ]
+  },
+  "11-clean-v0": {
+    "code": "int V1 = 2;\n--V1;\nboolean R = (V1 == 1);",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "--",
+      "V",
+      "1",
+      ";\n",
+      "boolean",
+      " R",
+      " =",
+      " (",
+      "V",
+      "1",
+      " ==",
+      " ",
+      "1",
+      ");"
+    ],
+    "summary": {
+      "overall_perplexity": 27.412817471086548,
+      "mean_perplexity": 595.6787040813114,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 21
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "--",
+        "position": 7,
+        "log_prob": -7.1751813888549805,
+        "perplexity": 1306.5970816446477
+      },
+      {
+        "token": "V",
+        "position": 8,
+        "log_prob": -3.4048800468444824,
+        "perplexity": 30.110683635764516
+      },
+      {
+        "token": "1",
+        "position": 9,
+        "log_prob": -1.0693144798278809,
+        "perplexity": 2.9133816333875435
+      },
+      {
+        "token": ";\n",
+        "position": 10,
+        "log_prob": -3.831033945083618,
+        "perplexity": 46.110188999052674
+      },
+      {
+        "token": "boolean",
+        "position": 11,
+        "log_prob": -4.925411224365234,
+        "perplexity": 137.74597449858223
+      },
+      {
+        "token": " R",
+        "position": 12,
+        "log_prob": -6.938448905944824,
+        "perplexity": 1031.169532944713
+      },
+      {
+        "token": " =",
+        "position": 13,
+        "log_prob": -1.2434613704681396,
+        "perplexity": 3.4675953480644224
+      },
+      {
+        "token": " (",
+        "position": 14,
+        "log_prob": -3.097780704498291,
+        "perplexity": 22.148742093078152
+      },
+      {
+        "token": "V",
+        "position": 15,
+        "log_prob": -1.310188889503479,
+        "perplexity": 3.7068738356434072
+      },
+      {
+        "token": "1",
+        "position": 16,
+        "log_prob": -0.24634294211864471,
+        "perplexity": 1.2793382372848598
+      },
+      {
+        "token": " ==",
+        "position": 17,
+        "log_prob": -1.1801121234893799,
+        "perplexity": 3.254739115138282
+      },
+      {
+        "token": " ",
+        "position": 18,
+        "log_prob": -0.5710439085960388,
+        "perplexity": 1.770113924424396
+      },
+      {
+        "token": "1",
+        "position": 19,
+        "log_prob": -2.173264741897583,
+        "perplexity": 8.786924303694175
+      },
+      {
+        "token": ");",
+        "position": 20,
+        "log_prob": -2.0596418380737305,
+        "perplexity": 7.843160185838025
+      }
+    ]
+  },
+  "11-obf-v0": {
+    "code": "int V1 = 2;\nboolean R = (--V1 == 1);",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "boolean",
+      " R",
+      " =",
+      " (--",
+      "V",
+      "1",
+      " ==",
+      " ",
+      "1",
+      ");"
+    ],
+    "summary": {
+      "overall_perplexity": 42.48187493881516,
+      "mean_perplexity": 11154.140674807411,
+      "max_perplexity": 178484.2413134289,
+      "token_count": 17
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "boolean",
+        "position": 7,
+        "log_prob": -6.0736188888549805,
+        "perplexity": 434.24934156188715
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -6.649232864379883,
+        "perplexity": 772.1917224848797
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.1983935832977295,
+        "perplexity": 3.3147877130701167
+      },
+      {
+        "token": " (--",
+        "position": 10,
+        "log_prob": -12.092255592346191,
+        "perplexity": 178484.2413134289
+      },
+      {
+        "token": "V",
+        "position": 11,
+        "log_prob": -0.7136417627334595,
+        "perplexity": 2.04141207644001
+      },
+      {
+        "token": "1",
+        "position": 12,
+        "log_prob": -0.5397010445594788,
+        "perplexity": 1.7154939292732991
+      },
+      {
+        "token": " ==",
+        "position": 13,
+        "log_prob": -1.4311180114746094,
+        "perplexity": 4.183373638124101
+      },
+      {
+        "token": " ",
+        "position": 14,
+        "log_prob": -0.9403771162033081,
+        "perplexity": 2.5609470108611423
+      },
+      {
+        "token": "1",
+        "position": 15,
+        "log_prob": -1.7082754373550415,
+        "perplexity": 5.519434654357202
+      },
+      {
+        "token": ");",
+        "position": 16,
+        "log_prob": -2.082585334777832,
+        "perplexity": 8.025189919985355
+      }
+    ]
+  },
+  "12-clean-v0": {
+    "code": "int V1 = 2;\n--V1;\nint R = 8 - V1;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "--",
+      "V",
+      "1",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "8",
+      " -",
+      " V",
+      "1",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 29.85006907275643,
+      "mean_perplexity": 661.8976462296188,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 20
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "--",
+        "position": 7,
+        "log_prob": -7.1751813888549805,
+        "perplexity": 1306.5970816446477
+      },
+      {
+        "token": "V",
+        "position": 8,
+        "log_prob": -3.4048800468444824,
+        "perplexity": 30.110683635764516
+      },
+      {
+        "token": "1",
+        "position": 9,
+        "log_prob": -1.0693144798278809,
+        "perplexity": 2.9133816333875435
+      },
+      {
+        "token": ";\n",
+        "position": 10,
+        "log_prob": -3.831033945083618,
+        "perplexity": 46.110188999052674
+      },
+      {
+        "token": "int",
+        "position": 11,
+        "log_prob": -2.1129114627838135,
+        "perplexity": 8.272290724695479
+      },
+      {
+        "token": " R",
+        "position": 12,
+        "log_prob": -7.504520416259766,
+        "perplexity": 1816.2340195681425
+      },
+      {
+        "token": " =",
+        "position": 13,
+        "log_prob": -1.4206534624099731,
+        "perplexity": 4.139824776439418
+      },
+      {
+        "token": " ",
+        "position": 14,
+        "log_prob": -1.0073401927947998,
+        "perplexity": 2.7383079490289117
+      },
+      {
+        "token": "8",
+        "position": 15,
+        "log_prob": -3.8589906692504883,
+        "perplexity": 47.41746729967743
+      },
+      {
+        "token": " -",
+        "position": 16,
+        "log_prob": -4.150963306427002,
+        "perplexity": 63.49513611983831
+      },
+      {
+        "token": " V",
+        "position": 17,
+        "log_prob": -0.3745884895324707,
+        "perplexity": 1.4543927935987762
+      },
+      {
+        "token": "1",
+        "position": 18,
+        "log_prob": -0.09424705058336258,
+        "perplexity": 1.0988311792707648
+      },
+      {
+        "token": ";",
+        "position": 19,
+        "log_prob": -1.6140000820159912,
+        "perplexity": 5.022862960606538
+      }
+    ]
+  },
+  "12-obf-v0": {
+    "code": "int V1 = 2;\nint R = 8 - --V1;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "8",
+      " -",
+      " --",
+      "V",
+      "1",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 37.1819387215109,
+      "mean_perplexity": 1044.9601853640152,
+      "max_perplexity": 5869.907677679164,
+      "token_count": 17
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.7923691272735596,
+        "perplexity": 6.003659063548459
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.443970680236816,
+        "perplexity": 1709.5247386226765
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.6265019178390503,
+        "perplexity": 5.086052136034995
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.46973636746406555,
+        "perplexity": 1.5995724382873255
+      },
+      {
+        "token": "8",
+        "position": 11,
+        "log_prob": -3.361917495727539,
+        "perplexity": 28.844446989500177
+      },
+      {
+        "token": " -",
+        "position": 12,
+        "log_prob": -5.453567981719971,
+        "perplexity": 233.59012611559618
+      },
+      {
+        "token": " --",
+        "position": 13,
+        "log_prob": -8.677594184875488,
+        "perplexity": 5869.907677679164
+      },
+      {
+        "token": "V",
+        "position": 14,
+        "log_prob": -0.6475057601928711,
+        "perplexity": 1.910768964387248
+      },
+      {
+        "token": "1",
+        "position": 15,
+        "log_prob": -0.25002434849739075,
+        "perplexity": 1.2840566811578693
+      },
+      {
+        "token": ";",
+        "position": 16,
+        "log_prob": -1.4406871795654297,
+        "perplexity": 4.223597189681725
+      }
+    ]
+  },
+  "13-clean-v0": {
+    "code": "int R = 3 + 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " R",
+      " =",
+      " ",
+      "3",
+      " +",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 49.825384320299584,
+      "mean_perplexity": 1860.139802462321,
+      "max_perplexity": 10767.056687181434,
+      "token_count": 9
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " R",
+        "position": 1,
+        "log_prob": -9.284246444702148,
+        "perplexity": 10767.056687181434
+      },
+      {
+        "token": " =",
+        "position": 2,
+        "log_prob": -3.4186043739318848,
+        "perplexity": 30.526781305842025
+      },
+      {
+        "token": " ",
+        "position": 3,
+        "log_prob": -1.0138487815856934,
+        "perplexity": 2.756188595217443
+      },
+      {
+        "token": "3",
+        "position": 4,
+        "log_prob": -2.4038548469543457,
+        "perplexity": 11.065751045226724
+      },
+      {
+        "token": " +",
+        "position": 5,
+        "log_prob": -5.686567306518555,
+        "perplexity": 294.8796498588235
+      },
+      {
+        "token": " ",
+        "position": 6,
+        "log_prob": -0.8149455785751343,
+        "perplexity": 2.2590527281360204
+      },
+      {
+        "token": "2",
+        "position": 7,
+        "log_prob": -0.906085729598999,
+        "perplexity": 2.474617230207985
+      },
+      {
+        "token": ";",
+        "position": 8,
+        "log_prob": -3.016293525695801,
+        "perplexity": 20.41548181855446
+      }
+    ]
+  },
+  "13-obf-v0": {
+    "code": "int V1 = 3;\nint R = V1 + 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "3",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " V",
+      "1",
+      " +",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 20.865988086198552,
+      "mean_perplexity": 739.8180539091363,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 16
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "3",
+        "position": 5,
+        "log_prob": -2.600468635559082,
+        "perplexity": 13.470049100082312
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.878757953643799,
+        "perplexity": 17.792160761687843
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.6601656675338745,
+        "perplexity": 5.260182213681181
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.547634124755859,
+        "perplexity": 1896.2511265494084
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.6200836896896362,
+        "perplexity": 5.05351322582049
+      },
+      {
+        "token": " V",
+        "position": 10,
+        "log_prob": -1.8260161876678467,
+        "perplexity": 6.209101426613544
+      },
+      {
+        "token": "1",
+        "position": 11,
+        "log_prob": -0.27479037642478943,
+        "perplexity": 1.3162547279241843
+      },
+      {
+        "token": " +",
+        "position": 12,
+        "log_prob": -1.3990236520767212,
+        "perplexity": 4.051242612970048
+      },
+      {
+        "token": " ",
+        "position": 13,
+        "log_prob": -0.8498437404632568,
+        "perplexity": 2.3392812883549072
+      },
+      {
+        "token": "2",
+        "position": 14,
+        "log_prob": -0.8767663240432739,
+        "perplexity": 2.4031162294061557
+      },
+      {
+        "token": ";",
+        "position": 15,
+        "log_prob": -1.6091480255126953,
+        "perplexity": 4.998550775458744
+      }
+    ]
+  },
+  "14-clean-v0": {
+    "code": "int R = 2 * 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " R",
+      " =",
+      " ",
+      "2",
+      " *",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 51.51944324407085,
+      "mean_perplexity": 1832.7922592372504,
+      "max_perplexity": 10767.056687181434,
+      "token_count": 9
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " R",
+        "position": 1,
+        "log_prob": -9.284246444702148,
+        "perplexity": 10767.056687181434
+      },
+      {
+        "token": " =",
+        "position": 2,
+        "log_prob": -3.4186043739318848,
+        "perplexity": 30.526781305842025
+      },
+      {
+        "token": " ",
+        "position": 3,
+        "log_prob": -1.0138487815856934,
+        "perplexity": 2.756188595217443
+      },
+      {
+        "token": "2",
+        "position": 4,
+        "log_prob": -1.7007298469543457,
+        "perplexity": 5.477943993835831
+      },
+      {
+        "token": " *",
+        "position": 5,
+        "log_prob": -2.9764347076416016,
+        "perplexity": 19.61774880291698
+      },
+      {
+        "token": " ",
+        "position": 6,
+        "log_prob": -2.8543407917022705,
+        "perplexity": 17.362987608730524
+      },
+      {
+        "token": "2",
+        "position": 7,
+        "log_prob": -2.049046754837036,
+        "perplexity": 7.760499920283632
+      },
+      {
+        "token": ";",
+        "position": 8,
+        "log_prob": -3.548107147216797,
+        "perplexity": 34.747483329544124
+      }
+    ]
+  },
+  "14-obf-v0": {
+    "code": "int V1 = 2;\nint R = 2 * V1;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "2",
+      " *",
+      " V",
+      "1",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 22.169735857616363,
+      "mean_perplexity": 730.6190237727317,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 16
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.7923691272735596,
+        "perplexity": 6.003659063548459
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.443970680236816,
+        "perplexity": 1709.5247386226765
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.6265019178390503,
+        "perplexity": 5.086052136034995
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.46973636746406555,
+        "perplexity": 1.5995724382873255
+      },
+      {
+        "token": "2",
+        "position": 11,
+        "log_prob": -1.752542495727539,
+        "perplexity": 5.769252344190911
+      },
+      {
+        "token": " *",
+        "position": 12,
+        "log_prob": -3.930166482925415,
+        "perplexity": 50.91545351729025
+      },
+      {
+        "token": " V",
+        "position": 13,
+        "log_prob": -0.2635011076927185,
+        "perplexity": 1.3014787365793652
+      },
+      {
+        "token": "1",
+        "position": 14,
+        "log_prob": -0.17740675806999207,
+        "perplexity": 1.1941167109646533
+      },
+      {
+        "token": ";",
+        "position": 15,
+        "log_prob": -1.8183367252349854,
+        "perplexity": 6.161601485909934
+      }
+    ]
+  },
+  "15-clean-v0": {
+    "code": "double R = 4.5 * 2;",
+    "tokens": [
+      "<|im_end|>",
+      "double",
+      " R",
+      " =",
+      " ",
+      "4",
+      ".",
+      "5",
+      " *",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 62.27460242814848,
+      "mean_perplexity": 85996.54159237443,
+      "max_perplexity": 942506.4720577939,
+      "token_count": 11
+    },
+    "results": [
+      {
+        "token": "double",
+        "position": 0,
+        "log_prob": -13.756298065185547,
+        "perplexity": 942506.4720577939
+      },
+      {
+        "token": " R",
+        "position": 1,
+        "log_prob": -8.070889472961426,
+        "perplexity": 3199.94682979728
+      },
+      {
+        "token": " =",
+        "position": 2,
+        "log_prob": -4.919076919555664,
+        "perplexity": 136.87620710388072
+      },
+      {
+        "token": " ",
+        "position": 3,
+        "log_prob": -0.9652071595191956,
+        "perplexity": 2.625331462548839
+      },
+      {
+        "token": "4",
+        "position": 4,
+        "log_prob": -3.017232894897461,
+        "perplexity": 20.43466850369153
+      },
+      {
+        "token": ".",
+        "position": 5,
+        "log_prob": -2.0488638877868652,
+        "perplexity": 7.759080910304397
+      },
+      {
+        "token": "5",
+        "position": 6,
+        "log_prob": -3.107534885406494,
+        "perplexity": 22.365842025037832
+      },
+      {
+        "token": " *",
+        "position": 7,
+        "log_prob": -3.79103422164917,
+        "perplexity": 44.30219488006672
+      },
+      {
+        "token": " ",
+        "position": 8,
+        "log_prob": -1.738175630569458,
+        "perplexity": 5.686958839035108
+      },
+      {
+        "token": "2",
+        "position": 9,
+        "log_prob": -2.264841318130493,
+        "perplexity": 9.629596437502263
+      },
+      {
+        "token": ";",
+        "position": 10,
+        "log_prob": -1.7679359912872314,
+        "perplexity": 5.8587483655991095
+      }
+    ]
+  },
+  "15-obf-v0": {
+    "code": "int V1 = 2;\ndouble R = 4.5 * V1;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "double",
+      " R",
+      " =",
+      " ",
+      "4",
+      ".",
+      "5",
+      " *",
+      " V",
+      "1",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 24.245512836085336,
+      "mean_perplexity": 595.6789485196191,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 18
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -2.006718635559082,
+        "perplexity": 7.438867619336643
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8311703205108643,
+        "perplexity": 16.96530405411445
+      },
+      {
+        "token": "double",
+        "position": 7,
+        "log_prob": -6.2533063888549805,
+        "perplexity": 519.728411133618
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -4.8964457511901855,
+        "perplexity": 133.81332761149983
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -0.6634727716445923,
+        "perplexity": 1.9415231068123988
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.31613171100616455,
+        "perplexity": 1.3718109263249956
+      },
+      {
+        "token": "4",
+        "position": 11,
+        "log_prob": -3.046862840652466,
+        "perplexity": 21.049206020006135
+      },
+      {
+        "token": ".",
+        "position": 12,
+        "log_prob": -1.9856159687042236,
+        "perplexity": 7.283532432021765
+      },
+      {
+        "token": "5",
+        "position": 13,
+        "log_prob": -1.9292458295822144,
+        "perplexity": 6.884316335555379
+      },
+      {
+        "token": " *",
+        "position": 14,
+        "log_prob": -4.764135837554932,
+        "perplexity": 117.22976794006784
+      },
+      {
+        "token": " V",
+        "position": 15,
+        "log_prob": -1.39427649974823,
+        "perplexity": 4.032056323317372
+      },
+      {
+        "token": "1",
+        "position": 16,
+        "log_prob": -0.151859313249588,
+        "perplexity": 1.1639964660319226
+      },
+      {
+        "token": ";",
+        "position": 17,
+        "log_prob": -1.681697130203247,
+        "perplexity": 5.3746697496646965
+      }
+    ]
+  },
+  "16-clean-v0": {
+    "code": "boolean V1 = (2 != 3);\nboolean V2 = false;\nint R = 3;\nif (V1)\n   if (V2)\n      R = R + 2;\n   else\n      R = R + 4;",
+    "tokens": [
+      "<|im_end|>",
+      "boolean",
+      " V",
+      "1",
+      " =",
+      " (",
+      "2",
+      " !=",
+      " ",
+      "3",
+      ");\n",
+      "boolean",
+      " V",
+      "2",
+      " =",
+      " false",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "3",
+      ";\n",
+      "if",
+      " (",
+      "V",
+      "1",
+      ")\n",
+      "  ",
+      " if",
+      " (",
+      "V",
+      "2",
+      ")\n",
+      "     ",
+      " R",
+      " =",
+      " R",
+      " +",
+      " ",
+      "2",
+      ";\n",
+      "  ",
+      " else",
+      "\n",
+      "     ",
+      " R",
+      " =",
+      " R",
+      " +",
+      " ",
+      "4",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 6.376384128842757,
+      "mean_perplexity": 5969.43281091485,
+      "max_perplexity": 297442.95946249616,
+      "token_count": 52
+    },
+    "results": [
+      {
+        "token": "boolean",
+        "position": 0,
+        "log_prob": -12.602977752685547,
+        "perplexity": 297442.95946249616
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -9.314559936523438,
+        "perplexity": 11098.441105851944
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.5786867141723633,
+        "perplexity": 35.82645955664373
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.7769839763641357,
+        "perplexity": 43.684090601961664
+      },
+      {
+        "token": " (",
+        "position": 4,
+        "log_prob": -4.031905174255371,
+        "perplexity": 56.368200256496706
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -3.6349639892578125,
+        "perplexity": 37.900488047863796
+      },
+      {
+        "token": " !=",
+        "position": 6,
+        "log_prob": -5.445404052734375,
+        "perplexity": 231.6908761339377
+      },
+      {
+        "token": " ",
+        "position": 7,
+        "log_prob": -0.21879786252975464,
+        "perplexity": 1.244579675072293
+      },
+      {
+        "token": "3",
+        "position": 8,
+        "log_prob": -1.3324713706970215,
+        "perplexity": 3.79039930360745
+      },
+      {
+        "token": ");\n",
+        "position": 9,
+        "log_prob": -1.399812936782837,
+        "perplexity": 4.054441459039304
+      },
+      {
+        "token": "boolean",
+        "position": 10,
+        "log_prob": -0.4774216413497925,
+        "perplexity": 1.6119129499422455
+      },
+      {
+        "token": " V",
+        "position": 11,
+        "log_prob": -0.24459941685199738,
+        "perplexity": 1.2771096221315408
+      },
+      {
+        "token": "2",
+        "position": 12,
+        "log_prob": -0.10722071677446365,
+        "perplexity": 1.113179924848953
+      },
+      {
+        "token": " =",
+        "position": 13,
+        "log_prob": -0.03284955024719238,
+        "perplexity": 1.0333950535148502
+      },
+      {
+        "token": " false",
+        "position": 14,
+        "log_prob": -3.108811855316162,
+        "perplexity": 22.39442077552691
+      },
+      {
+        "token": ";\n",
+        "position": 15,
+        "log_prob": -0.5003116726875305,
+        "perplexity": 1.6492352121761562
+      },
+      {
+        "token": "int",
+        "position": 16,
+        "log_prob": -5.812925338745117,
+        "perplexity": 334.5965035126437
+      },
+      {
+        "token": " R",
+        "position": 17,
+        "log_prob": -6.6123738288879395,
+        "perplexity": 744.2476399810778
+      },
+      {
+        "token": " =",
+        "position": 18,
+        "log_prob": -0.3139485716819763,
+        "perplexity": 1.368819338660903
+      },
+      {
+        "token": " ",
+        "position": 19,
+        "log_prob": -1.2484426498413086,
+        "perplexity": 3.484911501740126
+      },
+      {
+        "token": "3",
+        "position": 20,
+        "log_prob": -3.015225648880005,
+        "perplexity": 20.393692235203233
+      },
+      {
+        "token": ";\n",
+        "position": 21,
+        "log_prob": -1.0110903978347778,
+        "perplexity": 2.7485964452273737
+      },
+      {
+        "token": "if",
+        "position": 22,
+        "log_prob": -2.573042392730713,
+        "perplexity": 13.105636341243727
+      },
+      {
+        "token": " (",
+        "position": 23,
+        "log_prob": -0.721897542476654,
+        "perplexity": 2.0583352859324973
+      },
+      {
+        "token": "V",
+        "position": 24,
+        "log_prob": -0.5268030762672424,
+        "perplexity": 1.6935096241735421
+      },
+      {
+        "token": "1",
+        "position": 25,
+        "log_prob": -0.23269471526145935,
+        "perplexity": 1.2619961523476222
+      },
+      {
+        "token": ")\n",
+        "position": 26,
+        "log_prob": -3.1049978733062744,
+        "perplexity": 22.30917153045026
+      },
+      {
+        "token": "  ",
+        "position": 27,
+        "log_prob": -5.323077201843262,
+        "perplexity": 205.0137811176918
+      },
+      {
+        "token": " if",
+        "position": 28,
+        "log_prob": -2.7317616939544678,
+        "perplexity": 15.359922681563306
+      },
+      {
+        "token": " (",
+        "position": 29,
+        "log_prob": -0.4386492073535919,
+        "perplexity": 1.5506112489473824
+      },
+      {
+        "token": "V",
+        "position": 30,
+        "log_prob": -0.43759065866470337,
+        "perplexity": 1.5489707198859648
+      },
+      {
+        "token": "2",
+        "position": 31,
+        "log_prob": -0.016150949522852898,
+        "perplexity": 1.016282081123528
+      },
+      {
+        "token": ")\n",
+        "position": 32,
+        "log_prob": -0.7544773817062378,
+        "perplexity": 2.1264998851577044
+      },
+      {
+        "token": "     ",
+        "position": 33,
+        "log_prob": -0.21693362295627594,
+        "perplexity": 1.2422616417457448
+      },
+      {
+        "token": " R",
+        "position": 34,
+        "log_prob": -0.18925446271896362,
+        "perplexity": 1.208348392982704
+      },
+      {
+        "token": " =",
+        "position": 35,
+        "log_prob": -0.14836232364177704,
+        "perplexity": 1.1599330914169759
+      },
+      {
+        "token": " R",
+        "position": 36,
+        "log_prob": -2.360992908477783,
+        "perplexity": 10.601472520283059
+      },
+      {
+        "token": " +",
+        "position": 37,
+        "log_prob": -0.7028591632843018,
+        "perplexity": 2.019518594153171
+      },
+      {
+        "token": " ",
+        "position": 38,
+        "log_prob": -0.059173986315727234,
+        "perplexity": 1.0609598171725312
+      },
+      {
+        "token": "2",
+        "position": 39,
+        "log_prob": -1.6734654903411865,
+        "perplexity": 5.3306089988201535
+      },
+      {
+        "token": ";\n",
+        "position": 40,
+        "log_prob": -0.3427155911922455,
+        "perplexity": 1.4087680389062258
+      },
+      {
+        "token": "  ",
+        "position": 41,
+        "log_prob": -0.6168711185455322,
+        "perplexity": 1.8531207662472
+      },
+      {
+        "token": " else",
+        "position": 42,
+        "log_prob": -0.04343968257308006,
+        "perplexity": 1.0443969970725833
+      },
+      {
+        "token": "\n",
+        "position": 43,
+        "log_prob": -0.2722007930278778,
+        "perplexity": 1.312850586091562
+      },
+      {
+        "token": "     ",
+        "position": 44,
+        "log_prob": -0.017537523061037064,
+        "perplexity": 1.0176922083611768
+      },
+      {
+        "token": " R",
+        "position": 45,
+        "log_prob": -0.016448259353637695,
+        "perplexity": 1.016584276697728
+      },
+      {
+        "token": " =",
+        "position": 46,
+        "log_prob": -0.01597744971513748,
+        "perplexity": 1.0161057716731385
+      },
+      {
+        "token": " R",
+        "position": 47,
+        "log_prob": -0.03737340494990349,
+        "perplexity": 1.0380805729010445
+      },
+      {
+        "token": " +",
+        "position": 48,
+        "log_prob": -0.8732990622520447,
+        "perplexity": 2.39479842466033
+      },
+      {
+        "token": " ",
+        "position": 49,
+        "log_prob": -0.022868013009428978,
+        "perplexity": 1.0231314905886595
+      },
+      {
+        "token": "4",
+        "position": 50,
+        "log_prob": -2.3325693607330322,
+        "perplexity": 10.304383227013464
+      },
+      {
+        "token": ";",
+        "position": 51,
+        "log_prob": -1.709991693496704,
+        "perplexity": 5.52891555147801
+      }
+    ]
+  },
+  "16-obf-v0": {
+    "code": "boolean V1 = (2 != 3);\nboolean V2 = false;\nint R = 3;\nif (V1)\n   if (V2)\n      R = R + 2;\nelse\n   R = R + 4;",
+    "tokens": [
+      "<|im_end|>",
+      "boolean",
+      " V",
+      "1",
+      " =",
+      " (",
+      "2",
+      " !=",
+      " ",
+      "3",
+      ");\n",
+      "boolean",
+      " V",
+      "2",
+      " =",
+      " false",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "3",
+      ";\n",
+      "if",
+      " (",
+      "V",
+      "1",
+      ")\n",
+      "  ",
+      " if",
+      " (",
+      "V",
+      "2",
+      ")\n",
+      "     ",
+      " R",
+      " =",
+      " R",
+      " +",
+      " ",
+      "2",
+      ";\n",
+      "else",
+      "\n",
+      "  ",
+      " R",
+      " =",
+      " R",
+      " +",
+      " ",
+      "4",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 6.746241811823372,
+      "mean_perplexity": 6086.51965083525,
+      "max_perplexity": 297442.95946249616,
+      "token_count": 51
+    },
+    "results": [
+      {
+        "token": "boolean",
+        "position": 0,
+        "log_prob": -12.602977752685547,
+        "perplexity": 297442.95946249616
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -9.314559936523438,
+        "perplexity": 11098.441105851944
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.5786867141723633,
+        "perplexity": 35.82645955664373
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.7769839763641357,
+        "perplexity": 43.684090601961664
+      },
+      {
+        "token": " (",
+        "position": 4,
+        "log_prob": -4.031905174255371,
+        "perplexity": 56.368200256496706
+      },
+      {
+        "token": "2",
+        "position": 5,
+        "log_prob": -3.6349639892578125,
+        "perplexity": 37.900488047863796
+      },
+      {
+        "token": " !=",
+        "position": 6,
+        "log_prob": -5.445404052734375,
+        "perplexity": 231.6908761339377
+      },
+      {
+        "token": " ",
+        "position": 7,
+        "log_prob": -0.21879786252975464,
+        "perplexity": 1.244579675072293
+      },
+      {
+        "token": "3",
+        "position": 8,
+        "log_prob": -1.3324713706970215,
+        "perplexity": 3.79039930360745
+      },
+      {
+        "token": ");\n",
+        "position": 9,
+        "log_prob": -1.399812936782837,
+        "perplexity": 4.054441459039304
+      },
+      {
+        "token": "boolean",
+        "position": 10,
+        "log_prob": -0.4774216413497925,
+        "perplexity": 1.6119129499422455
+      },
+      {
+        "token": " V",
+        "position": 11,
+        "log_prob": -0.24459941685199738,
+        "perplexity": 1.2771096221315408
+      },
+      {
+        "token": "2",
+        "position": 12,
+        "log_prob": -0.10722071677446365,
+        "perplexity": 1.113179924848953
+      },
+      {
+        "token": " =",
+        "position": 13,
+        "log_prob": -0.03284955024719238,
+        "perplexity": 1.0333950535148502
+      },
+      {
+        "token": " false",
+        "position": 14,
+        "log_prob": -3.108811855316162,
+        "perplexity": 22.39442077552691
+      },
+      {
+        "token": ";\n",
+        "position": 15,
+        "log_prob": -0.5003116726875305,
+        "perplexity": 1.6492352121761562
+      },
+      {
+        "token": "int",
+        "position": 16,
+        "log_prob": -5.812925338745117,
+        "perplexity": 334.5965035126437
+      },
+      {
+        "token": " R",
+        "position": 17,
+        "log_prob": -6.6123738288879395,
+        "perplexity": 744.2476399810778
+      },
+      {
+        "token": " =",
+        "position": 18,
+        "log_prob": -0.3139485716819763,
+        "perplexity": 1.368819338660903
+      },
+      {
+        "token": " ",
+        "position": 19,
+        "log_prob": -1.2484426498413086,
+        "perplexity": 3.484911501740126
+      },
+      {
+        "token": "3",
+        "position": 20,
+        "log_prob": -3.015225648880005,
+        "perplexity": 20.393692235203233
+      },
+      {
+        "token": ";\n",
+        "position": 21,
+        "log_prob": -1.0110903978347778,
+        "perplexity": 2.7485964452273737
+      },
+      {
+        "token": "if",
+        "position": 22,
+        "log_prob": -2.573042392730713,
+        "perplexity": 13.105636341243727
+      },
+      {
+        "token": " (",
+        "position": 23,
+        "log_prob": -0.721897542476654,
+        "perplexity": 2.0583352859324973
+      },
+      {
+        "token": "V",
+        "position": 24,
+        "log_prob": -0.5268030762672424,
+        "perplexity": 1.6935096241735421
+      },
+      {
+        "token": "1",
+        "position": 25,
+        "log_prob": -0.23269471526145935,
+        "perplexity": 1.2619961523476222
+      },
+      {
+        "token": ")\n",
+        "position": 26,
+        "log_prob": -3.1049978733062744,
+        "perplexity": 22.30917153045026
+      },
+      {
+        "token": "  ",
+        "position": 27,
+        "log_prob": -5.323077201843262,
+        "perplexity": 205.0137811176918
+      },
+      {
+        "token": " if",
+        "position": 28,
+        "log_prob": -2.7317616939544678,
+        "perplexity": 15.359922681563306
+      },
+      {
+        "token": " (",
+        "position": 29,
+        "log_prob": -0.4386492073535919,
+        "perplexity": 1.5506112489473824
+      },
+      {
+        "token": "V",
+        "position": 30,
+        "log_prob": -0.43759065866470337,
+        "perplexity": 1.5489707198859648
+      },
+      {
+        "token": "2",
+        "position": 31,
+        "log_prob": -0.016150949522852898,
+        "perplexity": 1.016282081123528
+      },
+      {
+        "token": ")\n",
+        "position": 32,
+        "log_prob": -0.7544773817062378,
+        "perplexity": 2.1264998851577044
+      },
+      {
+        "token": "     ",
+        "position": 33,
+        "log_prob": -0.21693362295627594,
+        "perplexity": 1.2422616417457448
+      },
+      {
+        "token": " R",
+        "position": 34,
+        "log_prob": -0.18925446271896362,
+        "perplexity": 1.208348392982704
+      },
+      {
+        "token": " =",
+        "position": 35,
+        "log_prob": -0.14836232364177704,
+        "perplexity": 1.1599330914169759
+      },
+      {
+        "token": " R",
+        "position": 36,
+        "log_prob": -2.360992908477783,
+        "perplexity": 10.601472520283059
+      },
+      {
+        "token": " +",
+        "position": 37,
+        "log_prob": -0.7028591632843018,
+        "perplexity": 2.019518594153171
+      },
+      {
+        "token": " ",
+        "position": 38,
+        "log_prob": -0.059173986315727234,
+        "perplexity": 1.0609598171725312
+      },
+      {
+        "token": "2",
+        "position": 39,
+        "log_prob": -1.6734654903411865,
+        "perplexity": 5.3306089988201535
+      },
+      {
+        "token": ";\n",
+        "position": 40,
+        "log_prob": -0.3427155911922455,
+        "perplexity": 1.4087680389062258
+      },
+      {
+        "token": "else",
+        "position": 41,
+        "log_prob": -1.2731211185455322,
+        "perplexity": 3.5719837671946157
+      },
+      {
+        "token": "\n",
+        "position": 42,
+        "log_prob": -0.3810439109802246,
+        "perplexity": 1.4638118814130843
+      },
+      {
+        "token": "  ",
+        "position": 43,
+        "log_prob": -0.14803925156593323,
+        "perplexity": 1.15955840995311
+      },
+      {
+        "token": " R",
+        "position": 44,
+        "log_prob": -0.21108362078666687,
+        "perplexity": 1.2350156237216323
+      },
+      {
+        "token": " =",
+        "position": 45,
+        "log_prob": -0.017906904220581055,
+        "perplexity": 1.018068194125914
+      },
+      {
+        "token": " R",
+        "position": 46,
+        "log_prob": -0.04532740265130997,
+        "perplexity": 1.0463703882726827
+      },
+      {
+        "token": " +",
+        "position": 47,
+        "log_prob": -0.7473928332328796,
+        "perplexity": 2.111487833236364
+      },
+      {
+        "token": " ",
+        "position": 48,
+        "log_prob": -0.023275379091501236,
+        "perplexity": 1.0235483645598187
+      },
+      {
+        "token": "4",
+        "position": 49,
+        "log_prob": -2.4399802684783936,
+        "perplexity": 11.472814364476926
+      },
+      {
+        "token": ";",
+        "position": 50,
+        "log_prob": -1.694408655166626,
+        "perplexity": 5.44342607138967
+      }
+    ]
+  },
+  "17-clean-v0": {
+    "code": "int V1 = 5;\nint R = 5;\nwhile (V1 > 0)\n   V1--;\nR++;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "5",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "5",
+      ";\n",
+      "while",
+      " (",
+      "V",
+      "1",
+      " >",
+      " ",
+      "0",
+      ")\n",
+      "  ",
+      " V",
+      "1",
+      "--;\n",
+      "R",
+      "++;"
+    ],
+    "summary": {
+      "overall_perplexity": 14.94287610891071,
+      "mean_perplexity": 470.85763476556235,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 27
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "5",
+        "position": 5,
+        "log_prob": -3.616093635559082,
+        "perplexity": 37.19199818394438
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.5350019931793213,
+        "perplexity": 12.616455994871036
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.3761661052703857,
+        "perplexity": 3.9596914488371353
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.513610363006592,
+        "perplexity": 1832.8187530623377
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.4132496118545532,
+        "perplexity": 4.109287319350877
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.4967666566371918,
+        "perplexity": 1.643398997727197
+      },
+      {
+        "token": "5",
+        "position": 11,
+        "log_prob": -2.6228668689727783,
+        "perplexity": 13.77515860535118
+      },
+      {
+        "token": ";\n",
+        "position": 12,
+        "log_prob": -0.730262279510498,
+        "perplexity": 2.0756249301793472
+      },
+      {
+        "token": "while",
+        "position": 13,
+        "log_prob": -4.006795406341553,
+        "perplexity": 54.97043011274273
+      },
+      {
+        "token": " (",
+        "position": 14,
+        "log_prob": -1.0118134021759033,
+        "perplexity": 2.750584410956603
+      },
+      {
+        "token": "V",
+        "position": 15,
+        "log_prob": -0.6346786618232727,
+        "perplexity": 1.8864158666192001
+      },
+      {
+        "token": "1",
+        "position": 16,
+        "log_prob": -0.22328191995620728,
+        "perplexity": 1.2501729727692246
+      },
+      {
+        "token": " >",
+        "position": 17,
+        "log_prob": -1.784912109375,
+        "perplexity": 5.959056179393751
+      },
+      {
+        "token": " ",
+        "position": 18,
+        "log_prob": -0.7164199948310852,
+        "perplexity": 2.047091478690998
+      },
+      {
+        "token": "0",
+        "position": 19,
+        "log_prob": -0.17671369016170502,
+        "perplexity": 1.193289393720167
+      },
+      {
+        "token": ")\n",
+        "position": 20,
+        "log_prob": -2.3963162899017334,
+        "perplexity": 10.98264489345099
+      },
+      {
+        "token": "  ",
+        "position": 21,
+        "log_prob": -6.660853385925293,
+        "perplexity": 781.2173326163452
+      },
+      {
+        "token": " V",
+        "position": 22,
+        "log_prob": -1.8869047164916992,
+        "perplexity": 6.598911534995625
+      },
+      {
+        "token": "1",
+        "position": 23,
+        "log_prob": -0.05450274050235748,
+        "perplexity": 1.0560153704223716
+      },
+      {
+        "token": "--;\n",
+        "position": 24,
+        "log_prob": -1.1209551095962524,
+        "perplexity": 3.067782873331475
+      },
+      {
+        "token": "R",
+        "position": 25,
+        "log_prob": -3.128342628479004,
+        "perplexity": 22.836100258869056
+      },
+      {
+        "token": "++;",
+        "position": 26,
+        "log_prob": -3.4405994415283203,
+        "perplexity": 31.205658530504415
+      }
+    ]
+  },
+  "17-obf-v0": {
+    "code": "int V1 = 5;\nint R = 5;\nwhile (V1 > 0)\n   V1--;\n   R++;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "5",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "5",
+      ";\n",
+      "while",
+      " (",
+      "V",
+      "1",
+      " >",
+      " ",
+      "0",
+      ")\n",
+      "  ",
+      " V",
+      "1",
+      "--;\n",
+      "  ",
+      " R",
+      "++;"
+    ],
+    "summary": {
+      "overall_perplexity": 14.192468237155923,
+      "mean_perplexity": 453.7859637123112,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 28
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "5",
+        "position": 5,
+        "log_prob": -3.616093635559082,
+        "perplexity": 37.19199818394438
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.5350019931793213,
+        "perplexity": 12.616455994871036
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.3761661052703857,
+        "perplexity": 3.9596914488371353
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.513610363006592,
+        "perplexity": 1832.8187530623377
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.4132496118545532,
+        "perplexity": 4.109287319350877
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.4967666566371918,
+        "perplexity": 1.643398997727197
+      },
+      {
+        "token": "5",
+        "position": 11,
+        "log_prob": -2.6228668689727783,
+        "perplexity": 13.77515860535118
+      },
+      {
+        "token": ";\n",
+        "position": 12,
+        "log_prob": -0.730262279510498,
+        "perplexity": 2.0756249301793472
+      },
+      {
+        "token": "while",
+        "position": 13,
+        "log_prob": -4.006795406341553,
+        "perplexity": 54.97043011274273
+      },
+      {
+        "token": " (",
+        "position": 14,
+        "log_prob": -1.0118134021759033,
+        "perplexity": 2.750584410956603
+      },
+      {
+        "token": "V",
+        "position": 15,
+        "log_prob": -0.6346786618232727,
+        "perplexity": 1.8864158666192001
+      },
+      {
+        "token": "1",
+        "position": 16,
+        "log_prob": -0.22328191995620728,
+        "perplexity": 1.2501729727692246
+      },
+      {
+        "token": " >",
+        "position": 17,
+        "log_prob": -1.784912109375,
+        "perplexity": 5.959056179393751
+      },
+      {
+        "token": " ",
+        "position": 18,
+        "log_prob": -0.7164199948310852,
+        "perplexity": 2.047091478690998
+      },
+      {
+        "token": "0",
+        "position": 19,
+        "log_prob": -0.17671369016170502,
+        "perplexity": 1.193289393720167
+      },
+      {
+        "token": ")\n",
+        "position": 20,
+        "log_prob": -2.3963162899017334,
+        "perplexity": 10.98264489345099
+      },
+      {
+        "token": "  ",
+        "position": 21,
+        "log_prob": -6.660853385925293,
+        "perplexity": 781.2173326163452
+      },
+      {
+        "token": " V",
+        "position": 22,
+        "log_prob": -1.8869047164916992,
+        "perplexity": 6.598911534995625
+      },
+      {
+        "token": "1",
+        "position": 23,
+        "log_prob": -0.05450274050235748,
+        "perplexity": 1.0560153704223716
+      },
+      {
+        "token": "--;\n",
+        "position": 24,
+        "log_prob": -1.1209551095962524,
+        "perplexity": 3.067782873331475
+      },
+      {
+        "token": "  ",
+        "position": 25,
+        "log_prob": -3.050217628479004,
+        "perplexity": 21.119940222901317
+      },
+      {
+        "token": " R",
+        "position": 26,
+        "log_prob": -1.7978689670562744,
+        "perplexity": 6.036769193252082
+      },
+      {
+        "token": "++;",
+        "position": 27,
+        "log_prob": -2.9824390411376953,
+        "perplexity": 19.735894647749575
+      }
+    ]
+  },
+  "18-clean-v0": {
+    "code": "int V1 = 1;\nint R = 2;\nif (V1 > R)\n   R = 1;\nV1 = 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "1",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "if",
+      " (",
+      "V",
+      "1",
+      " >",
+      " R",
+      ")\n",
+      "  ",
+      " R",
+      " =",
+      " ",
+      "1",
+      ";\n",
+      "V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 11.46836657515935,
+      "mean_perplexity": 394.9406797250408,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 32
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "1",
+        "position": 5,
+        "log_prob": -1.9754685163497925,
+        "perplexity": 7.209996864032342
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8852057456970215,
+        "perplexity": 17.907251556480748
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.5298407077789307,
+        "perplexity": 4.617441241244191
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.643306732177734,
+        "perplexity": 2086.6323553706425
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.6763614416122437,
+        "perplexity": 5.3460685569850135
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.3963161110877991,
+        "perplexity": 1.4863390915641632
+      },
+      {
+        "token": "2",
+        "position": 11,
+        "log_prob": -1.4748847484588623,
+        "perplexity": 4.370532033349499
+      },
+      {
+        "token": ";\n",
+        "position": 12,
+        "log_prob": -0.6728070378303528,
+        "perplexity": 1.9597306451022114
+      },
+      {
+        "token": "if",
+        "position": 13,
+        "log_prob": -4.96007776260376,
+        "perplexity": 142.60488479298314
+      },
+      {
+        "token": " (",
+        "position": 14,
+        "log_prob": -1.0864264965057373,
+        "perplexity": 2.963664461802756
+      },
+      {
+        "token": "V",
+        "position": 15,
+        "log_prob": -0.626807689666748,
+        "perplexity": 1.8716262206573824
+      },
+      {
+        "token": "1",
+        "position": 16,
+        "log_prob": -0.2670680582523346,
+        "perplexity": 1.3061293361857198
+      },
+      {
+        "token": " >",
+        "position": 17,
+        "log_prob": -2.069716215133667,
+        "perplexity": 7.922574492058351
+      },
+      {
+        "token": " R",
+        "position": 18,
+        "log_prob": -0.5973665118217468,
+        "perplexity": 1.8173265849612528
+      },
+      {
+        "token": ")\n",
+        "position": 19,
+        "log_prob": -1.724979281425476,
+        "perplexity": 5.612404747462541
+      },
+      {
+        "token": "  ",
+        "position": 20,
+        "log_prob": -5.690360069274902,
+        "perplexity": 296.0001820255052
+      },
+      {
+        "token": " R",
+        "position": 21,
+        "log_prob": -4.373661994934082,
+        "perplexity": 79.33361972168714
+      },
+      {
+        "token": " =",
+        "position": 22,
+        "log_prob": -0.14616571366786957,
+        "perplexity": 1.1573879671653342
+      },
+      {
+        "token": " ",
+        "position": 23,
+        "log_prob": -2.178748846054077,
+        "perplexity": 8.835245088794558
+      },
+      {
+        "token": "1",
+        "position": 24,
+        "log_prob": -1.7593061923980713,
+        "perplexity": 5.808406079792691
+      },
+      {
+        "token": ";\n",
+        "position": 25,
+        "log_prob": -0.5697193145751953,
+        "perplexity": 1.7677707942945664
+      },
+      {
+        "token": "V",
+        "position": 26,
+        "log_prob": -4.096271991729736,
+        "perplexity": 60.11575729163157
+      },
+      {
+        "token": "1",
+        "position": 27,
+        "log_prob": -0.07620944827795029,
+        "perplexity": 1.0791885846783449
+      },
+      {
+        "token": " =",
+        "position": 28,
+        "log_prob": -0.36344513297080994,
+        "perplexity": 1.4382759408123131
+      },
+      {
+        "token": " ",
+        "position": 29,
+        "log_prob": -1.140987515449524,
+        "perplexity": 3.1298576223473966
+      },
+      {
+        "token": "2",
+        "position": 30,
+        "log_prob": -0.9593237638473511,
+        "perplexity": 2.6099309468717653
+      },
+      {
+        "token": ";",
+        "position": 31,
+        "log_prob": -1.6588982343673706,
+        "perplexity": 5.253519507441048
+      }
+    ]
+  },
+  "18-obf-v0": {
+    "code": "int V1 = 1;\nint R = 2;\nif (V1 > R)\nR = 1;\nV1 = 2;",
+    "tokens": [
+      "<|im_end|>",
+      "int",
+      " V",
+      "1",
+      " =",
+      " ",
+      "1",
+      ";\n",
+      "int",
+      " R",
+      " =",
+      " ",
+      "2",
+      ";\n",
+      "if",
+      " (",
+      "V",
+      "1",
+      " >",
+      " R",
+      ")\n",
+      "R",
+      " =",
+      " ",
+      "1",
+      ";\n",
+      "V",
+      "1",
+      " =",
+      " ",
+      "2",
+      ";"
+    ],
+    "summary": {
+      "overall_perplexity": 10.809922590124417,
+      "mean_perplexity": 422.11226908987163,
+      "max_perplexity": 5609.824012397448,
+      "token_count": 31
+    },
+    "results": [
+      {
+        "token": "int",
+        "position": 0,
+        "log_prob": -8.632274627685547,
+        "perplexity": 5609.824012397448
+      },
+      {
+        "token": " V",
+        "position": 1,
+        "log_prob": -8.338933944702148,
+        "perplexity": 4183.627385190696
+      },
+      {
+        "token": "1",
+        "position": 2,
+        "log_prob": -3.763338088989258,
+        "perplexity": 43.09203119677977
+      },
+      {
+        "token": " =",
+        "position": 3,
+        "log_prob": -3.649256467819214,
+        "perplexity": 38.44606952921348
+      },
+      {
+        "token": " ",
+        "position": 4,
+        "log_prob": -1.0834259986877441,
+        "perplexity": 2.9547853206352674
+      },
+      {
+        "token": "1",
+        "position": 5,
+        "log_prob": -1.9754685163497925,
+        "perplexity": 7.209996864032342
+      },
+      {
+        "token": ";\n",
+        "position": 6,
+        "log_prob": -2.8852057456970215,
+        "perplexity": 17.907251556480748
+      },
+      {
+        "token": "int",
+        "position": 7,
+        "log_prob": -1.5298407077789307,
+        "perplexity": 4.617441241244191
+      },
+      {
+        "token": " R",
+        "position": 8,
+        "log_prob": -7.643306732177734,
+        "perplexity": 2086.6323553706425
+      },
+      {
+        "token": " =",
+        "position": 9,
+        "log_prob": -1.6763614416122437,
+        "perplexity": 5.3460685569850135
+      },
+      {
+        "token": " ",
+        "position": 10,
+        "log_prob": -0.3963161110877991,
+        "perplexity": 1.4863390915641632
+      },
+      {
+        "token": "2",
+        "position": 11,
+        "log_prob": -1.4748847484588623,
+        "perplexity": 4.370532033349499
+      },
+      {
+        "token": ";\n",
+        "position": 12,
+        "log_prob": -0.6728070378303528,
+        "perplexity": 1.9597306451022114
+      },
+      {
+        "token": "if",
+        "position": 13,
+        "log_prob": -4.96007776260376,
+        "perplexity": 142.60488479298314
+      },
+      {
+        "token": " (",
+        "position": 14,
+        "log_prob": -1.0864264965057373,
+        "perplexity": 2.963664461802756
+      },
+      {
+        "token": "V",
+        "position": 15,
+        "log_prob": -0.626807689666748,
+        "perplexity": 1.8716262206573824
+      },
+      {
+        "token": "1",
+        "position": 16,
+        "log_prob": -0.2670680582523346,
+        "perplexity": 1.3061293361857198
+      },
+      {
+        "token": " >",
+        "position": 17,
+        "log_prob": -2.069716215133667,
+        "perplexity": 7.922574492058351
+      },
+      {
+        "token": " R",
+        "position": 18,
+        "log_prob": -0.5973665118217468,
+        "perplexity": 1.8173265849612528
+      },
+      {
+        "token": ")\n",
+        "position": 19,
+        "log_prob": -1.724979281425476,
+        "perplexity": 5.612404747462541
+      },
+      {
+        "token": "R",
+        "position": 20,
+        "log_prob": -6.752860069274902,
+        "perplexity": 856.5049261831048
+      },
+      {
+        "token": " =",
+        "position": 21,
+        "log_prob": -0.14113840460777283,
+        "perplexity": 1.1515840214902877
+      },
+      {
+        "token": " ",
+        "position": 22,
+        "log_prob": -2.0425350666046143,
+        "perplexity": 7.710130138414792
+      },
+      {
+        "token": "1",
+        "position": 23,
+        "log_prob": -1.6925954818725586,
+        "perplexity": 5.433565139099902
+      },
+      {
+        "token": ";\n",
+        "position": 24,
+        "log_prob": -0.557496190071106,
+        "perplexity": 1.7462946320696788
+      },
+      {
+        "token": "V",
+        "position": 25,
+        "log_prob": -3.3156564235687256,
+        "perplexity": 27.540466263533663
+      },
+      {
+        "token": "1",
+        "position": 26,
+        "log_prob": -0.06752176582813263,
+        "perplexity": 1.0698535455928821
+      },
+      {
+        "token": " =",
+        "position": 27,
+        "log_prob": -0.4098626673221588,
+        "perplexity": 1.5066108640002458
+      },
+      {
+        "token": " ",
+        "position": 28,
+        "log_prob": -1.0832512378692627,
+        "perplexity": 2.9542689850531247
+      },
+      {
+        "token": "2",
+        "position": 29,
+        "log_prob": -0.9254714250564575,
+        "perplexity": 2.5230574125212053
+      },
+      {
+        "token": ";",
+        "position": 30,
+        "log_prob": -1.7521476745605469,
+        "perplexity": 5.766974970854887
+      }
+    ]
+  }
+}

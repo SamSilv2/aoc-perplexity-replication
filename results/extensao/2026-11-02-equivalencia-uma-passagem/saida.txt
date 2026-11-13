@@ -1,0 +1,4 @@
+Qwen2.5-Coder-1.5B, fp16, MPS. Diferença absoluta de log-prob entre laço por token e uma passagem:
+perplexidade.json (Bergum) 3529 tokens: mediana 0.0009, máximo 0.027
+perplexidade-gopstein.json 5955 tokens: mediana 0.0003, máximo 0.03
+Tempo: Bergum 229.7 s contra 12.4 s; Gopstein 459.9 s contra 13.5 s.

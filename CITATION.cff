@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "Se usar este pacote, cite o artigo e o pacote de replicação. O DOI entra quando for atribuído."
+title: "Code Specialization, Instruction Tuning, and Atoms of Confusion: replication package"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/SamSilv2/aoc-perplexity-replication"
+date-released: 2026-11-13
+authors:
+  - family-names: Santana
+    given-names: Camila Nicola Dias
+    affiliation: Universidade Federal de Minas Gerais
+  - family-names: Rezende
+    given-names: João Marcos de Sousa
+    affiliation: Universidade Federal de Minas Gerais
+  - family-names: Santos
+    given-names: Matheus Botelho Menezes dos
+    affiliation: Universidade Federal de Minas Gerais
+  - family-names: Silva
+    given-names: Samuel Souza
+    affiliation: Universidade Federal de Minas Gerais
+preferred-citation:
+  type: article
+  title: "Code Specialization, Instruction Tuning, and Atoms of Confusion: Comparing Perplexity Across General-Purpose Base, Code-Specialized Base, and Instruct Models"
+  authors:
+    - family-names: Santana
+      given-names: Camila Nicola Dias
+    - family-names: Rezende
+      given-names: João Marcos de Sousa
+    - family-names: Santos
+      given-names: Matheus Botelho Menezes dos
+    - family-names: Silva
+      given-names: Samuel Souza
+  year: 2026
+references:
+  - type: software
+    title: "llm-perplexity-AoC"
+    authors:
+      - family-names: Abdelsalam
+        given-names: Youssef
+    repository-code: "https://github.com/brains-on-code/llm-perplexity-AoC"

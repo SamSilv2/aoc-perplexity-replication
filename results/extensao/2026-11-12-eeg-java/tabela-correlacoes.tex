@@ -1,0 +1,53 @@
+\begin{tabular}{llll}
+\toprule
+Model & All (144) & Confusing (72) & Clean (72) \\
+\midrule
+\multicolumn{4}{l}{\textit{Published models (Abdelsalam et al.)}} \\
+\texttt{Artigenz-Coder-DS-6.7B} & \textbf{0.29 [0.09, 0.48]} & \textbf{0.46 [0.24, 0.63]} & 0.02 [$-$0.29, 0.33] \\
+\texttt{Llama-3.2-3B} & \textbf{0.29 [0.09, 0.46]} & \textbf{0.44 [0.22, 0.60]} & 0.02 [$-$0.28, 0.30] \\
+\texttt{Qwen2.5-Coder-32B} & \textbf{0.31 [0.13, 0.47]} & \textbf{0.47 [0.27, 0.62]} & 0.06 [$-$0.22, 0.34] \\
+\texttt{Yi-Coder-9B} & \textbf{0.23 [0.02, 0.43]} & \textbf{0.30 [0.06, 0.50]} & 0.08 [$-$0.21, 0.38] \\
+\texttt{deepseek-coder-1.3b-base} & \textbf{0.30 [0.11, 0.48]} & \textbf{0.45 [0.23, 0.61]} & 0.06 [$-$0.24, 0.35] \\
+\texttt{deepseek-coder-6.7b-base} & \textbf{0.30 [0.11, 0.47]} & \textbf{0.46 [0.25, 0.62]} & 0.06 [$-$0.24, 0.34] \\
+\midrule
+\multicolumn{4}{l}{\textit{Qwen2.5 3B}} \\
+\quad base & \textbf{0.33 [0.16, 0.48]} & \textbf{0.53 [0.32, 0.68]} & 0.02 [$-$0.29, 0.34] \\
+\quad code & \textbf{0.33 [0.16, 0.48]} & \textbf{0.51 [0.28, 0.66]} & 0.04 [$-$0.24, 0.32] \\
+\quad instruct & \textbf{0.28 [0.09, 0.44]} & \textbf{0.49 [0.24, 0.65]} & $-$0.03 [$-$0.32, 0.28] \\
+\midrule
+\multicolumn{4}{l}{\textit{Qwen2.5 7B}} \\
+\quad base & \textbf{0.30 [0.11, 0.46]} & \textbf{0.48 [0.24, 0.63]} & 0.03 [$-$0.25, 0.32] \\
+\quad code & \textbf{0.36 [0.19, 0.51]} & \textbf{0.51 [0.27, 0.68]} & 0.13 [$-$0.15, 0.39] \\
+\quad instruct & \textbf{0.24 [0.04, 0.43]} & \textbf{0.47 [0.26, 0.63]} & $-$0.13 [$-$0.42, 0.17] \\
+\midrule
+\multicolumn{4}{l}{\textit{Qwen2.5 32B (4 bits)}} \\
+\quad base & \textbf{0.30 [0.13, 0.46]} & \textbf{0.49 [0.27, 0.65]} & 0.00 [$-$0.27, 0.27] \\
+\quad code & \textbf{0.29 [0.11, 0.45]} & \textbf{0.47 [0.25, 0.63]} & 0.00 [$-$0.29, 0.28] \\
+\quad instruct & \textbf{0.29 [0.08, 0.47]} & \textbf{0.51 [0.30, 0.65]} & $-$0.02 [$-$0.31, 0.29] \\
+\midrule
+\multicolumn{4}{l}{\textit{DeepSeek 7B}} \\
+\quad base & \textbf{0.33 [0.15, 0.50]} & \textbf{0.49 [0.29, 0.64]} & 0.09 [$-$0.20, 0.37] \\
+\quad code & \textbf{0.31 [0.12, 0.46]} & \textbf{0.44 [0.21, 0.59]} & 0.10 [$-$0.19, 0.36] \\
+\quad instruct & \textbf{0.30 [0.12, 0.46]} & \textbf{0.45 [0.22, 0.62]} & 0.07 [$-$0.20, 0.33] \\
+\midrule
+\multicolumn{4}{l}{\textit{Yi 9B}} \\
+\quad base & \textbf{0.26 [0.02, 0.45]} & \textbf{0.36 [0.07, 0.58]} & 0.10 [$-$0.21, 0.39] \\
+\quad code & \textbf{0.21 [0.00, 0.42]} & \textbf{0.32 [0.04, 0.54]} & 0.06 [$-$0.23, 0.36] \\
+\quad instruct & \textbf{0.23 [0.01, 0.44]} & \textbf{0.35 [0.07, 0.57]} & 0.08 [$-$0.24, 0.41] \\
+\midrule
+\multicolumn{4}{l}{\textit{Llama-2 7B}} \\
+\quad base & \textbf{0.36 [0.16, 0.53]} & \textbf{0.51 [0.32, 0.64]} & 0.14 [$-$0.15, 0.42] \\
+\quad code & \textbf{0.37 [0.17, 0.53]} & \textbf{0.52 [0.31, 0.67]} & 0.15 [$-$0.15, 0.42] \\
+\quad instruct & \textbf{0.35 [0.16, 0.51]} & \textbf{0.52 [0.31, 0.66]} & 0.11 [$-$0.20, 0.39] \\
+\midrule
+\multicolumn{4}{l}{\textit{Llama-2 13B}} \\
+\quad base & \textbf{0.34 [0.15, 0.50]} & \textbf{0.52 [0.31, 0.66]} & 0.10 [$-$0.20, 0.38] \\
+\quad code & \textbf{0.35 [0.15, 0.52]} & \textbf{0.46 [0.24, 0.62]} & 0.13 [$-$0.17, 0.40] \\
+\quad instruct & \textbf{0.34 [0.15, 0.51]} & \textbf{0.50 [0.29, 0.65]} & 0.07 [$-$0.22, 0.34] \\
+\midrule
+\multicolumn{4}{l}{\textit{Gemma 7B}} \\
+\quad base & \textbf{0.36 [0.18, 0.52]} & \textbf{0.53 [0.32, 0.68]} & 0.06 [$-$0.23, 0.34] \\
+\quad code & \textbf{0.32 [0.13, 0.49]} & \textbf{0.50 [0.29, 0.64]} & 0.04 [$-$0.21, 0.29] \\
+\quad instruct & \textbf{0.33 [0.14, 0.50]} & \textbf{0.45 [0.21, 0.61]} & 0.11 [$-$0.18, 0.37] \\
+\bottomrule
+\end{tabular}

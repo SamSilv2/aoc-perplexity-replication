@@ -1,0 +1,18 @@
+{
+  "commit": "60ba7e975b8f41b58b7f006e6c292eb4e22ab131",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "tokenizadores": [
+      "deepseek-ai/deepseek-coder-1.3b-base",
+      "Qwen/Qwen2.5-Coder-32B",
+      "01-ai/Yi-Coder-9B",
+      "deepseek-ai/deepseek-coder-6.7b-base"
+    ]
+  },
+  "seed": null,
+  "model": "só tokenizadores",
+  "model_revision": "main na data",
+  "date": "2026-11-02",
+  "approx_cost": "sem custo"
+}

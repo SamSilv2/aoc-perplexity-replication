@@ -1,0 +1,261 @@
+snippet,campo,valor_antigo,valor_novo,regra
+3-obf-v0,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",R6: regra do átomo reescrita para a v2.1
+3-clean-v0,inicio,38,43,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v0,fim,59,49,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v0,trecho,"V2 = V1 + 3;
+   V1++;",V1 + 3,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v0,nivel_aprox,STAT,NEXP,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v0,origem,independente,regra_v2.1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v0,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",R6: regra do átomo reescrita para a v2.1
+3-clean-v0,alternativa,,Do uso ao incremento: V1 + 3; V1++ (v2 sem o alvo e o ';').,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v0,observacao,,v2.1: reduzida (1c/1e).,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-obf-v1,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",R6: regra do átomo reescrita para a v2.1
+3-clean-v1,inicio,33,37,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v1,fim,123,44,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v1,trecho,"if (V1 == 0) {
+      printf(""true "");
+   }
+   else {
+      printf(""false "");
+   }
+   V1++;",V1 == 0,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v1,nivel_aprox,BLOCK,NEXP,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v1,origem,independente,regra_v2.1,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v1,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",R6: regra do átomo reescrita para a v2.1
+3-clean-v1,revisao,duvidoso,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,R8: desfecho da lista de revisão
+3-clean-v1,alternativa,"Só o teste V1 == 0 (mesmo tamanho do confuso, sem o incremento).","Do teste ao incremento, com os corpos do if (v2).","1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v1,observacao,AOI do limpo inclui os printf entre o teste e o incremento por continuidade.,v2.1: reduzida (1c/1e/3).,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-obf-v2,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",R6: regra do átomo reescrita para a v2.1
+3-clean-v2,inicio,33,37,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v2,fim,123,44,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v2,trecho,"if (V1 == 1) {
+      printf(""true "");
+   }
+   else {
+      printf(""false "");
+   }
+   V1--;",V1 == 1,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v2,nivel_aprox,BLOCK,NEXP,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v2,origem,independente,regra_v2.1,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v2,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,"O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora, porque em v1 e v2 ele só entra junto com os corpos do if (mesmo padrão nos 3 pares).",R6: regra do átomo reescrita para a v2.1
+3-clean-v2,revisao,duvidoso,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,R8: desfecho da lista de revisão
+3-clean-v2,alternativa,"Só o teste V1 == 1 (mesmo tamanho do confuso, sem o decremento).","Do teste ao decremento, com os corpos do if (v2).","1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+3-clean-v2,observacao,AOI do limpo inclui os printf entre o teste e o decremento por continuidade.,v2.1: reduzida (1c/1e/3).,"1c/1e/3 R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-obf-v0,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,R6: regra do átomo reescrita para a v2.1
+4-clean-v0,inicio,37,51,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v0,fim,58,57,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v0,trecho,"++V1;
+   V2 = 5 - V1;",5 - V1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v0,nivel_aprox,STAT,NEXP,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v0,origem,independente,regra_v2.1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v0,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,R6: regra do átomo reescrita para a v2.1
+4-clean-v0,alternativa,,Do incremento ao uso: ++V1; V2 = 5 - V1 (v2 sem o ';').,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v0,observacao,,v2.1: reduzida (1c/1e).,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-obf-v1,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,R6: regra do átomo reescrita para a v2.1
+4-clean-v1,inicio,33,46,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v1,fim,56,53,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v1,trecho,"V1--;
+   if (V1 == 1) {",V1 == 1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v1,nivel_aprox,BLOCK,NEXP,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v1,origem,independente,regra_v2.1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v1,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,R6: regra do átomo reescrita para a v2.1
+4-clean-v1,alternativa,,Do decremento ao teste: V1--; if (V1 == 1 (v2 sem ') {').,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v1,observacao,,v2.1: reduzida (1c/1e).,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-obf-v2,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,R6: regra do átomo reescrita para a v2.1
+4-clean-v2,inicio,37,42,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v2,fim,58,48,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v2,trecho,"V2 = 9 - V1;
+   --V1;",9 - V1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v2,nivel_aprox,STAT,NEXP,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v2,origem,independente,regra_v2.1,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v2,justificativa,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão com o ++/--. Limpo: do primeiro ao último comando que juntos fazem o mesmo cálculo.,O cálculo alterado é a ordem entre usar a variável e incrementá-la. Confuso: a expressão em que o ++/-- está embutido (é o embutir que muda). Limpo: a expressão que usa o valor; o incremento separado fica fora (mesmo padrão do átomo pós-incremento).,R6: regra do átomo reescrita para a v2.1
+4-clean-v2,alternativa,,Do uso ao decremento: 9 - V1; --V1 (v2 sem o alvo e o ';').,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+4-clean-v2,observacao,O limpo de Gopstein faz a conta antes do decremento: não é o mesmo cálculo do confuso.,O limpo de Gopstein faz a conta antes do decremento: não é o mesmo cálculo do confuso. v2.1: reduzida (1c/1e).,"1c/1e R4 + R6: no limpo, a expressão que usa o valor; o comando de incremento separado só entra, em v1 e v2, junto com os corpos do if, que não fazem parte do cálculo; v0 segue o mesmo padrão."
+5-obf-v0,inicio,17,41,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v0,fim,48,47,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v0,trecho,"int V1 = 3;
+   int V2 = V1 + 2;",V1 + 2,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v0,nivel_aprox,STAT,NEXP,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v0,origem,independente,equipe,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v0,justificativa,O valor da conta vem da declaração da constante. Confuso: da declaração até a conta (STAT). Limpo: a conta com o número direto (NEXP).,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,R6: regra do átomo reescrita para a v2.1
+5-obf-v0,revisao,duvidoso,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,R8: desfecho da lista de revisão
+5-obf-v0,alternativa,Só a conta V1 + 2 (anotação da equipe; mesmo nível dos dois lados).,Da declaração até a conta (v2).,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v0,observacao,Assimetria de tamanho (STAT x NEXP) tende a inflar o ℓ.,v2.1: reduzida (1b/1c/3).,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-clean-v0,justificativa,O valor da conta vem da declaração da constante. Confuso: da declaração até a conta (STAT). Limpo: a conta com o número direto (NEXP).,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,R6: regra do átomo reescrita para a v2.1
+5-obf-v1,inicio,17,41,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v1,fim,48,47,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v1,trecho,"int V1 = 2;
+   int V2 = 2 * V1;",2 * V1,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v1,nivel_aprox,STAT,NEXP,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v1,origem,independente,equipe,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v1,justificativa,O valor da conta vem da declaração da constante. Confuso: da declaração até a conta (STAT). Limpo: a conta com o número direto (NEXP).,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,R6: regra do átomo reescrita para a v2.1
+5-obf-v1,revisao,duvidoso,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,R8: desfecho da lista de revisão
+5-obf-v1,alternativa,Só a conta 2 * V1 (anotação da equipe; mesmo nível dos dois lados).,Da declaração até a conta (v2).,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v1,observacao,Assimetria de tamanho (STAT x NEXP) tende a inflar o ℓ.,v2.1: reduzida (1b/1c/3).,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-clean-v1,justificativa,O valor da conta vem da declaração da constante. Confuso: da declaração até a conta (STAT). Limpo: a conta com o número direto (NEXP).,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,R6: regra do átomo reescrita para a v2.1
+5-obf-v2,inicio,17,47,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v2,fim,57,55,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v2,trecho,"int V1 = 2;
+   printf(""%f\n"", 2.5 * V1);",2.5 * V1,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v2,nivel_aprox,STAT,NEXP,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v2,origem,independente,equipe,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v2,justificativa,O valor da conta vem da declaração da constante. Confuso: da declaração até a conta (STAT). Limpo: a conta com o número direto (NEXP).,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,R6: regra do átomo reescrita para a v2.1
+5-obf-v2,revisao,duvidoso,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,R8: desfecho da lista de revisão
+5-obf-v2,alternativa,Só a conta 2.5 * V1 (anotação da equipe; mesmo nível dos dois lados).,Da declaração até a conta (v2).,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-obf-v2,observacao,Assimetria de tamanho (STAT x NEXP) tende a inflar o ℓ.,v2.1: reduzida (1b/1c/3).,"1b/1c/3 R3 + R5: a declaração da constante é um comando inteiro na borda; sem ela a AOI ainda contém o uso da constante, que é o átomo."
+5-clean-v2,justificativa,O valor da conta vem da declaração da constante. Confuso: da declaração até a conta (STAT). Limpo: a conta com o número direto (NEXP).,A confusão está no uso da constante no lugar do número. Confuso: a conta que usa a constante (NEXP). Limpo: a conta com o número direto (NEXP). A declaração fica fora (minimalidade).,R6: regra do átomo reescrita para a v2.1
+8-obf-v2,inicio,45,55,1c R3a + R3b: o alvo da declaração não faz parte da conta de ponteiro.
+8-obf-v2,fim,78,77,1c R3a + R3b: o alvo da declaração não faz parte da conta de ponteiro.
+8-obf-v2,trecho,"int *V2 = V1 + 1;
+   V2 = V2 + 2;","V1 + 1;
+   V2 = V2 + 2",1c R3a + R3b: o alvo da declaração não faz parte da conta de ponteiro.
+8-obf-v2,origem,independente,regra_v2.1,1c R3a + R3b: o alvo da declaração não faz parte da conta de ponteiro.
+8-obf-v2,observacao,,v2.1: reduzida (1c).,1c R3a + R3b: o alvo da declaração não faz parte da conta de ponteiro.
+8-clean-v2,inicio,45,55,1c R4 (R3a + R3b).
+8-clean-v2,fim,78,77,1c R4 (R3a + R3b).
+8-clean-v2,trecho,"int *V2 = &V1[1];
+   V2 = &V2[2];","&V1[1];
+   V2 = &V2[2]",1c R4 (R3a + R3b).
+8-clean-v2,origem,independente,regra_v2.1,1c R4 (R3a + R3b).
+8-clean-v2,observacao,,v2.1: reduzida (1c).,1c R4 (R3a + R3b).
+9-obf-v0,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+9-clean-v0,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+9-clean-v0,observacao,,v2.1 mantida: Razão > 2: o if/else é o equivalente de ?: (R4); as atribuições ficam no meio e não podem sair sem quebrar a continuidade.,R5: justificativa do trecho mantido
+9-obf-v1,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+9-clean-v1,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+9-clean-v1,observacao,,v2.1 mantida: Razão > 2: o if/else aninhado é o equivalente dos ?: aninhados (R4); nada sai da borda.,R5: justificativa do trecho mantido
+9-obf-v2,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+9-clean-v2,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+9-clean-v2,observacao,,v2.1 mantida: Razão > 2: o if/else é o equivalente de ?: (R4); nada sai da borda.,R5: justificativa do trecho mantido
+11-obf-v0,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+11-clean-v0,inicio,33,38,1c/3 R4: o alvo V1 fica fora da AOI no confuso; nível de expressão nas duas pontas.
+11-clean-v0,fim,51,50,1c/3 R4: o alvo V1 fica fora da AOI no confuso; nível de expressão nas duas pontas.
+11-clean-v0,trecho,"V1 = 2;
+   V2 = 1;","2;
+   V2 = 1",1c/3 R4: o alvo V1 fica fora da AOI no confuso; nível de expressão nas duas pontas.
+11-clean-v0,origem,independente,regra_v2.1,1c/3 R4: o alvo V1 fica fora da AOI no confuso; nível de expressão nas duas pontas.
+11-clean-v0,revisao,ternario_virgula,alterado (ternario_virgula; item 1c/3),R8: desfecho da lista de revisão
+11-clean-v0,observacao,,v2.1: reduzida (1c/3).,1c/3 R4: o alvo V1 fica fora da AOI no confuso; nível de expressão nas duas pontas.
+11-obf-v1,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+11-clean-v1,fim,67,66,"1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-clean-v1,trecho,"V1 *= 2;
+
+   int V2 = (V1 += 1);","V1 *= 2;
+
+   int V2 = (V1 += 1)","1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-clean-v1,origem,independente,regra_v2.1,"1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-clean-v1,revisao,ternario_virgula,alterado (ternario_virgula; item 1c/3),R8: desfecho da lista de revisão
+11-clean-v1,observacao,,v2.1: reduzida (1c/3).,"1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-obf-v2,revisao,ternario_virgula,mantido (ternario_virgula),R8: desfecho da lista de revisão
+11-clean-v2,fim,67,66,"1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-clean-v2,trecho,"V1 += 1;
+
+   int V2 = (V1 *= 2);","V1 += 1;
+
+   int V2 = (V1 *= 2)","1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-clean-v2,origem,independente,regra_v2.1,"1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+11-clean-v2,revisao,ternario_virgula,alterado (ternario_virgula; item 1c/3),R8: desfecho da lista de revisão
+11-clean-v2,observacao,,v2.1: reduzida (1c/3).,"1c/3 R4 (R3b): nível de expressão nas duas pontas, como o confuso."
+12-obf-v0,inicio,17,28,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v0,fim,63,62,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v0,trecho,"char *V1 = ""abcdef""
+   #define M1
+   ""abcdef"";","""abcdef""
+   #define M1
+   ""abcdef""",1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v0,origem,independente,regra_v2.1,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v0,observacao,,v2.1: reduzida (1c).,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-clean-v0,inicio,17,28,1c R4 (R3a + R3b).
+12-clean-v0,fim,49,48,1c R4 (R3a + R3b).
+12-clean-v0,trecho,"char *V1 = ""abcdef""
+   ""abcdef"";","""abcdef""
+   ""abcdef""",1c R4 (R3a + R3b).
+12-clean-v0,origem,independente,regra_v2.1,1c R4 (R3a + R3b).
+12-clean-v0,observacao,,v2.1: reduzida (1c).,1c R4 (R3a + R3b).
+12-obf-v1,inicio,40,49,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v1,fim,94,93,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v1,trecho,"int V2 = 1
+   #define M1 1
+   +
+   #define M2 2
+   V1;","1
+   #define M1 1
+   +
+   #define M2 2
+   V1",1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v1,origem,independente,regra_v2.1,1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v1,observacao,,"v2.1: reduzida (1c). v2.1 mantida: Razão < 0,5: as diretivas no meio da expressão são o próprio átomo; nada sai sem perdê-lo. No limpo, as diretivas estão fora do cálculo.",1c R3a + R3b: a diretiva está no inicializador; o alvo não faz parte do cálculo.
+12-obf-v2,observacao,,"v2.1 mantida: Razão < 0,5: o if/else é o que faz as diretivas parecerem condicionais; sem ele a AOI perde o átomo.",R5: justificativa do trecho mantido
+13-clean-v0,fim,51,49,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v0,trecho,"V1 = 1;
+   if (1) {","V1 = 1;
+   if (1)","1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v0,origem,independente,regra_v2.1,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v0,observacao,,v2.1: reduzida (1c). v2.1 mantida: Razão > 2: o cálculo do limpo tem duas partes (atribuição e teste) em comandos separados; nenhuma sai sem perder o cálculo.,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v1,fim,54,52,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v1,trecho,"V1 = 0;
+
+   if (V1) {","V1 = 0;
+
+   if (V1)","1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v1,origem,independente,regra_v2.1,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v1,observacao,,v2.1: reduzida (1c). v2.1 mantida: Razão > 2: o cálculo do limpo tem duas partes (atribuição e teste) em comandos separados; nenhuma sai sem perder o cálculo.,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v2,fim,72,70,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v2,trecho,"V1 = 4;
+
+   while (!4) {","V1 = 4;
+
+   while (!4)","1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v2,origem,independente,regra_v2.1,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+13-clean-v2,observacao,,v2.1: reduzida (1c).,"1c R4 (R3c): o '{' abre o corpo, que fica fora."
+14-obf-v0,justificativa,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os comandos que já existiam no confuso.","O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",R6: regra do átomo reescrita para a v2.1
+14-clean-v0,fim,123,121,"1c/3 R4 (R3c): o '{' abre o segundo corpo, que fica fora."
+14-clean-v0,trecho,"if (++V1) {
+        V1 = V1 * 2;
+        V2 = V2 * 2;
+   } else if (++V2) {","if (++V1) {
+        V1 = V1 * 2;
+        V2 = V2 * 2;
+   } else if (++V2)","1c/3 R4 (R3c): o '{' abre o segundo corpo, que fica fora."
+14-clean-v0,origem,independente,regra_v2.1,"1c/3 R4 (R3c): o '{' abre o segundo corpo, que fica fora."
+14-clean-v0,justificativa,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os comandos que já existiam no confuso.","O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",R6: regra do átomo reescrita para a v2.1
+14-clean-v0,revisao,duvidoso,ambiguo (duvidoso): escolhida a opção mínima; a outra em alternativa,R8: desfecho da lista de revisão
+14-clean-v0,observacao,AOI do limpo inclui o primeiro corpo por continuidade.,AOI do limpo inclui o primeiro corpo por continuidade: é o menor trecho contíguo que vai do primeiro ao último teste. v2.1: reduzida (1c/3). v2.1 mantida: Razão > 2: o menor trecho contíguo do primeiro ao último teste passa pelo primeiro corpo (continuidade); a opção maior está em alternativa.,"1c/3 R4 (R3c): o '{' abre o segundo corpo, que fica fora."
+14-obf-v1,justificativa,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os comandos que já existiam no confuso.","O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",R6: regra do átomo reescrita para a v2.1
+14-clean-v1,fim,104,98,"1c/1e R4: a regra do átomo termina no último pedaço (++V2), como em v0 e v2; nível de expressão (R3b)."
+14-clean-v1,trecho,"if (V1 == V2) {
+      ++V1;
+   } else {
+      ++V2;
+   }","if (V1 == V2) {
+      ++V1;
+   } else {
+      ++V2","1c/1e R4: a regra do átomo termina no último pedaço (++V2), como em v0 e v2; nível de expressão (R3b)."
+14-clean-v1,origem,independente,regra_v2.1,"1c/1e R4: a regra do átomo termina no último pedaço (++V2), como em v0 e v2; nível de expressão (R3b)."
+14-clean-v1,justificativa,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os comandos que já existiam no confuso.","O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",R6: regra do átomo reescrita para a v2.1
+14-clean-v1,observacao,,v2.1: reduzida (1c/1e).,"1c/1e R4: a regra do átomo termina no último pedaço (++V2), como em v0 e v2; nível de expressão (R3b)."
+14-obf-v2,justificativa,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os comandos que já existiam no confuso.","O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",R6: regra do átomo reescrita para a v2.1
+14-clean-v2,justificativa,"O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os comandos que já existiam no confuso.","O cálculo alterado é qual efeito colateral executa (curto-circuito). Confuso: a expressão lógica, sem ';'. Limpo: do primeiro teste ao último pedaço que reproduz a expressão, sem os corpos que vêm depois.",R6: regra do átomo reescrita para a v2.1
+14-clean-v2,observacao,,v2.1 mantida: Razão > 2: o while com o if/break é o equivalente de && no teste do laço (R4); do primeiro teste ao último pedaço.,R5: justificativa do trecho mantido
+15-obf-v1,revisao,novo,mantido (novo),R8: desfecho da lista de revisão
+15-clean-v1,fim,149,131,1c R4: comando na borda sem correspondente no trecho confuso.
+15-clean-v1,trecho,"for (int V2 = 0; V2 < 2; V2++) {
+         V3 = 4 * V1 + V2;
+         V1 = V2;","for (int V2 = 0; V2 < 2; V2++) {
+         V3 = 4 * V1 + V2;",1c R4: comando na borda sem correspondente no trecho confuso.
+15-clean-v1,origem,independente,regra_v2.1,1c R4: comando na borda sem correspondente no trecho confuso.
+15-clean-v1,observacao,,v2.1: reduzida (1c).,1c R4: comando na borda sem correspondente no trecho confuso.
+17-obf-v0,fim,51,40,"2 R3 + R7: a atribuição seguinte, que torna V1 = 3 morta, existe igual no limpo; a AOI é o trecho que não existe no limpo, como em v1 e v2."
+17-obf-v0,trecho,"V1 = 3;
+   V1 = 2;",V1 = 3;,"2 R3 + R7: a atribuição seguinte, que torna V1 = 3 morta, existe igual no limpo; a AOI é o trecho que não existe no limpo, como em v1 e v2."
+17-obf-v0,origem,novo,ambas,"2 R3 + R7: a atribuição seguinte, que torna V1 = 3 morta, existe igual no limpo; a AOI é o trecho que não existe no limpo, como em v1 e v2."
+17-obf-v0,justificativa,"Decisão fechada: confuso, o código morto e o que o torna morto; limpo não tem equivalente. O par sai da métrica de AOI nos dois lados e continua na métrica do snippet.","Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",R6: regra do átomo reescrita para a v2.1
+17-obf-v0,revisao,novo,alterado (novo; item 2),R8: desfecho da lista de revisão
+17-obf-v0,alternativa,,V1 = 3; V1 = 2; (v2: inclui o que torna o trecho morto).,"2 R3 + R7: a atribuição seguinte, que torna V1 = 3 morta, existe igual no limpo; a AOI é o trecho que não existe no limpo, como em v1 e v2."
+17-obf-v0,observacao,"Inclui a atribuição seguinte, que é o que torna V1 = 3 morto.","Inclui a atribuição seguinte, que é o que torna V1 = 3 morto. v2.1: reduzida (2).","2 R3 + R7: a atribuição seguinte, que torna V1 = 3 morta, existe igual no limpo; a AOI é o trecho que não existe no limpo, como em v1 e v2."
+17-clean-v0,justificativa,"Decisão fechada: confuso, o código morto e o que o torna morto; limpo não tem equivalente. O par sai da métrica de AOI nos dois lados e continua na métrica do snippet.","Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",R6: regra do átomo reescrita para a v2.1
+17-obf-v1,justificativa,"Decisão fechada: confuso, o código morto e o que o torna morto; limpo não tem equivalente. O par sai da métrica de AOI nos dois lados e continua na métrica do snippet.","Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",R6: regra do átomo reescrita para a v2.1
+17-clean-v1,justificativa,"Decisão fechada: confuso, o código morto e o que o torna morto; limpo não tem equivalente. O par sai da métrica de AOI nos dois lados e continua na métrica do snippet.","Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",R6: regra do átomo reescrita para a v2.1
+17-obf-v2,justificativa,"Decisão fechada: confuso, o código morto e o que o torna morto; limpo não tem equivalente. O par sai da métrica de AOI nos dois lados e continua na métrica do snippet.","Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",R6: regra do átomo reescrita para a v2.1
+17-clean-v2,justificativa,"Decisão fechada: confuso, o código morto e o que o torna morto; limpo não tem equivalente. O par sai da métrica de AOI nos dois lados e continua na métrica do snippet.","Confuso: o trecho que não existe no limpo (o comando morto, inalcançável ou repetido). Limpo não tem equivalente: o par sai do aoi_max nos dois lados e continua no snippet_media.",R6: regra do átomo reescrita para a v2.1
+20-clean-v1,observacao,,v2.1 mantida: Razão > 2: a conversão explícita do limpo é condicional; tirar o teste ou um ramo perde a equivalência.,R5: justificativa do trecho mantido

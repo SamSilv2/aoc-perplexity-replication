@@ -1,0 +1,34 @@
+{
+  "codigo_alterado": false,
+  "commit": "518f477c8b25e100a2de5fc39233fdea1c3c3b19",
+  "config": {
+    "trios": {
+      "Qwen2.5 3B-bergum": "2026-11-02-trio-qwen2.5-3b-bergum-aoi-manual",
+      "Qwen2.5 7B-bergum": "2026-11-04-trio-qwen2.5-7b-bergum-aoi-manual",
+      "Qwen2.5 32B (4 bits)-bergum": "2026-11-03-trio-qwen2.5-32b-4bit-bergum-aoi-manual",
+      "DeepSeek 7B-bergum": "2026-11-03-trio-deepseek-7b-bergum-aoi-manual",
+      "Yi 9B-bergum": "2026-11-03-trio-yi-9b-bergum-aoi-manual",
+      "Llama-2 7B-bergum": "2026-11-04-trio-llama-2-7b-bergum-aoi-manual",
+      "Llama-2 13B-bergum": "2026-11-05-trio-llama-2-13b-bergum-aoi-manual",
+      "Gemma 7B-bergum": "2026-11-03-trio-gemma-7b-bergum-aoi-manual",
+      "Qwen2.5 3B-gopstein": "2026-11-04-trio-qwen2.5-3b-gopstein-aoi-manual-v2.1",
+      "Qwen2.5 7B-gopstein": "2026-11-04-trio-qwen2.5-7b-gopstein-aoi-manual-v2.1",
+      "Qwen2.5 32B (4 bits)-gopstein": "2026-11-04-trio-qwen2.5-32b-4bit-gopstein-aoi-manual-v2.1",
+      "DeepSeek 7B-gopstein": "2026-11-04-trio-deepseek-7b-gopstein-aoi-manual-v2.1",
+      "Yi 9B-gopstein": "2026-11-04-trio-yi-9b-gopstein-aoi-manual-v2.1",
+      "Llama-2 7B-gopstein": "2026-11-04-trio-llama-2-7b-gopstein-aoi-manual-v2.1",
+      "Llama-2 13B-gopstein": "2026-11-05-trio-llama-2-13b-gopstein-aoi-manual-v2.1",
+      "Gemma 7B-gopstein": "2026-11-04-trio-gemma-7b-gopstein-aoi-manual-v2.1"
+    },
+    "anotacao_gopstein": "v2.1",
+    "robustez": null,
+    "invalidas": [
+      "Gemma 7B: snippet_media"
+    ]
+  },
+  "seed": "herdada das análises (42)",
+  "model": "Qwen2.5 3B, 7B, 32B 4 bits; DeepSeek 7B; Yi 9B; Llama-2 7B e 13B; Gemma 7B",
+  "model_revision": "nos run.json de cada análise listada em config.trios",
+  "date": "2026-11-05",
+  "approx_cost": "sem custo (Mac local)"
+}

@@ -1,0 +1,14 @@
+Recorte da AOI contra a coluna publicada: maior erro relativo 2.22e-16
+Token a token: mediana |Δ| 0.282, média com sinal -0.304, Spearman 0.9625
+RQ1 publicado (fp16)  Overall Perplexity       n=72 W=   941 p=0.0363 r=0.247
+RQ1 publicado (fp16)  Max Perplexity           n=26 W=    97 p=0.0460 r=0.391
+RQ1 publicado (fp16)  Overall AOI Perplexity   n=72 W=   686 p=0.0004 r=0.415
+RQ1 publicado (fp16)  Max AOI Perplexity       n=72 W=   638 p=0.0001 r=0.447
+    mediana Overall Perplexity: limpo 15.31, confuso 17.73
+    mediana Max AOI Perplexity: limpo 7.51, confuso 46.15
+RQ1 4 bits            Overall Perplexity       n=72 W=   989 p=0.0682 r=0.215
+RQ1 4 bits            Max Perplexity           n=13 W=    36 p=0.5293 r=0.184
+RQ1 4 bits            Overall AOI Perplexity   n=72 W=   769 p=0.0022 r=0.360
+RQ1 4 bits            Max AOI Perplexity       n=72 W=   615 p=0.0001 r=0.462
+    mediana Overall Perplexity: limpo 21.41, confuso 26.40
+    mediana Max AOI Perplexity: limpo 15.00, confuso 51.57

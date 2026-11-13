@@ -1,0 +1,137 @@
+% Template ACM. O modo nonacm remove os dados de publicação da ACM.
+\documentclass[sigconf,nonacm]{acmart}
+
+% Permite quebrar nomes de modelos e evita estouros de margem.
+\renewcommand{\texttt}[1]{\nolinkurl{#1}}
+\setlength{\emergencystretch}{2em}
+
+% Notação dos contrastes (decisão 0016): o primeiro índice entra com sinal positivo.
+\newcommand{\Dcb}{D_{\mathrm{code},\mathrm{base}}}
+\newcommand{\Dic}{D_{\mathrm{instr},\mathrm{code}}}
+\newcommand{\Dib}{D_{\mathrm{instr},\mathrm{base}}}
+
+% Espaço entre referências (evita Overfull na última página).
+\setlength{\bibsep}{1pt plus 1pt}
+
+% Diagrama do experimento nos anexos; [H] fixa tabelas e figuras dos anexos depois do texto.
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+% Numeração das páginas (o sigconf a omite por padrão).
+\settopmatter{printfolios=true}
+\begin{document}
+
+\title{Code Specialization, Instruction Tuning, and Atoms of Confusion}
+\subtitle{Comparing Perplexity Across General-Purpose Base, Code-Specialized Base, and Instruct Models} 
+
+\author{Camila Nicola Dias Santana, João Marcos de Sousa Rezende, Matheus Botelho Menezes dos Santos, and Samuel Souza Silva}
+\affiliation{\institution{Universidade Federal de Minas Gerais}\city{Belo Horizonte}\country{Brazil}}
+\renewcommand{\shortauthors}{Santana, Rezende, Santos, and Silva}
+
+\begin{abstract}
+Abdelsalam et al.\ showed that code language models assign higher perplexity to atoms of confusion, in line with neural signals of human confusion.
+We reproduce their study and compare eight trios of related base, code, and instruct checkpoints from five families on Java and C snippets.
+Recomputed statistics match the authors' result files, and all six published models remain significant when pairs are clustered by base pair.
+General-purpose base models already show the effect in Java. The evidence on code specialization and instruction tuning is mixed, with contrasts in both directions.
+In Java, perplexity correlates with the human FRP on confusing snippets in all 24 models (Spearman $\rho = 0.32$--$0.53$), while no interval excludes zero on clean snippets.
+In C, the confusion effect is smaller and five of its 24 intervals include zero.
+\end{abstract}
+
+\maketitle
+
+\section{Problem and Motivation}
+Software, like natural language, is repetitive and predictable~\cite{hindle2012}, and, as word surprisal predicts reading difficulty, more surprising versions of meaning-equivalent snippets took programmers longer to answer correctly~\cite{casalnuovo2020}.
+Atoms of confusion, small patterns that cause programmers to misread code, were identified in C~\cite{gopstein2017} and later studied in Java~\cite{langhout2021}; more than 30\% of the Java files in the Android Open Source Project contain at least one~\cite{tabosa2024}.
+Bergum et al.\ showed that atoms elicit a late frontal positivity in fixation-related potentials (FRP), like unexpected but plausible words~\cite{bergum2025}, and Abdelsalam et al.\ found that LLM perplexity on the same snippets, especially in the area of interest (AOI) that contains the atom, correlates with this response~\cite{abdelsalam2026}.
+They evaluated mostly code models (their package includes one general-purpose model, Llama 3.2 3B); we reproduce their study, compare related base, code, and instruct checkpoints, and extend it to the C snippets of Gopstein et al.
+
+We compare trios of related checkpoints: a general-purpose base model ($B$), its code-specialized version ($C$), and the instruct version of the code model ($I$).
+Models in a trio share a lineage and tokenize every snippet identically, but may differ in vocabulary, context length, data and recipe, so differences are associated with, not attributed to, code specialization and instruction tuning.
+For each pair, $\ell = \ln(\mathrm{PPL}_{\mathrm{confusing}}) - \ln(\mathrm{PPL}_{\mathrm{clean}})$, and a model's confusion effect is $\Delta = \bar{\ell}$.
+Maximum AOI-level perplexity is the exponential of the maximum token surprisal within the AOI. The secondary snippet-level perplexity uses the mean.
+We report $\Dcb = \Delta_C - \Delta_B$, $\Dic = \Delta_I - \Delta_C$ and $\Dib = \Delta_I - \Delta_B = \Dcb + \Dic$ on the AOI metric, prespecified before any trio was run.
+Nominal 95\% intervals come from a percentile bootstrap (10\,000 resamples, seed 42) over clusters shared by the three models of a trio (24 base pairs in Java, 20 atoms in C).
+
+
+\section{Experimental Setup}
+\paragraph{Models.}
+Eight trios from five families (Qwen2.5 3B, 7B and 32B, DeepSeek 7B, Yi 9B, Llama-2 7B and 13B, and Gemma 7B; Appendix~\ref{app:design}), all evaluated on Java and C in fp16, except Qwen2.5 32B (4 bits).
+Instruct models score plain snippets, without chat templates; Gemma is reported only with maximum AOI-level perplexity.
+
+\paragraph{Data.}
+We use the 72 Java pairs of Bergum et al.~\cite{bergum2025} and the original C dataset~\cite{gopstein2017}, from which they descend~\cite{langhout2021}.
+We use all 21 atoms of the authors' package, 15 of them confirmed as confusing by the original study.
+The Java AOI was designed with the stimuli and checked in a pilot study; for C we annotated one (Section~\ref{sec:discussion}), and the dead-code atom, which has no clean AOI, is left out of the AOI metric (60 pairs, 20 atoms).
+
+\section{Results}
+\paragraph{Reproduction.}
+We recomputed RQ1--RQ3 from the published outputs of Qwen2.5-Coder-32B and re-executed \texttt{deepseek-coder-1.3b-base} locally (Apple Silicon, fp16; Appendix~\ref{app:reproduction}).
+The four RQ1 tests match the paper at its precision, and all recomputed statistics match the authors' result files. Two results printed in the paper differ from those files (RQ2 clean: $\rho = 0.063$ versus $0.05$; RQ3 overlap, clean: bootstrap mean $0.42$ versus $0.38$, point estimate $0.41$), without changing the original conclusions.
+The original tests (Wilcoxon for RQ1, Spearman $p$ values for RQ2), like our reproduction, treat the 72 pairs as independent, although they come from 24 base pairs. With a bootstrap clustered by base pair, all six published models keep intervals above zero for $\Delta$ and for $\rho$ on confusing snippets.
+The re-execution has identical tokens and nearly identical statistics ($W = 863$ versus $864$), but only 84.5\% of tokens fall within our prespecified tolerance (99\% required), consistent with numerical noise; the criterion remains unmet.
+
+
+\begin{figure}[t]
+  \includegraphics[width=\columnwidth]{../results/extensao/2026-11-11-figuras/delta-aoi_max-grade.pdf}
+  \caption{Confusion effect $\Delta$ (maximum AOI-level perplexity) for each base (B), code (C) and instruct (I) model, with nominal 95\% bootstrap intervals; Java above, C below; Qwen2.5 32B in 4 bits.}
+  \label{fig:delta}
+\end{figure}
+
+
+\paragraph{Confusion effect.}
+In Java, all 24 models assign higher perplexity to the AOI of confusing snippets ($\Delta$ from 1.32 to 3.19, all intervals above zero; Figure~\ref{fig:delta}).
+In C, effects are smaller ($\Delta$ from 0.59 to 1.97), and five intervals include zero: Qwen2.5 3B base, Qwen2.5 32B code and instruct, and Yi 9B base and code.
+
+
+
+
+\begin{table}[t]
+  \caption{Contrasts between models for maximum AOI-level perplexity, with nominal 95\% bootstrap intervals. Bold: interval excludes zero.}
+  \label{tab:extension}
+  \input{../results/extensao/2026-11-12-consolidado/tabela-contrastes-aoi_max-coluna.tex}
+\end{table}
+
+\paragraph{Correlation with EEG (RQ2).}
+In Java, Spearman $\rho$ between maximum AOI-level perplexity and the human FRP ranged from 0.32 to 0.53 on confusing snippets, all intervals above zero, and from $-0.13$ to 0.15 on clean ones, none excluding zero (Table~\ref{tab:app-eeg}).
+
+\paragraph{Contrasts.}
+In Java, $\Dib$ is positive in all eight trios, but no interval excludes zero.
+Across both languages, $\Dic$ is positive in 12 of 16 trio--language combinations, with eight intervals excluding zero (seven positive, some with lower bounds close to zero, and one negative, Llama-2 13B in Java). Five $\Dcb$ intervals exclude zero, in both directions (Table~\ref{tab:extension}; per-model results in Appendix~\ref{app:results}).
+
+\section{Discussion and Threats to Validity}
+\label{sec:discussion}
+Because atoms are common in real code~\cite{tabosa2024}, code specialization can change exposure to them in either direction (more code, or quality filtering that removes them). Curation differs across vendors, consistent with $\Dcb$ of opposite signs across families (e.g., Llama-2 13B and Gemma 7B in Java), but we did not measure corpus composition.
+With dozens of nominal intervals, some bold entries are expected by chance, and an interval that includes zero is not evidence of no effect.
+
+Every instruct model is built on the code model, so $\Dic$ compares each instruct model with the code model it was tuned from, in a fixed order. Instruction recipes also differ across families.
+Instruct models ran without chat templates; for Qwen2.5 3B and DeepSeek 7B, adding the template lowered $\Delta_I$ in 6 of 8 language--metric combinations without reversing its sign, but 5 of the 16 contrasts involving the instruct model, mostly close to zero, changed sign (e.g., $\Dic$ of Qwen2.5 3B in Java, 0.44 to $-0.05$).
+
+The AOI maximum also depends on how many tokens the AOI contains, which varies across versions, languages and tokenizers, so comparisons between families and sizes are descriptive.
+Java and C differ at once in language, snippet style and atom categories (C has macro, preprocessor and pointer atoms), so the smaller effects in C are not attributed to the language alone.
+The C AOI is an assumption: Gopstein et al.\ validated atoms by error rates on whole snippets, not by region, and our annotation was produced by an LLM under author-defined rules, with examples from 26 pairs checked (four revised rules unchecked). Across three AOI annotations, 12 of the 24 primary C contrasts changed sign or interval status, several of them close to zero.
+Four atoms were unconfirmed and two (indentation) left out of the original analysis; restricted to the 15 confirmed atoms (45 pairs), every C $\Delta$ increases and only a near-zero contrast reverses ($\Dcb$ of Gemma 7B), but $\Dib$ and $\Dic$ of Qwen2.5 3B then exclude zero, whereas $\Dib$ and $\Dcb$ of Llama-2 13B no longer do.
+
+The 32B trio ran in 4 bits, which lowered $\Delta$ of \texttt{Qwen2.5-Coder-32B} in Java from 2.75 (published fp16) to 2.47; a common precision within the trio does not ensure that the error cancels in the contrasts.
+Each vendor contributes one family, the snippets are short synthetic programs, and there are EEG data only for Java: in C, the link to human confusion remains indirect.
+
+\section{Conclusion}
+In Java, maximum AOI-level perplexity already separates confusing from clean code in all eight general-purpose base models, so the alignment with atoms of confusion precedes additional code specialization. Pretraining may already include code, as for Qwen2.5~\cite{qwen25}, and the snippet-level metric rarely shows the effect.
+The evidence on instruction tuning and code specialization is mixed: $\Dic$ is often positive but negative for Llama-2 13B, and $\Dcb$ excludes zero in both directions; we find no consistent effect of either stage.
+
+In Java, perplexity is positively associated with the published FRP on confusing snippets in every model; we did not test differences between these correlations. Results in C remain conditional on the AOI annotation and the evaluated atom set.
+
+\section*{AI-Assistance Statement}
+The authors designed the reproduction and extension.
+AI agents (Claude Opus 5.5, Claude Sonnet 5.5 and GPT-6 Astra) implemented code under the authors' direction and assisted with tests, documentation and drafting.
+The AOI annotation of the C dataset was produced in a hybrid process by the authors and two independent AI agents.
+The authors validated the code and are responsible for the final text.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+% Anexos, em uma coluna e a partir da página seguinte às referências.
+\onecolumn
+\input{anexos}
+
+\end{document}

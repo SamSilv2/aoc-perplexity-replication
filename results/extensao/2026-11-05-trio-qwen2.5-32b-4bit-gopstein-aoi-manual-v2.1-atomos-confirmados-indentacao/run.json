@@ -1,0 +1,60 @@
+{
+  "commit": "0b1bb62dfe84e53381ee8a64b1a9afb7fe23203b",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-02-reexecucao-Qwen2.5-32B-4bit-completo",
+      "codigo": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-32B-4bit-completo",
+      "instruct": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-32B-Instruct-4bit-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "gopstein",
+    "aoi": "manual",
+    "anotacao": {
+      "versao": "v2.1",
+      "arquivo": "data/anotacoes/gopstein-aoi-v2.1.csv",
+      "sha256": "8ebc846fb9d403c4b9291b70585546bd5f1c3ca03308344bee06aabe6c335e24"
+    },
+    "n_pares": {
+      "aoi_max": 51,
+      "snippet_media": 51
+    },
+    "atomos": {
+      "rotulo": "confirmados-indentacao",
+      "lista": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "18",
+        "19",
+        "20",
+        "6",
+        "21"
+      ]
+    },
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "mlx-community/Qwen2.5-32B-4bit",
+    "codigo": "mlx-community/Qwen2.5-Coder-32B-4bit",
+    "instruct": "mlx-community/Qwen2.5-Coder-32B-Instruct-4bit"
+  },
+  "model_revision": {
+    "base": "2bea1f076286bd11fc7a4319c1f1e12529951af2",
+    "codigo": "95a94c79c01609c0ebd6eebab4164a65d2a690b8",
+    "instruct": "d1e3b690c8e225d7795bccddf971ca6be68b2012"
+  },
+  "date": "2026-11-05",
+  "approx_cost": "sem custo (Mac local)"
+}

@@ -1,0 +1,32 @@
+{
+  "commit": "fc3f38e61b15711982798fc6a2d70add7d6de1ac",
+  "codigo_alterado": false,
+  "config": {
+    "pacote_commit": "720e1bfb7b79d54f8834d4670ab8e5d80d44f84d",
+    "dtype": "float16",
+    "backend": "torch",
+    "tokenizador": "01-ai/Yi-9B",
+    "tokenizador_revisao": "7b7ca5cf23753f488859321e2439dc4bcbc0eca0",
+    "uma_passagem": true,
+    "dispositivo_entrada": "mps",
+    "dispositivo_inferencia": "mps",
+    "limite": null,
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "conjuntos": [
+      "bergum"
+    ],
+    "arquivos": {
+      "bergum": 144
+    },
+    "segundos": {
+      "bergum": 47.3
+    },
+    "comparacao": null
+  },
+  "seed": null,
+  "model": "01-ai/Yi-9B",
+  "model_revision": "7b7ca5cf23753f488859321e2439dc4bcbc0eca0",
+  "date": "2026-11-03",
+  "approx_cost": "sem custo (Mac local)"
+}

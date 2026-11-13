@@ -1,0 +1,390 @@
+{
+  "commit": "b36d2a6546eb0c6a6a712e696149f8ba4770fb12",
+  "codigo_alterado": false,
+  "config": {
+    "figuras": {
+      "eeg-grade-llama2.pdf": "grade 2 × 3 (Llama-2 7B e 13B × B, C, I)",
+      "eeg-grade-qwen25.pdf": "grade 3 × 3 (Qwen2.5 3B, 7B e 32B em 4 bits × B, C, I)",
+      "eeg-grade-contraste.pdf": "grade 2 × 3 (Llama-2 13B e Gemma 7B × B, C, I): os trios com contrastes opostos e D_code,base e D_instr,code fora de zero",
+      "png": "um PNG de 150 dpi por figura, só para pré-visualização"
+    },
+    "alternativa_em_avaliacao": true,
+    "painel": "uma seta por snippet-base (24), do limpo ao confuso; x = média geométrica da Max AOI Perplexity nas 3 versões, y = média do FRP (µV); média geral geométrica em x e aritmética em y",
+    "categorias": "expected: x e y sobem; opposite: x e y descem; partial: os demais casos",
+    "fontes": {
+      "results/extensao/2026-11-05-consolidado-3/consolidado.csv": "38700580b3a681429e31e570c15e097222b03c952478b8f4a6300f32ab33cc16",
+      "results/extensao/2026-11-05-eeg-java/correlacoes.csv": "9b4b6268d755080ce68d3407b8b3640676571de1b4702c7c0bdf7ab3e9dcb9b0"
+    },
+    "modelos": {
+      "Qwen2.5 3B base": {
+        "model": "Qwen/Qwen2.5-3B",
+        "model_revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+        "execucao": "results/extensao/2026-11-02-reexecucao-Qwen2.5-3B-completo",
+        "sha256_perplexidade": "c2e6f27d5356f61d375cbdc17353b85b4e37f0c1a985a1a4348c69eff43ae162"
+      },
+      "Qwen2.5 3B codigo": {
+        "model": "Qwen/Qwen2.5-Coder-3B",
+        "model_revision": "09d9bc5d376b0cfa0100a0694ea7de7232525803",
+        "execucao": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-completo",
+        "sha256_perplexidade": "90cb3d2ad99b11bfcbb385f243e07cd148b8d78e89c022d516bac2943513b4b2"
+      },
+      "Qwen2.5 3B instruct": {
+        "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "model_revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "execucao": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-3B-Instruct-completo",
+        "sha256_perplexidade": "025b9b1ed8062cf8c9ce73e58f5dc78a557eb99e94e748dfa5ae6a0a1cb4e821"
+      },
+      "Qwen2.5 7B base": {
+        "model": "Qwen/Qwen2.5-7B",
+        "model_revision": "d149729398750b98c0af14eb82c78cfe92750796",
+        "execucao": "results/extensao/2026-11-04-reexecucao-Qwen2.5-7B-bergum-gopstein",
+        "sha256_perplexidade": "e85a921239604d605dbeb863703100853c5f1b236404e2754e719461bfe5f038"
+      },
+      "Qwen2.5 7B codigo": {
+        "model": "Qwen/Qwen2.5-Coder-7B",
+        "model_revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+        "execucao": "results/extensao/2026-11-04-reexecucao-Qwen2.5-Coder-7B-bergum-gopstein",
+        "sha256_perplexidade": "34f8e112d436f0fb897ac582875ab9b662ff3ced4b56e1ba538d4c79bf97fa80"
+      },
+      "Qwen2.5 7B instruct": {
+        "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+        "model_revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+        "execucao": "results/extensao/2026-11-04-reexecucao-Qwen2.5-Coder-7B-Instruct-bergum-gopstein",
+        "sha256_perplexidade": "05d4c78885dd8764c2472454baa6aaf34d72f1c1f7cae98458013c45eac21a06"
+      },
+      "Qwen2.5 32B (4 bits) base": {
+        "model": "mlx-community/Qwen2.5-32B-4bit",
+        "model_revision": "2bea1f076286bd11fc7a4319c1f1e12529951af2",
+        "execucao": "results/extensao/2026-11-02-reexecucao-Qwen2.5-32B-4bit-completo",
+        "sha256_perplexidade": "90040f1a90a799ddab7d44071284bd2ebc17720c336e780560d935cd80453510"
+      },
+      "Qwen2.5 32B (4 bits) codigo": {
+        "model": "mlx-community/Qwen2.5-Coder-32B-4bit",
+        "model_revision": "95a94c79c01609c0ebd6eebab4164a65d2a690b8",
+        "execucao": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-32B-4bit-completo",
+        "sha256_perplexidade": "f21a19b120cc1c4b17d919a8fcd16e6b83d13083b76d92a0551a8bf6c17cd0a1"
+      },
+      "Qwen2.5 32B (4 bits) instruct": {
+        "model": "mlx-community/Qwen2.5-Coder-32B-Instruct-4bit",
+        "model_revision": "d1e3b690c8e225d7795bccddf971ca6be68b2012",
+        "execucao": "results/extensao/2026-11-02-reexecucao-Qwen2.5-Coder-32B-Instruct-4bit-completo",
+        "sha256_perplexidade": "c3ff4cb64ee910cc7dffb4b66f1aa32091ad2371298c88e0f7132560b05dfa85"
+      },
+      "Llama-2 7B base": {
+        "model": "meta-llama/Llama-2-7b-hf",
+        "model_revision": "01c7f73d771dfac7d292323805ebc428287df4f9",
+        "execucao": "results/extensao/2026-11-04-reexecucao-Llama-2-7b-hf-completo",
+        "sha256_perplexidade": "ae5174f55ad701b481abace08e8da72669468aadd5848bcfed4c3c91ab81f9eb"
+      },
+      "Llama-2 7B codigo": {
+        "model": "meta-llama/CodeLlama-7b-hf",
+        "model_revision": "b462c3c99b077d341db691ec780a33156f3c1472",
+        "execucao": "results/extensao/2026-11-04-reexecucao-CodeLlama-7b-hf-completo",
+        "sha256_perplexidade": "21bcb893a06d36bcb83e2ac0bc88fa36639c324545ccd272f6c5b4538603b830"
+      },
+      "Llama-2 7B instruct": {
+        "model": "meta-llama/CodeLlama-7b-Instruct-hf",
+        "model_revision": "4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc",
+        "execucao": "results/extensao/2026-11-04-reexecucao-CodeLlama-7b-Instruct-hf-completo",
+        "sha256_perplexidade": "e6e23831f8d1a3bddd8eadc73fad40786866394a1d1fa64f2ccc86d2af8b8699"
+      },
+      "Llama-2 13B base": {
+        "model": "meta-llama/Llama-2-13b-hf",
+        "model_revision": "5c31dfb671ce7cfe2d7bb7c04375e44c55e815b1",
+        "execucao": "results/extensao/2026-11-05-reexecucao-Llama-2-13b-hf-bergum-gopstein",
+        "sha256_perplexidade": "2dee1979aa0195bcb2f907875f81eb197df4943e8fedeb2934de836385aa485f"
+      },
+      "Llama-2 13B codigo": {
+        "model": "meta-llama/CodeLlama-13b-hf",
+        "model_revision": "bed8c603d9ad262851259de64609337fea3b620d",
+        "execucao": "results/extensao/2026-11-05-reexecucao-CodeLlama-13b-hf-bergum-gopstein",
+        "sha256_perplexidade": "d0f5625c62df7cd38651cbbaa0462350bfd39f285ef039ccd8f94b966ffc148d"
+      },
+      "Llama-2 13B instruct": {
+        "model": "meta-llama/CodeLlama-13b-Instruct-hf",
+        "model_revision": "c24689b733f841ab1a6cce35bccb729f3f7b23fd",
+        "execucao": "results/extensao/2026-11-05-reexecucao-CodeLlama-13b-Instruct-hf-bergum-gopstein",
+        "sha256_perplexidade": "4ccd5aa2d600007166a52b9370ef641d24e166b8647d7286f6243213db3eb260"
+      },
+      "Gemma 7B base": {
+        "model": "google/gemma-7b",
+        "model_revision": "ff6768d9368919a1f025a54f9f5aa0ee591730bb",
+        "execucao": "results/extensao/2026-11-03-reexecucao-gemma-7b-completo",
+        "sha256_perplexidade": "db322d4a2db60c129c8d509e3e1267c63c479217a59b8747b84614e65681746e"
+      },
+      "Gemma 7B codigo": {
+        "model": "google/codegemma-7b",
+        "model_revision": "2ec970089fe8f083d10d1ce6bac30538ac4badaa",
+        "execucao": "results/extensao/2026-11-03-reexecucao-codegemma-7b-completo",
+        "sha256_perplexidade": "853233467e33f7c688eacc0e0c4cff1046bd4069d0aed52fab3a1f5c609c86e3"
+      },
+      "Gemma 7B instruct": {
+        "model": "google/codegemma-7b-it",
+        "model_revision": "078cdc51070553d1636d645c9a238f3b0914459a",
+        "execucao": "results/extensao/2026-11-03-reexecucao-codegemma-7b-it-completo",
+        "sha256_perplexidade": "e2deb1eb8fa30b70f711d570d6ef248d6d10157afcfa99c806c29287c313710f"
+      }
+    },
+    "contagens": {
+      "Qwen2.5 3B base": {
+        "expected_n": 12,
+        "partial_n": 9,
+        "opposite_n": 3,
+        "expected_pct": 50,
+        "partial_pct": 38,
+        "opposite_pct": 13
+      },
+      "Qwen2.5 3B codigo": {
+        "expected_n": 12,
+        "partial_n": 7,
+        "opposite_n": 5,
+        "expected_pct": 50,
+        "partial_pct": 29,
+        "opposite_pct": 21
+      },
+      "Qwen2.5 3B instruct": {
+        "expected_n": 11,
+        "partial_n": 9,
+        "opposite_n": 4,
+        "expected_pct": 46,
+        "partial_pct": 38,
+        "opposite_pct": 17
+      },
+      "Qwen2.5 7B base": {
+        "expected_n": 13,
+        "partial_n": 6,
+        "opposite_n": 5,
+        "expected_pct": 54,
+        "partial_pct": 25,
+        "opposite_pct": 21
+      },
+      "Qwen2.5 7B codigo": {
+        "expected_n": 13,
+        "partial_n": 6,
+        "opposite_n": 5,
+        "expected_pct": 54,
+        "partial_pct": 25,
+        "opposite_pct": 21
+      },
+      "Qwen2.5 7B instruct": {
+        "expected_n": 12,
+        "partial_n": 6,
+        "opposite_n": 6,
+        "expected_pct": 50,
+        "partial_pct": 25,
+        "opposite_pct": 25
+      },
+      "Qwen2.5 32B (4 bits) base": {
+        "expected_n": 12,
+        "partial_n": 6,
+        "opposite_n": 6,
+        "expected_pct": 50,
+        "partial_pct": 25,
+        "opposite_pct": 25
+      },
+      "Qwen2.5 32B (4 bits) codigo": {
+        "expected_n": 13,
+        "partial_n": 5,
+        "opposite_n": 6,
+        "expected_pct": 54,
+        "partial_pct": 21,
+        "opposite_pct": 25
+      },
+      "Qwen2.5 32B (4 bits) instruct": {
+        "expected_n": 12,
+        "partial_n": 6,
+        "opposite_n": 6,
+        "expected_pct": 50,
+        "partial_pct": 25,
+        "opposite_pct": 25
+      },
+      "Llama-2 7B base": {
+        "expected_n": 12,
+        "partial_n": 6,
+        "opposite_n": 6,
+        "expected_pct": 50,
+        "partial_pct": 25,
+        "opposite_pct": 25
+      },
+      "Llama-2 7B codigo": {
+        "expected_n": 11,
+        "partial_n": 8,
+        "opposite_n": 5,
+        "expected_pct": 46,
+        "partial_pct": 33,
+        "opposite_pct": 21
+      },
+      "Llama-2 7B instruct": {
+        "expected_n": 11,
+        "partial_n": 8,
+        "opposite_n": 5,
+        "expected_pct": 46,
+        "partial_pct": 33,
+        "opposite_pct": 21
+      },
+      "Llama-2 13B base": {
+        "expected_n": 12,
+        "partial_n": 7,
+        "opposite_n": 5,
+        "expected_pct": 50,
+        "partial_pct": 29,
+        "opposite_pct": 21
+      },
+      "Llama-2 13B codigo": {
+        "expected_n": 14,
+        "partial_n": 6,
+        "opposite_n": 4,
+        "expected_pct": 58,
+        "partial_pct": 25,
+        "opposite_pct": 17
+      },
+      "Llama-2 13B instruct": {
+        "expected_n": 14,
+        "partial_n": 5,
+        "opposite_n": 5,
+        "expected_pct": 58,
+        "partial_pct": 21,
+        "opposite_pct": 21
+      },
+      "Gemma 7B base": {
+        "expected_n": 12,
+        "partial_n": 7,
+        "opposite_n": 5,
+        "expected_pct": 50,
+        "partial_pct": 29,
+        "opposite_pct": 21
+      },
+      "Gemma 7B codigo": {
+        "expected_n": 12,
+        "partial_n": 6,
+        "opposite_n": 6,
+        "expected_pct": 50,
+        "partial_pct": 25,
+        "opposite_pct": 25
+      },
+      "Gemma 7B instruct": {
+        "expected_n": 13,
+        "partial_n": 6,
+        "opposite_n": 5,
+        "expected_pct": 54,
+        "partial_pct": 25,
+        "opposite_pct": 21
+      }
+    },
+    "x_max_do_eixo": 1000000.0,
+    "pontos_alem_da_borda": {
+      "total": 6,
+      "por_modelo": {
+        "Qwen2.5 3B instruct": 1,
+        "Llama-2 13B codigo": 1,
+        "Gemma 7B base": 1,
+        "Gemma 7B instruct": 3
+      }
+    },
+    "contrastes_da_dupla": {
+      "Llama-2 13B D_codigo": {
+        "estimativa": 1.1424950537168317,
+        "ic_inferior": 0.24841883793059336,
+        "ic_superior": 2.0575494438823725,
+        "ic_exclui_zero": true
+      },
+      "Llama-2 13B D_instrucao": {
+        "estimativa": -0.5365395297606788,
+        "ic_inferior": -0.9388425367573902,
+        "ic_superior": -0.11997315508003038,
+        "ic_exclui_zero": true
+      },
+      "Gemma 7B D_codigo": {
+        "estimativa": -0.5030104813890326,
+        "ic_inferior": -0.8248791415089121,
+        "ic_superior": -0.2113658843975931,
+        "ic_exclui_zero": true
+      },
+      "Gemma 7B D_instrucao": {
+        "estimativa": 0.7805929224834671,
+        "ic_inferior": 0.06970317364903164,
+        "ic_superior": 1.4951770029017806,
+        "ic_exclui_zero": true
+      }
+    },
+    "estilo": {
+      "expected": {
+        "cor": "#4F8A9E",
+        "lw": 1.0,
+        "alpha": 0.85,
+        "cabeca": "cheia",
+        "escala": 4,
+        "zorder": 6,
+        "rotulo": "Expected direction"
+      },
+      "partial": {
+        "cor": "#7F7F7F",
+        "lw": 0.9,
+        "alpha": 0.8,
+        "cabeca": "cheia",
+        "escala": 4,
+        "zorder": 4,
+        "rotulo": "Partial"
+      },
+      "opposite": {
+        "cor": "#B5655A",
+        "lw": 1.0,
+        "alpha": 0.85,
+        "cabeca": "cheia",
+        "escala": 4,
+        "zorder": 5,
+        "rotulo": "Opposite"
+      },
+      "media_geral": {
+        "cor": "#4DAF4A",
+        "lw": 2.6,
+        "contorno": 3.6
+      },
+      "text.hinting": "none (o espaço de rótulos rotacionados some nos PNGs com hinting)"
+    },
+    "rho_confusos": {
+      "Qwen2.5 3B base": 0.5315336318715707,
+      "Qwen2.5 3B codigo": 0.5102459181295349,
+      "Qwen2.5 3B instruct": 0.4861927310010716,
+      "Qwen2.5 7B base": 0.47570965746647387,
+      "Qwen2.5 7B codigo": 0.5053261196972485,
+      "Qwen2.5 7B instruct": 0.47179412984321784,
+      "Qwen2.5 32B (4 bits) base": 0.49130564109923425,
+      "Qwen2.5 32B (4 bits) codigo": 0.47017871069361866,
+      "Qwen2.5 32B (4 bits) instruct": 0.5077055414140955,
+      "Llama-2 7B base": 0.5090239647727414,
+      "Llama-2 7B codigo": 0.5236874050542644,
+      "Llama-2 7B instruct": 0.5227227050357433,
+      "Llama-2 13B base": 0.5180278316122731,
+      "Llama-2 13B codigo": 0.46426188391335504,
+      "Llama-2 13B instruct": 0.4984765779035755,
+      "Gemma 7B base": 0.5253917084203187,
+      "Gemma 7B codigo": 0.49850873457085965,
+      "Gemma 7B instruct": 0.4462541502342915
+    },
+    "delta_conferido_com": "2026-11-05-consolidado-3 (aoi_max, tolerância 1e-9)",
+    "faixa_x": {
+      "min": 1.0220546685638743,
+      "max": 7705297.953096824
+    },
+    "faixa_y_uv": {
+      "min": -8.155192651951952,
+      "max": 6.682312360028058
+    },
+    "fonte_tipografica": {
+      "usada": "STIX Two Text",
+      "candidatas": [
+        "Linux Libertine O",
+        "Libertinus Serif",
+        "STIX Two Text",
+        "DejaVu Serif"
+      ],
+      "mathtext": "stix"
+    },
+    "matplotlib": "3.11.2",
+    "metadados": "PDF: CreationDate omitido, SOURCE_DATE_EPOCH fixo, fontes embutidas (Type 42); PNG: sem Software"
+  },
+  "seed": null,
+  "date": "2026-11-12",
+  "approx_cost": "sem custo (Mac local)"
+}

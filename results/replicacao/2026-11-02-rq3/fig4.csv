@@ -1,0 +1,7 @@
+contagem,recalculado,artigo,confere
+atomos_confusos_detectados,46,46,True
+atomos_confusos_nao_detectados,26,26,True
+atomos_limpos_detectados,27,27,True
+atomos_limpos_nao_detectados,45,45,True
+regioes_em_confusos,115,115,True
+regioes_em_limpos,112,112,True

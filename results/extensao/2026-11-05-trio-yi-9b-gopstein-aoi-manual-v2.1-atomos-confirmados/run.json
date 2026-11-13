@@ -1,0 +1,58 @@
+{
+  "commit": "0b1bb62dfe84e53381ee8a64b1a9afb7fe23203b",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-03-reexecucao-Yi-9B-gopstein",
+      "codigo": "results/extensao/2026-11-03-reexecucao-Yi-Coder-9B-gopstein",
+      "instruct": "results/extensao/2026-11-03-reexecucao-Yi-Coder-9B-Chat-gopstein"
+    },
+    "reamostragens": 10000,
+    "conjunto": "gopstein",
+    "aoi": "manual",
+    "anotacao": {
+      "versao": "v2.1",
+      "arquivo": "data/anotacoes/gopstein-aoi-v2.1.csv",
+      "sha256": "8ebc846fb9d403c4b9291b70585546bd5f1c3ca03308344bee06aabe6c335e24"
+    },
+    "n_pares": {
+      "aoi_max": 45,
+      "snippet_media": 45
+    },
+    "atomos": {
+      "rotulo": "confirmados",
+      "lista": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "18",
+        "19",
+        "20"
+      ]
+    },
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "01-ai/Yi-9B",
+    "codigo": "01-ai/Yi-Coder-9B",
+    "instruct": "01-ai/Yi-Coder-9B-Chat"
+  },
+  "model_revision": {
+    "base": "7b7ca5cf23753f488859321e2439dc4bcbc0eca0",
+    "codigo": "bc6e63fd26a654ee42dba737a553310bfa01dc5d",
+    "instruct": "356a1f8d4e4a606d0b879e54191ca809918576b8"
+  },
+  "date": "2026-11-05",
+  "approx_cost": "sem custo (Mac local)"
+}

@@ -1,0 +1,22 @@
+id,tag,nome_no_artigo,significativo,phi,p,observacao
+1,add_CONDITION_atom,Implicit Predicate,sim,0.24,4.27e-03,"v1 (if (V1 = 8)) é atribuição dentro de predicado, um caso que o artigo inclui em Implicit Predicate (Tabela 1)"
+2,add_PARENTHESIS_atom,Operator Precedence,sim,0.33,5.90e-05,
+3,move_POST_INC_DEC_atom,Post-Increment/Decrement,sim,0.45,6.98e-08,
+4,move_PRE_INC_DEC_atom,Pre-Increment/Decrement,sim,0.28,6.89e-04,
+5,replace_CONSTANTVARIABLE_atom,Constant Variables,nao,0.00,1.000,
+6,remove_INDENTATION_atom,,fora_do_artigo,,,"testado com participantes, mas excluído da análise publicada (snippet_study/sql/remove_indentation.sql no commit 7aed29b)"
+7,replace_MACRO_atom,Macro Operator Precedence,sim,0.53,1.77e-07,
+8,replace_Mixed_Pointer_Integer_Arithmetic,Pointer Arithmetic,nao,0.03,0.752,"o artigo relata que a versão limpa também confundia (Seção 5.3.1)"
+9,replace_Ternary_Operator,Conditional Operator,sim,0.36,1.74e-05,
+10,replace_Arithmetic_As_Logic,Arithmetic as Logic,nao,0.10,0.248,
+11,replace_Comma_Operator,Comma Operator,sim,0.30,2.46e-04,
+12,move_Preprocessor_Directives_Inside_Statements,Preprocessor in Statement,sim,0.54,8.53e-11,
+13,Constant Assignment,Assignment as Value,sim,0.52,3.78e-10,"mapeado por eliminação; os snippets usam atribuição dentro de condição, próximo também de Implicit Predicate"
+14,Logic as Control Flow,Logic as Control Flow,sim,0.48,5.62e-09,
+15,Re-purposed variables,Repurposed Variables,sim,0.22,6.66e-03,
+16,Swapped subscripts,Reversed Subscripts,sim,0.40,1.52e-06,
+17,"Dead, unreachable, repeated","Dead, Unreachable, Repeated",nao,0.16,0.059,"amálgama: só o snippet de código inalcançável foi significativo sozinho (Seção 5.3.1)"
+18,Literal encoding,Change of Literal Encoding,sim,0.63,2.93e-14,
+19,Curly braces,Omitted Curly Braces,sim,0.22,8.64e-03,
+20,Type conversion,Type Conversion,sim,0.42,5.17e-07,
+21,Indentation,,fora_do_artigo,,,"testado com participantes, mas excluído da análise publicada (snippet_study/sql/remove_indentation.sql no commit 7aed29b)"

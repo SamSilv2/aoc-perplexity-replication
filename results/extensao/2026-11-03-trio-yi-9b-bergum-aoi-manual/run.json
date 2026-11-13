@@ -1,0 +1,29 @@
+{
+  "commit": "b24da91b4228ae4898d96e0bc6d8ec63a36556b6",
+  "codigo_alterado": false,
+  "config": {
+    "execucoes": {
+      "base": "results/extensao/2026-11-03-reexecucao-Yi-9B-completo",
+      "codigo": "results/extensao/2026-11-03-reexecucao-Yi-Coder-9B-completo",
+      "instruct": "results/extensao/2026-11-03-reexecucao-Yi-Coder-9B-Chat-completo"
+    },
+    "reamostragens": 10000,
+    "conjunto": "bergum",
+    "aoi": "manual",
+    "unidade": "pares-base (decisões 0003 e 0008)",
+    "metrica": "decisão 0007"
+  },
+  "seed": 42,
+  "model": {
+    "base": "01-ai/Yi-9B",
+    "codigo": "01-ai/Yi-Coder-9B",
+    "instruct": "01-ai/Yi-Coder-9B-Chat"
+  },
+  "model_revision": {
+    "base": "7b7ca5cf23753f488859321e2439dc4bcbc0eca0",
+    "codigo": "bc6e63fd26a654ee42dba737a553310bfa01dc5d",
+    "instruct": "356a1f8d4e4a606d0b879e54191ca809918576b8"
+  },
+  "date": "2026-11-03",
+  "approx_cost": "sem custo (Mac local)"
+}

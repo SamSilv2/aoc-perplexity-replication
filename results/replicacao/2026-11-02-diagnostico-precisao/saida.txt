@@ -1,0 +1,15 @@
+diferenca em ULPs do fp16: quantis {0.5: 3.0, 0.9: 17.0, 0.99: 45.0, 1.0: 85.0}
+fracao <= 1 ULP 0.3448  <= 2 ULP 0.4429
+|log_prob| medio dos que passam de 0,01: 4.3 dos demais: 2.06
+spearman token a token 0.9999841023567758
+float32 vs publicado: mediana 0.003126472234725952 fracao<=0,01 0.8172
+bfloat16 vs publicado: mediana 0.0185546875 fracao<=0,01 0.3972
+fp16 nosso vs fp32: mediana 0.0025226473808288574  publicado vs fp32: 0.003126472234725952
+diferenca relativa no snippet:                           50%       max
+metrica                               
+max_perplexity      0.007843  0.115581
+overall_perplexity  0.001180  0.008091
+RQ1 snippet overall_perplexity   nosso     n=72 W=863.0 p=0.0114 r=0.298
+RQ1 snippet max_perplexity       nosso     n=22 W=95.0 p=0.3062 r=0.218
+RQ1 snippet overall_perplexity   publicado n=72 W=864.0 p=0.0116 r=0.298
+RQ1 snippet max_perplexity       publicado n=22 W=95.0 p=0.3062 r=0.218
