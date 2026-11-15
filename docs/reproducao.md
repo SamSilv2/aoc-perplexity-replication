@@ -94,7 +94,7 @@ Roda antes 31 execuções, com o modelo, a revisão, o tokenizador, a precisão 
 
 ## Mapa do artigo
 
-`make paper` compila `paper/main.tex` em `paper/build/main.pdf`. Requer uma distribuição TeX (por exemplo, TeX Live ou MacTeX) com `latexmk`, `pdflatex`, `bibtex`, a classe `acmart` e TikZ/PGF. O artigo lê as figuras e tabelas das pastas publicadas por caminhos fixos; uma reprodução não muda o PDF. Para conferir a integração, compare os arquivos da tabela abaixo com os da raiz da reprodução.
+O PDF do artigo já está em `paper/aoc-perplexity.pdf`. `make paper` compila `paper/main.tex` em `paper/build/main.pdf`. Requer uma distribuição TeX (por exemplo, TeX Live ou MacTeX) com `latexmk`, `pdflatex`, `bibtex`, a classe `acmart` e TikZ/PGF. O artigo lê as figuras e tabelas das pastas publicadas por caminhos fixos; uma reprodução não muda o PDF. Para conferir a integração, compare os arquivos da tabela abaixo com os da raiz da reprodução.
 
 | No artigo | Fonte | Como entra |
 |---|---|---|

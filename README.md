@@ -1,6 +1,6 @@
 # aoc-perplexity-replication
 
-Pacote de replicação do artigo *Code Specialization, Instruction Tuning, and Atoms of Confusion: Comparing Perplexity Across General-Purpose Base, Code-Specialized Base, and Instruct Models* (fonte em [`paper/`](paper/)).
+Pacote de replicação do artigo *Code Specialization, Instruction Tuning, and Atoms of Confusion: Comparing Perplexity Across General-Purpose Base, Code-Specialized Base, and Instruct Models* ([PDF](paper/aoc-perplexity.pdf); fonte LaTeX em [`paper/`](paper/)).
 
 Átomos de confusão são trechos de código válidos, mas difíceis de entender. Abdelsalam et al. (ICSE 2026) mostraram que a perplexidade de LLMs de código é maior na região do átomo (a área de interesse, AOI) e se associa a respostas cerebrais de programadores (o FRP, medido por EEG). Este pacote:
 
